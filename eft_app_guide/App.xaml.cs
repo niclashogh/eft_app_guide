@@ -12,6 +12,7 @@ namespace eft_app_guide
     public partial class App : Application
     {
         public static IServiceProvider ServiceProvider { get; private set; } = null!;
+        public readonly static string APP_DATA_FOLDER = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "EFT GUIDE");
 
         protected override void OnStartup(StartupEventArgs e)
         {
@@ -20,12 +21,11 @@ namespace eft_app_guide
             #region Adding Services
             ServiceCollection services = new();
 
-            string appDataFolder = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "EFT GUIDE");
-            Directory.CreateDirectory(appDataFolder);
+            Directory.CreateDirectory(APP_DATA_FOLDER);
 
             services.AddDbContextFactory<DataContext>(opt =>
             {
-                opt.UseSqlite($"Data Source={Path.Combine(appDataFolder, "version_1.db")}");
+                opt.UseSqlite($"Data Source={Path.Combine(APP_DATA_FOLDER, "version_1.db")}");
             });
             
             Assembly assembly = typeof(App).Assembly;
