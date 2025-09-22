@@ -1,10 +1,8 @@
-﻿using eft_app_guide.Services;
+﻿using eft_app_guide.Extentions;
 using eft_app_guide.Views;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.DependencyInjection.Extensions;
 using System.IO;
-using System.Reflection;
 using System.Windows;
 
 namespace eft_app_guide
@@ -19,24 +17,18 @@ namespace eft_app_guide
             base.OnStartup(e);
 
             #region Adding Services
-            ServiceCollection services = new();
+            ServiceCollection service = new();
 
             Directory.CreateDirectory(APP_DATA_FOLDER);
 
-            services.AddDbContextFactory<DataContext>(opt =>
+            service.AddDbContextFactory<DataContext>(opt =>
             {
                 opt.UseSqlite($"Data Source={Path.Combine(APP_DATA_FOLDER, "version_1.db")}");
             });
-            
-            Assembly assembly = typeof(App).Assembly;
-            foreach (Type type in assembly.GetTypes())
-            {
-                DIAutoRegisterAttribute? attr = type.GetCustomAttribute<DIAutoRegisterAttribute>();
-                if (attr == null) continue;
-                services.Add(new ServiceDescriptor(type, type, attr.Lifetime));
-            }
 
-            ServiceProvider = services.BuildServiceProvider();
+            service.AddDependencyInjections();
+
+            ServiceProvider = service.BuildServiceProvider();
             #endregion
 
             #region Register Database
