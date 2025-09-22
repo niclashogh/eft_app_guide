@@ -1,12 +1,11 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Markers
 {
     public class MarkerIcon
     {
         #region Keys
-        [Key] public int Id { get; set; }
+        [Key] public int Id { get; init; }
         #endregion
 
         [Required] public string Icon { get; set; }

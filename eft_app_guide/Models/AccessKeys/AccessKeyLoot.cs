@@ -9,7 +9,7 @@ namespace eft_app_guide.Models.AccessKeys
     public class AccessKeyLoot
     {
         #region Keys
-        [Key] public int Id { get; set; }
+        [Key] public int Id { get; init; }
         [Required] public int AccessKeyId { get; set; }
         [Required] public int ItemId { get; set; }
         #endregion

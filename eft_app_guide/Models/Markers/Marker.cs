@@ -11,7 +11,7 @@ namespace eft_app_guide.Models.Markers
     public class Marker : BasePositionAndSize, IPositionAndSize
     {
         #region Keys
-        [Key] public int Id { get; set; }
+        [Key] public int Id { get; init; }
         [Required] public string MapName { get; set; }
         [Required] public int MarkerIconId { get; set; }
         #endregion
