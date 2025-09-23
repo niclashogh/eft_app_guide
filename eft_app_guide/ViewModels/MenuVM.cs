@@ -42,7 +42,7 @@ namespace eft_app_guide.ViewModels
             Window? windowOfType = Application.Current.Windows.OfType<Window>().FirstOrDefault(x => x.GetType() == type);
             if (windowOfType == null)
             {
-                Window newWindow = (Window)ActivatorUtilities.CreateInstance(App.ServiceProvider, type);
+                Window? newWindow = (Window)ActivatorUtilities.CreateInstance(App.ServiceProvider, type) ?? null;
                 if (newWindow == null) return;
 
                 newWindow.Show();
