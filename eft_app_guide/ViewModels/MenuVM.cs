@@ -1,8 +1,8 @@
-﻿using eft_app_guide.Models;
+﻿using eft_app_guide.Extentions;
+using eft_app_guide.Models;
 using eft_app_guide.Services;
 using eft_app_guide.Views;
 using Microsoft.Extensions.DependencyInjection;
-using System.Windows;
 
 namespace eft_app_guide.ViewModels
 {
@@ -28,30 +28,13 @@ namespace eft_app_guide.ViewModels
         public ViewRecord<Type> SelectedItem
         {
             get { return new(); }
-            set { _ = ManageWindow(value.Component); }
+            set { _ = WindowManager.ShowAsync(value.Component); }
         }
         #endregion
 
         public MenuVM()
         {
             
-        }
-
-        private async Task ManageWindow(Type type)
-        {
-            Window? windowOfType = Application.Current.Windows.OfType<Window>().FirstOrDefault(x => x.GetType() == type);
-            if (windowOfType == null)
-            {
-                Window? newWindow = (Window)ActivatorUtilities.CreateInstance(App.ServiceProvider, type) ?? null;
-                if (newWindow == null) return;
-
-                newWindow.Show();
-            }
-            else
-            {
-                if (windowOfType!.WindowState == WindowState.Minimized) windowOfType.WindowState = WindowState.Normal;
-                else windowOfType.Activate();
-            }
         }
     }
 }
