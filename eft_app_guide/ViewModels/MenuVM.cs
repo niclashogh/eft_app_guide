@@ -28,10 +28,7 @@ namespace eft_app_guide.ViewModels
         public ViewRecord<Type> SelectedItem
         {
             get { return new(); }
-            set
-            {
-                _ = ManageWindow(value.Component);
-            }
+            set { _ = ManageWindow(value.Component); }
         }
         #endregion
 
