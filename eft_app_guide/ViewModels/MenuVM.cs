@@ -10,15 +10,9 @@ namespace eft_app_guide.ViewModels
     public class MenuVM : BaseVM
     {
         #region [Time] Variables & Properties
-        private string currentTime = DateTime.Now.ToString("HH:mm");
         public string CurrentTime
         {
-            get { return currentTime; }
-            set
-            {
-                currentTime = value;
-                OnPropertyChanged(nameof(CurrentTime));
-            }
+            get { return DateTime.Now.ToString("HH:mm"); }
         }
         #endregion
 
