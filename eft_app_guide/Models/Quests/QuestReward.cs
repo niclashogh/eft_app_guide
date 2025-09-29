@@ -15,7 +15,8 @@ namespace eft_app_guide.Models.Quests
         public int? ItemId { get; set; }
         #endregion
 
-        [Required] public QuestRewardTypes RewardType { get; set; }
+        public int? Quantity { get; set; }
+        public QuestRewardTypes? RewardType { get; set; }
 
         #region Relations
         public Quest? Quest { get; set; }
