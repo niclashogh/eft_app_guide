@@ -10,7 +10,8 @@ namespace eft_app_guide
     public partial class App : Application
     {
         public static IServiceProvider ServiceProvider { get; private set; } = null!;
-        public readonly static string APP_DATA_FOLDER = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "EFT GUIDE");
+        public readonly static string ROOT_DATA_FOLDER = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "EFT GUIDE");
+        public readonly static string ROOT_ASSET_FOLDER = Path.Combine(ROOT_DATA_FOLDER, "Assets");
 
         protected override void OnStartup(StartupEventArgs e)
         {
@@ -19,11 +20,11 @@ namespace eft_app_guide
             #region Adding Services
             ServiceCollection service = new();
 
-            Directory.CreateDirectory(APP_DATA_FOLDER);
+            Directory.CreateDirectory(ROOT_DATA_FOLDER);
 
             service.AddDbContextFactory<DataContext>(opt =>
             {
-                opt.UseSqlite($"Data Source={Path.Combine(APP_DATA_FOLDER, "version_1.db")}");
+                opt.UseSqlite($"Data Source={Path.Combine(ROOT_DATA_FOLDER, "version_1.db")}");
             });
 
             service.AddDependencyInjections();

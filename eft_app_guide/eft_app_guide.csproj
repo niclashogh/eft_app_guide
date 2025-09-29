@@ -13,9 +13,4 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="8.0.20" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Views\AsComponents\" />
-    <Folder Include="Views\Converters\" />
-  </ItemGroup>
-
 </Project>
