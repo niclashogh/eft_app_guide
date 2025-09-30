@@ -1,4 +1,4 @@
-﻿using eft_app_guide.Services;
+﻿using eft_app_guide.Models.Enums;
 using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models._Internal
