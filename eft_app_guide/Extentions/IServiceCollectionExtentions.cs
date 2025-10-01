@@ -1,4 +1,4 @@
-﻿using eft_app_guide.Services;
+﻿using eft_app_guide.Attributes;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
 
@@ -11,7 +11,7 @@ namespace eft_app_guide.Extentions
             Assembly assembly = typeof(App).Assembly;
             foreach (Type type in assembly.GetTypes())
             {
-                DIAutoRegisterAttribute? attr = type.GetCustomAttribute<DIAutoRegisterAttribute>();
+                DependencyInjectionRegisterAttribute? attr = type.GetCustomAttribute<DependencyInjectionRegisterAttribute>();
                 if (attr ==  null) continue;
                 service.Add(new ServiceDescriptor(type, type, attr.Lifetime));
             }

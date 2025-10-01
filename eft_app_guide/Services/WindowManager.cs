@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using System.Windows;
 
-namespace eft_app_guide.Extentions
+namespace eft_app_guide.Services
 {
     public static class WindowManager
     {

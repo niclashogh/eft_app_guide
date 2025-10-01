@@ -1,4 +1,4 @@
-﻿using eft_app_guide.Extentions;
+﻿using eft_app_guide.Attributes;
 using eft_app_guide.Models;
 using eft_app_guide.Services;
 using eft_app_guide.Views;
@@ -6,7 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace eft_app_guide.ViewModels
 {
-    [DIAutoRegister(ServiceLifetime.Singleton)]
+    [DependencyInjectionRegister(ServiceLifetime.Singleton)]
     public class MenuVM : BaseVM
     {
         #region [Time] Variables & Properties

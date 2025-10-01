@@ -1,12 +1,19 @@
-﻿using eft_app_guide.Services;
+﻿using System.ComponentModel;
 using System.Runtime.InteropServices;
 using System.Security.Principal;
 
 namespace eft_app_guide.ViewModels
 {
-    public class BaseVM : NotifyChangedService
+    public class BaseVM : INotifyPropertyChanged
     {
-        public bool IsAdminstrator()
+        public event PropertyChangedEventHandler? PropertyChanged;
+
+        protected void OnPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+        protected bool IsAdminstrator()
         {
             if (!RuntimeInformation.IsOSPlatform(OSPlatform.Windows)) return false;
 

@@ -1,7 +1,9 @@
-﻿using eft_app_guide.Models;
+﻿using eft_app_guide.Attributes;
+using eft_app_guide.Models;
 using eft_app_guide.Services;
 using eft_app_guide.ViewModels.ToUserControls;
 using eft_app_guide.ViewModels.ToUserControls.BTRs;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
@@ -11,9 +13,12 @@ using System.Threading.Tasks;
 
 namespace eft_app_guide.ViewModels
 {
-    [DIAutoRegister(ServiceLifetime.Transient)]
+    [DependencyInjectionRegister(ServiceLifetime.Transient)]
     public class SettingVM : BaseVM
     {
+        private readonly IDbContextFactory<DataContext> DbFactory;
+        private readonly AuditLogger AuditLogger;
+
         #region [Current User Control] Variable & Properties
         private object currentUserControl = Pages.First().Component;
         public object CurrentUserControl
@@ -69,9 +74,10 @@ namespace eft_app_guide.ViewModels
         }
         #endregion
 
-        public SettingVM()
+        public SettingVM(IDbContextFactory<DataContext> dbFactory, AuditLogger auditLogger)
         {
-            
+            this.DbFactory = dbFactory;
+            this.AuditLogger = auditLogger;
         }
     }
 }

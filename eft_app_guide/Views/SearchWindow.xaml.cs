@@ -1,4 +1,4 @@
-﻿using eft_app_guide.Services;
+﻿using eft_app_guide.Attributes;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
@@ -16,7 +16,7 @@ using System.Windows.Shapes;
 
 namespace eft_app_guide.Views
 {
-    [DIAutoRegister(ServiceLifetime.Transient)]
+    [DependencyInjectionRegister(ServiceLifetime.Transient)]
     public partial class SearchWindow : Window
     {
         public SearchWindow()

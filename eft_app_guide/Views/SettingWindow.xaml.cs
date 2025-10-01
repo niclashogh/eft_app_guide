@@ -1,4 +1,4 @@
-﻿using eft_app_guide.Services;
+﻿using eft_app_guide.Attributes;
 using eft_app_guide.ViewModels;
 using eft_app_guide.ViewModels.ToUserControls.BTRs;
 using Microsoft.Extensions.DependencyInjection;
@@ -18,15 +18,16 @@ using System.Windows.Shapes;
 
 namespace eft_app_guide.Views
 {
-    [DIAutoRegister(ServiceLifetime.Transient)]
+    [DependencyInjectionRegister(ServiceLifetime.Transient)]
     public partial class SettingWindow : Window
     {
-        private SettingVM viewmodel = new();
+        private SettingVM viewmodel;
 
-        public SettingWindow()
+        public SettingWindow(SettingVM viewmodel)
         {
             InitializeComponent();
-            DataContext = viewmodel;
+            this.viewmodel = viewmodel;
+            this.DataContext = viewmodel;
         }
     }
 }

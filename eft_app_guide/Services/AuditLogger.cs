@@ -1,34 +1,45 @@
-﻿using eft_app_guide.Models.Enums;
+﻿using eft_app_guide.Attributes;
+using eft_app_guide.Models.Enums;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace eft_app_guide.Services
 {
-    public static class AuditLogger
+    [DependencyInjectionRegister(ServiceLifetime.Singleton)]
+    public class AuditLogger
     {
-        private static async Task Log(int entityId, AuditActions action, string forEntity, object? oldValues, object? newValues)
+        private readonly IDbContextFactory<DataContext> dbFactory;
+
+        public AuditLogger(IDbContextFactory<DataContext> dbFactory)
+        {
+            this.dbFactory = dbFactory;
+        }
+
+        private async Task Log(int entityId, AuditActions action, string forEntity, object? oldValues, object? newValues)
         {
             // ...
         }
 
-        public static async Task LogEntryChanged(int entityId, string forEntity, object oldValues, object newValues) => await Log(entityId, AuditActions.Changed, forEntity, oldValues, newValues);
-        public static async Task LogEntryCreation(int entityId, string forEntity, object newValues) => await Log(entityId, AuditActions.Created, forEntity, null, newValues);
-        public static async Task LogEntryRemoved(int entityId, string forEntity, object oldValues) => await Log(entityId, AuditActions.Removed, forEntity, oldValues, null);
+        public async Task LogEntryChanged(int entityId, string forEntity, object oldValues, object newValues) => await Log(entityId, AuditActions.Changed, forEntity, oldValues, newValues);
+        public async Task LogEntryCreation(int entityId, string forEntity, object newValues) => await Log(entityId, AuditActions.Created, forEntity, null, newValues);
+        public async Task LogEntryRemoved(int entityId, string forEntity, object oldValues) => await Log(entityId, AuditActions.Removed, forEntity, oldValues, null);
         
-        public static async Task ClearEntireLog()
+        public async Task ClearEntireLog()
         {
 
         }
 
-        public static async Task RollbackChange()
-        {
-            // ...
-        }
-
-        public static async Task RestoreEntry()
+        public async Task RollbackChange()
         {
             // ...
         }
 
-        public static async Task RemoveEntry()
+        public async Task RestoreEntry()
+        {
+            // ...
+        }
+
+        public async Task RemoveEntry()
         {
             // ...
         }

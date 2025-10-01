@@ -1,4 +1,4 @@
-﻿using eft_app_guide.Services;
+﻿using eft_app_guide.Attributes;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace eft_app_guide.ViewModels
 {
-    [DIAutoRegister(ServiceLifetime.Transient)]
+    [DependencyInjectionRegister(ServiceLifetime.Transient)]
     public class BrowserVM
     {
 
