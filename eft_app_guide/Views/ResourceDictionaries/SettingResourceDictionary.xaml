@@ -1,0 +1,19 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    
+                    xmlns:usercontrols="clr-namespace:eft_app_guide.Views.AsUserControls"
+                    xmlns:viewmodels="clr-namespace:eft_app_guide.ViewModels.ToUserControls">
+
+    <!--#region DataTemplates, Management-->
+    <DataTemplate DataType="{x:Type viewmodels:ItemManagementVM}">
+        <usercontrols:ItemManagement/>
+    </DataTemplate>
+    <!--#endregion-->
+    
+    <!--#region DataTemplates, Pages-->
+    <DataTemplate DataType="{x:Type viewmodels:SettingHomeVM}">
+        <usercontrols:SettingHome/>
+    </DataTemplate>
+    <!--#endregion -->
+    
+</ResourceDictionary>

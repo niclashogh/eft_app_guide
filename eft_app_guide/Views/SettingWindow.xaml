@@ -6,11 +6,19 @@
         xmlns:local="clr-namespace:eft_app_guide.Views"
         mc:Ignorable="d"
         
+        xmlns:usercontrols="clr-namespace:eft_app_guide.Views.AsUserControls"
+        xmlns:viewmodels="clr-namespace:eft_app_guide.ViewModels.ToUserControls"
         Title="Settings"
         Height="1080"
         Width="1920">
-    
+
+    <!--#region Dictionary Resources-->
+    <Window.Resources>
+        <ResourceDictionary Source="/Views/ResourceDictionaries/SettingResourceDictionary.xaml"/>
+    </Window.Resources>
+    <!--#endregion-->
+
     <Grid>
-        
+        <ContentControl Content="{Binding CurrentUserControl, Mode=OneWay}" />
     </Grid>
 </Window>

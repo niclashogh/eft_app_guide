@@ -1,4 +1,6 @@
 ﻿using eft_app_guide.Services;
+using eft_app_guide.ViewModels;
+using eft_app_guide.ViewModels.ToUserControls.BTRs;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
@@ -19,9 +21,12 @@ namespace eft_app_guide.Views
     [DIAutoRegister(ServiceLifetime.Transient)]
     public partial class SettingWindow : Window
     {
+        private SettingVM viewmodel = new();
+
         public SettingWindow()
         {
             InitializeComponent();
+            DataContext = viewmodel;
         }
     }
 }

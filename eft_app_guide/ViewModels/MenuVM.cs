@@ -17,7 +17,7 @@ namespace eft_app_guide.ViewModels
         #endregion
 
         #region [Menu Items] Variables & Properties
-        public List<ViewRecord<Type>> MenuItems { get; } = new List<ViewRecord<Type>>
+        public static List<ViewRecord<Type>> MenuItems { get; } = new List<ViewRecord<Type>>
         {
             new(typeof(MapWindow), "Map"),
             new(typeof(SearchWindow), "Search"),

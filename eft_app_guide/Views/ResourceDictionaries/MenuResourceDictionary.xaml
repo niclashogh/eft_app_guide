@@ -27,12 +27,12 @@
     </Style>
     <!--#endregion-->
 
-    <!--#region MENU_ITEM_CONTENT (Background = #1A000000)-->
+    <!--#region MENU_ITEM_CONTENT-->
     <Style TargetType="Grid" x:Key="MENU_ITEM_CONTENT">
         <Setter Property="Height" Value="40"/>
         <Setter Property="Width" Value="40"/>
         <Setter Property="Margin" Value="0,5"/>
-        <Setter Property="Background" Value="Red"/>
+        <Setter Property="Background" Value="#1A000000"/>
 
         <Setter Property="ItemsControl.ItemTemplate">
             <Setter.Value>
@@ -70,46 +70,6 @@
                 </Trigger.ExitActions>
             </Trigger>
         </Style.Triggers>
-    </Style>
-    <!--#endregion-->
-
-    <!--#region MENU_CONTEXT_ITEM (Delete?)-->
-    <Style TargetType="MenuItem" x:Key="MENU_CONTEXT_ITEM">
-        <Setter Property="IsTabStop" Value="False"/>
-
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate>
-
-                    <!--#region Content-->
-                    <Grid>
-                        <Border x:Name="BORDER"
-                            Background="#1E1E1E"
-                            Padding="20,0"
-                            Height="40">
-
-                            <TextBlock Text="{Binding Header, RelativeSource={RelativeSource TemplatedParent}}"
-                                       Foreground="White"
-                                       HorizontalAlignment="Center"
-                                       VerticalAlignment="Center"/>
-                        </Border>
-                    </Grid>
-                    <!--#endregion-->
-
-                    <!--#region Triggers-->
-                    <ControlTemplate.Triggers>
-
-                        <Trigger Property="IsMouseOver" Value="True">
-                            <Setter TargetName="BORDER" Property="Background" Value="#282828"/>
-                            <Setter Property="Cursor" Value="Hand"/>
-                        </Trigger>
-
-                    </ControlTemplate.Triggers>
-                    <!--#endregion-->
-
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
     </Style>
     <!--#endregion-->
 

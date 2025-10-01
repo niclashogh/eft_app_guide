@@ -17,7 +17,7 @@
     
     <!--#region Dictionary Resources-->
     <Window.Resources>
-        <ResourceDictionary Source="/Views/ResourceDictionaries/MenuStyle.xaml"/>
+        <ResourceDictionary Source="/Views/ResourceDictionaries/MenuResourceDictionary.xaml"/>
     </Window.Resources>
     <!--#endregion-->
     
@@ -34,7 +34,8 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <Grid Style="{StaticResource MENU_ITEM_CONTENT}"
-                          Tag="{Binding Title}"/>
+                          Tag="{Binding Title}"
+                          Background="Red"/>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
