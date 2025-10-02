@@ -8,15 +8,15 @@ namespace eft_app_guide.Views
     [DependencyInjectionRegister(ServiceLifetime.Scoped)]
     public partial class MenuWindow : Window
     {
-        private MenuVM viewmodel { get; set; }
+        private readonly MenuVM viewmodel;
 
-        public MenuWindow(MenuVM vm)
+        public MenuWindow(MenuVM viewmodel)
         {
             InitializeComponent();
             this.Height = SystemParameters.PrimaryScreenHeight;
 
-            this.viewmodel = vm;
-            this.DataContext = viewmodel;
+            this.viewmodel = viewmodel;
+            this.DataContext = this.viewmodel;
         }
     }
 }

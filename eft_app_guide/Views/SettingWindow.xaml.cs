@@ -21,13 +21,13 @@ namespace eft_app_guide.Views
     [DependencyInjectionRegister(ServiceLifetime.Transient)]
     public partial class SettingWindow : Window
     {
-        private SettingVM viewmodel;
+        private readonly SettingVM viewmodel;
 
         public SettingWindow(SettingVM viewmodel)
         {
             InitializeComponent();
             this.viewmodel = viewmodel;
-            this.DataContext = viewmodel;
+            this.DataContext = this.viewmodel;
         }
     }
 }
