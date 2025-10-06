@@ -1,8 +1,11 @@
-﻿using eft_app_guide.Models.Enums;
+﻿using eft_app_guide.Models._Internal.Config;
+using eft_app_guide.Models.Enums;
+using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models._Internal
 {
+    [EntityTypeConfiguration(typeof(AuditLogConfig))]
     public class AuditLog
     {
         #region Keys
