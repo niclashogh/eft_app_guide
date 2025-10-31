@@ -19,8 +19,8 @@ namespace eft_app_guide.Models._Internal
         [Required] public AuditActions Action { get; set; }
         [Required] public string ForEntity { get; set; }
 
-        public object? OldValues { get; set; }
-        public object? NewValues { get; set; }
+        public string? OldValues { get; set; }
+        public string? NewValues { get; set; }
 
         #region Relations
         public AuditLog? Parent { get; set; }
