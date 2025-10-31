@@ -32,7 +32,7 @@
         <Setter Property="Height" Value="40"/>
         <Setter Property="Width" Value="40"/>
         <Setter Property="Margin" Value="0,5"/>
-        <Setter Property="Background" Value="#1A000000"/>
+        <Setter Property="Background" Value="#00000000"/> <!-- OR #1A000000 -->
 
         <Setter Property="ItemsControl.ItemTemplate">
             <Setter.Value>

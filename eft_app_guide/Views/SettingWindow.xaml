@@ -8,10 +8,18 @@
         
         xmlns:usercontrols="clr-namespace:eft_app_guide.Views.AsUserControls"
         xmlns:viewmodels="clr-namespace:eft_app_guide.ViewModels.ToUserControls"
+        
+        WindowStyle="None"
         Title="Settings"
         Height="1080"
         Width="1920">
 
+    <WindowChrome.WindowChrome>
+        <WindowChrome GlassFrameThickness="0"
+                      CornerRadius="5"
+                      CaptionHeight="0" />
+    </WindowChrome.WindowChrome>
+    
     <!--#region Dictionary Resources-->
     <Window.Resources>
         <ResourceDictionary Source="/Views/ResourceDictionaries/SettingResourceDictionary.xaml"/>
@@ -19,6 +27,31 @@
     <!--#endregion-->
 
     <Grid>
-        <ContentControl Content="{Binding CurrentUserControl, Mode=OneWay}" />
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid Background="#00000000"
+              MouseLeftButtonDown="TopBar_LeftHold">
+            
+            <StackPanel Orientation="Horizontal"
+                        HorizontalAlignment="Right">
+            
+                <Button Content="_"
+                        Background="Transparent"
+                        BorderThickness="0"
+                        Padding="10,0"
+                        Click="TrayBtn_Click" />
+                
+                <Button Content="x"
+                        Background="Transparent"
+                        BorderThickness="0"
+                        Padding="10,0"
+                        Click="CloseBtn_Click" />
+            </StackPanel>
+        </Grid>
+
+        <ContentControl Grid.Row="1" Content="{Binding CurrentUserControl, Mode=OneWay}" />
     </Grid>
 </Window>

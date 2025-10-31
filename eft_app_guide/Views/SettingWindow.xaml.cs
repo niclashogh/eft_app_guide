@@ -29,5 +29,11 @@ namespace eft_app_guide.Views
             this.viewmodel = viewmodel;
             this.DataContext = this.viewmodel;
         }
+
+        private void TopBar_LeftHold(object sender, MouseButtonEventArgs e) => this.DragMove();
+
+        private void CloseBtn_Click(object sender, RoutedEventArgs e) => this.Close();
+
+        private void TrayBtn_Click(object sender, RoutedEventArgs e) => WindowState = WindowState.Minimized;
     }
 }
