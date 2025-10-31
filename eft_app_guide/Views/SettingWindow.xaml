@@ -32,6 +32,8 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
+        <Border Grid.RowSpan="2" Background="DarkGreen" />
+        
         <Grid Background="#00000000"
               MouseLeftButtonDown="TopBar_LeftHold">
             
