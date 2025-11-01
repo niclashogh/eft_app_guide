@@ -1,8 +1,10 @@
 ﻿using eft_app_guide.Attributes;
 using eft_app_guide.Models._Internal.Records;
+using eft_app_guide.Models.Enums;
 using eft_app_guide.Services;
 using eft_app_guide.Views;
 using Microsoft.Extensions.DependencyInjection;
+using System.Windows.Controls;
 
 namespace eft_app_guide.ViewModels
 {
@@ -32,9 +34,17 @@ namespace eft_app_guide.ViewModels
         }
         #endregion
 
+        #region [UI Configurations] Variables & Properties
+        public MenuPosition MenuPosition { get; init; }
+        public Orientation MenuItemOrientation { get; init; }
+        public bool MenuSlideIn { get; init; }
+        #endregion
+
         public MenuVM()
         {
-            
+            MenuPosition = ConfigurationManager.GetValue(x => x.MenuPosition);
+            MenuItemOrientation = ConfigurationManager.GetValue(x => x.MenuItemOrientation);
+            MenuSlideIn = ConfigurationManager.GetValue(x => x.MenuSlideIn);
         }
     }
 }

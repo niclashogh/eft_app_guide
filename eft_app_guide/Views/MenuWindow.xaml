@@ -10,10 +10,7 @@
         WindowStyle="None"
         AllowsTransparency="True"
         Background="Transparent"
-        Topmost="True"
-        Left="0"
-        Top="0"
-        MaxWidth="60">
+        Topmost="True">
     
     <!--#region Dictionary Resources-->
     <Window.Resources>
@@ -22,15 +19,20 @@
     <!--#endregion-->
     
     <Grid Background="Transparent"
-          VerticalAlignment="Center">
+          VerticalAlignment="Center"
+          HorizontalAlignment="Center">
         
         <ListView ItemsSource="{Binding MenuItems, Mode=OneWay}"
                   ItemContainerStyle="{StaticResource MENU_LIST_ITEM}"
                   SelectedItem="{Binding SelectedItem}"
-                  Background="Transparent"
-                  BorderThickness="0"
-                  ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                  Style="{StaticResource MENU_ITEM}">
 
+            <ListView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <StackPanel Orientation="{Binding MenuItemOrientation, Mode=OneWay}"/>
+                </ItemsPanelTemplate>
+            </ListView.ItemsPanel>
+            
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <Grid Style="{StaticResource MENU_ITEM_CONTENT}"
