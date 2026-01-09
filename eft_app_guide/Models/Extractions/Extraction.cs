@@ -1,6 +1,6 @@
-﻿using eft_app_guide.Models.Entities;
-using eft_app_guide.Models.Extractions.Config;
+﻿using eft_app_guide.Models.Extractions.Config;
 using eft_app_guide.Models.Interfaces;
+using eft_app_guide.Models.Maps;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 
@@ -11,7 +11,7 @@ namespace eft_app_guide.Models.Extractions
     {
         #region Keys
         [Key] public int Id { get; init; }
-        [Required] public string MapName { get; set; }
+        [Required] public string MapId { get; set; }
         #endregion
 
         [Required] public string Name { get; set; }

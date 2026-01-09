@@ -1,5 +1,6 @@
-﻿using eft_app_guide.Models.Entities;
-using eft_app_guide.Models.Extractions;
+﻿using eft_app_guide.Models.Extractions;
+using eft_app_guide.Models.Maps;
+using eft_app_guide.Models.Traders;
 using System.Globalization;
 using System.IO;
 using System.Windows.Data;

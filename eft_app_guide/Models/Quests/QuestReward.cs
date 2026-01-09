@@ -1,4 +1,4 @@
-﻿using eft_app_guide.Models.Entities;
+﻿using eft_app_guide.Models.Items;
 using eft_app_guide.Models.Quests.Config;
 using eft_app_guide.Models.Quests.Enums;
 using Microsoft.EntityFrameworkCore;

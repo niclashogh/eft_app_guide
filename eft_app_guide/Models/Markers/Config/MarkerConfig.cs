@@ -13,7 +13,7 @@ namespace eft_app_guide.Models.Markers.Config
             builder
                 .HasOne(x => x.Map)
                 .WithMany(x => x.Markers)
-                .HasForeignKey(x => x.MapName);
+                .HasForeignKey(x => x.MapId);
 
             // Link Marker to MarkerIcon
             builder

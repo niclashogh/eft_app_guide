@@ -13,7 +13,7 @@ namespace eft_app_guide.Models.Extractions.Config
             builder
                 .HasOne(x => x.Map)
                 .WithMany(x => x.Extractions)
-                .HasForeignKey(x => x.MapName);
+                .HasForeignKey(x => x.MapId);
 
             // Link Extraction to ExtractionRequirement
             builder

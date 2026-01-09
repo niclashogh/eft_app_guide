@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace eft_app_guide.Models.Entities.Config
+namespace eft_app_guide.Models.BTRs.Config
 {
     public class BTRConfig : IEntityTypeConfiguration<BTR>
     {
@@ -13,7 +13,7 @@ namespace eft_app_guide.Models.Entities.Config
             builder
                 .HasOne(x => x.Map)
                 .WithMany(x => x.BTRs)
-                .HasForeignKey(x => x.MapName);
+                .HasForeignKey(x => x.MapId);
         }
     }
 }

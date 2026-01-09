@@ -1,5 +1,5 @@
 ﻿using eft_app_guide.Models.AccessKeys.Config;
-using eft_app_guide.Models.Entities;
+using eft_app_guide.Models.Items;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 

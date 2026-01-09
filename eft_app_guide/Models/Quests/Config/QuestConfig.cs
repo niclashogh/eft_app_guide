@@ -19,7 +19,7 @@ namespace eft_app_guide.Models.Quests.Config
             builder
                 .HasOne(x => x.Trader)
                 .WithMany(x => x.Quests)
-                .HasForeignKey(x => x.TraderName);
+                .HasForeignKey(x => x.TraderId);
 
             // Link Quest to QuestRequirement
             builder

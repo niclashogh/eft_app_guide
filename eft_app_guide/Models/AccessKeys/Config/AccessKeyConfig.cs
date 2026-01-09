@@ -19,7 +19,7 @@ namespace eft_app_guide.Models.AccessKeys.Config
             builder
                 .HasOne(x => x.Map)
                 .WithMany(x => x.AccessKeys)
-                .HasForeignKey(x => x.MapName);
+                .HasForeignKey(x => x.MapId);
 
             // Link AccessKey to AccessKeyLoot
             builder

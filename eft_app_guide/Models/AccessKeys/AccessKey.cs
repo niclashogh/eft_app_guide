@@ -1,6 +1,7 @@
 ﻿using eft_app_guide.Models.AccessKeys.Config;
-using eft_app_guide.Models.Entities;
 using eft_app_guide.Models.Interfaces;
+using eft_app_guide.Models.Items;
+using eft_app_guide.Models.Maps;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 
@@ -12,7 +13,7 @@ namespace eft_app_guide.Models.AccessKeys
         #region Keys
         [Key] public int Id { get; init; }
         [Required] public int ItemId { get; set; }
-        [Required] public string MapName { get; set; }
+        [Required] public string MapId { get; set; }
         #endregion
 
         [Required] public bool Show { get; set; }

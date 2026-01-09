@@ -1,6 +1,6 @@
-﻿using eft_app_guide.Models.Entities;
-using eft_app_guide.Models.Enums;
+﻿using eft_app_guide.Models.Enums;
 using eft_app_guide.Models.Interfaces;
+using eft_app_guide.Models.Maps;
 using eft_app_guide.Models.Markers.Config;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
@@ -12,7 +12,7 @@ namespace eft_app_guide.Models.Markers
     {
         #region Keys
         [Key] public int Id { get; init; }
-        [Required] public string MapName { get; set; }
+        [Required] public string MapId { get; set; }
         [Required] public int MarkerIconId { get; set; }
         #endregion
 
