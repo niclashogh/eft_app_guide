@@ -24,9 +24,9 @@ namespace eft_app_guide.Models.Quests
         public QuestLine? QuestLine { get; set; }
         public Trader? Trader { get; set; }
 
-        public List<QuestRequirement> QuestRequirements { get; set; } = new();
-        public List<QuestReward> QuestRewards { get; set; } = new();
-        public List<QuestTask> QuestTasks { get; set; } = new();
+        public List<QuestRequirement> Requirements { get; set; } = new();
+        public List<QuestReward> Rewards { get; set; } = new();
+        public List<QuestTask> Tasks { get; set; } = new();
         #endregion
     }
 }

@@ -22,7 +22,7 @@ namespace eft_app_guide.Models.Markers
 
         #region Relations
         public Map? Map { get; set; }
-        public MarkerIcon? MarkerIcon { get; set; }
+        public MarkerIcon? Icon { get; set; }
         #endregion
     }
 }

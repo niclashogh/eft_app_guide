@@ -1,24 +1,24 @@
-﻿using eft_app_guide.Models.Items;
+﻿using eft_app_guide.Models.AccessKeys;
 using eft_app_guide.Models.Locations.Config;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Locations
 {
-    [EntityTypeConfiguration(typeof(LocationLootConfig))]
-    public class LocationLoot
+    [EntityTypeConfiguration(typeof(LocationAccessConfig))]
+    public class LocationAccess
     {
         #region Keys
         [Key] public int Id { get; init; }
         [Required] public int LocationId { get; set; } // Mix key?
-        [Required] public int ItemId { get; set; }
+        [Required] public int AccessKeyId { get; set; }
         #endregion
 
-        [Required] public int Quantity { get; set; }
+        [Required] public bool IsLocked { get; set; }
 
         #region Relations
         public Location? Location { get; set; }
-        public Item? Item { get; set; }
+        public AccessKey? AccessKey { get; set; }
         #endregion
     }
 }

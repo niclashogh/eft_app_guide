@@ -5,9 +5,12 @@ using eft_app_guide.Models.Quests;
 using eft_app_guide.Models.BTRs;
 using System.ComponentModel.DataAnnotations;
 using eft_app_guide.Models.Locations;
+using Microsoft.EntityFrameworkCore;
+using eft_app_guide.Models.Maps.Config;
 
 namespace eft_app_guide.Models.Maps
 {
+    [EntityTypeConfiguration(typeof(MapConfig))]
     public class Map
     {
         #region Keys
@@ -21,8 +24,8 @@ namespace eft_app_guide.Models.Maps
         public List<Location> Locations { get; set; } = new();
         public List<Extraction> Extractions { get; set; } = new();
         public List<QuestTask> QuestTasks { get; set; } = new();
-        public List<Marker> Markers { get; set; } = new();
         public List<BTR> BTRs { get; set; } = new();
+        public List<Marker> Markers { get; set; } = new();
         #endregion
     }
 }

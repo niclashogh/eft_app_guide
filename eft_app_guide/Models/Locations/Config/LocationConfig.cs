@@ -20,6 +20,18 @@ namespace eft_app_guide.Models.Locations.Config
                 .HasMany(x => x.Loot)
                 .WithOne(x => x.Location)
                 .HasForeignKey(x => x.LocationId);
+
+            // Link Location to LocationAccess
+            builder
+                .HasMany(x => x.Access)
+                .WithOne(x => x.Location)
+                .HasForeignKey(x => x.LocationId);
+
+            // Link Location to Container
+            builder
+                .HasMany(x => x.Containers)
+                .WithOne(x => x.Location)
+                .HasForeignKey(x => x.LocationId);
         }
     }
 }

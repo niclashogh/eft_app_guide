@@ -8,13 +8,12 @@ using System.Threading.Tasks;
 
 namespace eft_app_guide.Models.Rewards
 {
-    public class Reward
+    public class Reward // ?
     {
         #region Keys
         [Key] public int Id { get; init; }
         #endregion
 
         [Required] public RewardTypes Type { get; set; }
-        [Required] public 
     }
 }

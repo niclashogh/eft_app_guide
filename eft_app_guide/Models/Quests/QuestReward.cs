@@ -7,7 +7,7 @@ using System.ComponentModel.DataAnnotations;
 namespace eft_app_guide.Models.Quests
 {
     [EntityTypeConfiguration(typeof(QuestRewardConfig))]
-    public class QuestReward
+    public class QuestReward // ?
     {
         #region Keys
         [Key] public int Id { get; init; }

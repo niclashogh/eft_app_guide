@@ -1,22 +1,20 @@
-﻿using eft_app_guide.Models.AccessKeys;
+﻿using eft_app_guide.Models.Containers.Enums;
 using eft_app_guide.Models.Locations;
 using System.ComponentModel.DataAnnotations;
 
-namespace eft_app_guide.Models.LootableContainers
+namespace eft_app_guide.Models.Containers
 {
-    public class LootableContainer
+    public class Container
     {
         #region Keys
         [Key] public int Id { get; init; }
         [Required] public int LocationId { get; set; }
-        public int? AccessKeyId { get; set; }
         #endregion
 
-        [Required] public bool Locked { get; set; }
+        [Required] public ContainerTypes Type { get; set; }
 
         #region Relations
         public Location? Location { get; set; }
-        public AccessKey? AccessKey { get; set; }
         #endregion
     }
 }

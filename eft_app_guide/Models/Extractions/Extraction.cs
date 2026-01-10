@@ -11,15 +11,16 @@ namespace eft_app_guide.Models.Extractions
     {
         #region Keys
         [Key] public int Id { get; init; }
-        [Required] public string MapId { get; set; }
+        [Required] public int MapId { get; set; }
         #endregion
 
         [Required] public string Name { get; set; }
+        [Required] public bool IsRandom { get; set; }
 
         #region Relations
         public Map? Map { get; set; }
 
-        public List<ExtractionRequirement> ExtractionRequirements { get; set; } = new(); 
+        public List<ExtractionRequirement> Requirements { get; set; } = new(); 
         #endregion
     }
 }

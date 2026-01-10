@@ -1,7 +1,10 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using eft_app_guide.Models.Items.Config;
+using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Items
 {
+    [EntityTypeConfiguration(typeof(ItemCategoryConfig))]
     public class ItemCategory
     {
         #region Keys

@@ -2,6 +2,6 @@
 {
     public enum ItemAccessTypes
     {
-        AsHandover, AsTrading, AsCrafting
+        Handover, Trading, Crafting
     }
 }

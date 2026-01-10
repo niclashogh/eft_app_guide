@@ -1,8 +1,11 @@
 ﻿using eft_app_guide.Models.Quests;
+using eft_app_guide.Models.Traders.Config;
+using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Traders
 {
+    [EntityTypeConfiguration(typeof(TraderConfig))]
     public class Trader
     {
         #region Keys
@@ -15,6 +18,7 @@ namespace eft_app_guide.Models.Traders
         #region Relations
         public List<TraderLevel> Levels { get; set; } = new();
         public List<Quest> Quests { get; set; } = new();
+        public List<TraderItem> Items { get; set; } = new();
         #endregion
     }
 }
