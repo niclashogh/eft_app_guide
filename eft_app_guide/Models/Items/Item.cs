@@ -1,4 +1,4 @@
-﻿using eft_app_guide.Models.AccessKeys;
+﻿using eft_app_guide.Models.Locations;
 using eft_app_guide.Models.Quests;
 using System.ComponentModel.DataAnnotations;
 
@@ -16,8 +16,8 @@ namespace eft_app_guide.Models.Items
 
         #region Relations
         public ItemCategory? Category { get; set; }
-        public List<AccessKey> AccessKeys { get; set; } = new();
-        public List<AccessKeyLoot> AccessKeyLoot { get; set; } = new();
+
+        public List<LocationLoot> LocationLoot { get; set; } = new();
         public List<QuestReward> QuestRewards { get; set; } = new();
         #endregion
     }

@@ -1,5 +1,5 @@
 ﻿using eft_app_guide.Models._Internal.Config;
-using eft_app_guide.Models.Enums;
+using eft_app_guide.Models._Internal.Enums;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 

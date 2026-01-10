@@ -1,4 +1,4 @@
-﻿using eft_app_guide.Models.Enums;
+﻿using eft_app_guide.Models._Internal.Enums;
 using eft_app_guide.Models.Interfaces;
 using eft_app_guide.Models.Maps;
 using eft_app_guide.Models.Markers.Config;

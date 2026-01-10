@@ -1,6 +1,6 @@
 ﻿using eft_app_guide.Models._Internal;
-using eft_app_guide.Models.AccessKeys;
 using eft_app_guide.Models.Extractions;
+using eft_app_guide.Models.Locations;
 using eft_app_guide.Models.Maps;
 using eft_app_guide.Models.Markers;
 using eft_app_guide.Models.Quests;
@@ -16,7 +16,7 @@ namespace eft_app_guide
         DbSet<Map> Maps { get; set; }
         DbSet<Trader> Traders { get; set; }
 
-        DbSet<AccessKey> AccessKeys { get; set; }
+        DbSet<Location> AccessKeys { get; set; }
         DbSet<Extraction> Extractions { get; set; }
         DbSet<Marker> Markers { get; set; }
         DbSet<Quest> Quests { get; set; }

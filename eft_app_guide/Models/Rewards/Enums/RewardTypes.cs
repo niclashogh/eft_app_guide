@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace eft_app_guide.Models.Rewards.Enums
+﻿namespace eft_app_guide.Models.Rewards.Enums
 {
     public enum RewardTypes
     {
-        Item, Access, Money
+        Item, Money, Map, Trader
     }
 }

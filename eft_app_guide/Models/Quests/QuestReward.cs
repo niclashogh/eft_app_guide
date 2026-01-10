@@ -1,6 +1,6 @@
 ﻿using eft_app_guide.Models.Items;
+using eft_app_guide.Models.Items.Enums;
 using eft_app_guide.Models.Quests.Config;
-using eft_app_guide.Models.Quests.Enums;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 
@@ -16,7 +16,7 @@ namespace eft_app_guide.Models.Quests
         #endregion
 
         public int? Quantity { get; set; }
-        public QuestRewardTypes? RewardType { get; set; }
+        public ItemAccessTypes? RewardType { get; set; }
 
         #region Relations
         public Quest? Quest { get; set; }

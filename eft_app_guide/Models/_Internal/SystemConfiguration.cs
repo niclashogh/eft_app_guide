@@ -1,4 +1,4 @@
-﻿using eft_app_guide.Models.Enums;
+﻿using eft_app_guide.Models._Internal.Enums;
 using System.Windows.Controls;
 
 namespace eft_app_guide.Models._Internal

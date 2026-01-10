@@ -1,6 +1,6 @@
 ﻿namespace eft_app_guide.Models.Traders.Enums
 {
-    public enum TraderAccess
+    public enum TraderAccessStates
     {
         Locked, Unclocked
     }
