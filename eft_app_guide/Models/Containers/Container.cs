@@ -1,9 +1,12 @@
-﻿using eft_app_guide.Models.Containers.Enums;
+﻿using eft_app_guide.Models.Containers.Config;
+using eft_app_guide.Models.Containers.Enums;
 using eft_app_guide.Models.Locations;
+using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Containers
 {
+    [EntityTypeConfiguration(typeof(ContainerConfig))]
     public class Container
     {
         #region Keys
