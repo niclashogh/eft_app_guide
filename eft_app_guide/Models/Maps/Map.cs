@@ -1,5 +1,4 @@
 ﻿using eft_app_guide.Models.Extractions;
-using eft_app_guide.Models.Maps.Enums;
 using eft_app_guide.Models.Markers;
 using eft_app_guide.Models.Quests;
 using eft_app_guide.Models.BTRs;
@@ -18,7 +17,7 @@ namespace eft_app_guide.Models.Maps
         #endregion
 
         [Required] public string Name { get; set; }
-        [Required] public MapAccessStates Access { get; set; }
+        [Required] public bool IsLocked { get; set; }
 
         #region Relatations
         public List<Location> Locations { get; set; } = new();

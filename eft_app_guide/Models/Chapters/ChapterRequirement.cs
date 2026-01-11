@@ -9,7 +9,7 @@ namespace eft_app_guide.Models.Chapters
         [Required] public int ChapterId { get; set; }
         #endregion
 
-        [Required] public string Requirement { get; set; }
+        [Required] public string Description { get; set; }
 
         #region Relatations
         public Chapter? Chapter { get; set; }

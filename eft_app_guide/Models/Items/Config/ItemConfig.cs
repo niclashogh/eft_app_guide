@@ -21,12 +21,6 @@ namespace eft_app_guide.Models.Items.Config
                 .WithOne(x => x.Item)
                 .HasForeignKey(x => x.ItemId);
 
-            // Link Item to ItemAcess
-            builder
-                .HasMany(x => x.Access)
-                .WithOne(x => x.Item)
-                .HasForeignKey(x => x.ItemId);
-
             // Link Item to TraderItem
             builder
                 .HasMany(x => x.TraderItems)

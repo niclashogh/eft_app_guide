@@ -12,7 +12,7 @@ namespace eft_app_guide.Models.Quests
         [Required] public int QuestId { get; set; }
         #endregion
 
-        [Required] public string Requirement { get; set; }
+        [Required] public string Description { get; set; }
 
         #region Relations
         public Quest? Quest { get; set; }

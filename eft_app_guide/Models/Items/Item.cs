@@ -1,4 +1,5 @@
-﻿using eft_app_guide.Models.Items.Config;
+﻿using eft_app_guide.Models.Hideout;
+using eft_app_guide.Models.Items.Config;
 using eft_app_guide.Models.Locations;
 using eft_app_guide.Models.Traders;
 using Microsoft.EntityFrameworkCore;
@@ -21,8 +22,8 @@ namespace eft_app_guide.Models.Items
         public ItemCategory? Category { get; set; }
 
         public List<LocationLoot> LocationLoot { get; set; } = new();
-        public List<ItemAccess> Access { get; set; } = new();
         public List<TraderItem> TraderItems { get; set; } = new();
+        public List<StationItem> StationItems { get; set; } = new();
         #endregion
     }
 }

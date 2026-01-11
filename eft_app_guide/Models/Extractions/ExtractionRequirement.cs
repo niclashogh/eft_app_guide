@@ -12,7 +12,7 @@ namespace eft_app_guide.Models.Extractions
         [Required] public int ExtractionId { get; set; }
         #endregion
 
-        [Required] public string Requirement { get; set; }
+        [Required] public string Description { get; set; }
 
         #region Relations
         public Extraction? Extraction { get; set; }
