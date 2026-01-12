@@ -1,6 +1,6 @@
 ﻿using eft_app_guide._Attributes;
 using eft_app_guide._Persistence;
-using eft_app_guide.Models._Internal.Enums;
+using eft_app_guide._Persistence.Enums;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 

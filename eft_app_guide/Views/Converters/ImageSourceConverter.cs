@@ -1,4 +1,5 @@
-﻿using eft_app_guide.Models.Extractions;
+﻿using eft_app_guide._Persistence;
+using eft_app_guide.Models.Extractions;
 using eft_app_guide.Models.Maps;
 using eft_app_guide.Models.Traders;
 using System.Globalization;
@@ -12,7 +13,7 @@ namespace eft_app_guide.Views.Converters
     {
         private BitmapImage? Bitmap<T>(T type, string fileName)
         {
-            string path = $"{App.ROOT_ASSET_FOLDER}/{nameof(T)}/{fileName}.png";
+            string path = $"{StorageFolder.ASSET_FOLDER}/{nameof(T)}/{fileName}.png";
             if (!File.Exists(path))
             {
                 // log

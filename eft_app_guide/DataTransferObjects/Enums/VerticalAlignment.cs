@@ -1,4 +1,4 @@
-﻿namespace eft_app_guide.Models._Internal.Enums
+﻿namespace eft_app_guide.DataTransferObjects.Enums
 {
     public enum VerticalAlignment
     {

@@ -1,7 +1,8 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using eft_app_guide._Persistence.Entities.AuditLogs;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace eft_app_guide.Models._Internal.Config
+namespace eft_app_guide._Persistence.Entities.AuditLogs.Config
 {
     public class AuditLogConfig : IEntityTypeConfiguration<AuditLog>
     {

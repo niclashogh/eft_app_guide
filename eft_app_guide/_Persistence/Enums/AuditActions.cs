@@ -1,4 +1,4 @@
-﻿namespace eft_app_guide.Models._Internal.Enums
+﻿namespace eft_app_guide._Persistence.Enums
 {
     public enum AuditActions
     {

@@ -1,4 +1,4 @@
-﻿using eft_app_guide.Models._Enums;
+﻿using eft_app_guide.DataTransferObjects.Enums;
 using eft_app_guide.Models.Interfaces;
 using eft_app_guide.Models.Markers.Config;
 using Microsoft.EntityFrameworkCore;

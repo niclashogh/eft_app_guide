@@ -1,7 +1,7 @@
-﻿using eft_app_guide.Models._Internal.Enums;
+﻿using eft_app_guide.DataTransferObjects.Enums;
 using System.Windows.Controls;
 
-namespace eft_app_guide.Models._Internal
+namespace eft_app_guide.DataTransferObjects
 {
     public class SystemConfiguration
     {

@@ -1,4 +1,4 @@
-﻿namespace eft_app_guide.Models._Enums
+﻿namespace eft_app_guide.DataTransferObjects.Enums
 {
     public enum OutlineVariants
     {

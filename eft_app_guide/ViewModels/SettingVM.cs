@@ -1,6 +1,6 @@
 ﻿using eft_app_guide._Attributes;
 using eft_app_guide._Persistence;
-using eft_app_guide.Models._Internal.Records;
+using eft_app_guide.DataTransferObjects.Records;
 using eft_app_guide.Services;
 using eft_app_guide.ViewModels.ToUserControls;
 using eft_app_guide.ViewModels.ToUserControls.BTRs;

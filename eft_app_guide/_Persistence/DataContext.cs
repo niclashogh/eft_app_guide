@@ -1,4 +1,4 @@
-﻿using eft_app_guide.Models._Internal;
+﻿using eft_app_guide._Persistence.Entities.AuditLogs;
 using eft_app_guide.Models.Extractions;
 using eft_app_guide.Models.Locations;
 using eft_app_guide.Models.Maps;

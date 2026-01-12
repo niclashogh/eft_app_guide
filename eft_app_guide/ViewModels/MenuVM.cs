@@ -1,6 +1,6 @@
 ﻿using eft_app_guide._Attributes;
-using eft_app_guide.Models._Internal.Enums;
-using eft_app_guide.Models._Internal.Records;
+using eft_app_guide.DataTransferObjects.Enums;
+using eft_app_guide.DataTransferObjects.Records;
 using eft_app_guide.Services;
 using eft_app_guide.Views;
 using Microsoft.Extensions.DependencyInjection;

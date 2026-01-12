@@ -1,9 +1,9 @@
-﻿using eft_app_guide.Models._Internal.Config;
-using eft_app_guide.Models._Internal.Enums;
+﻿using eft_app_guide._Persistence.Entities.AuditLogs.Config;
+using eft_app_guide._Persistence.Enums;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 
-namespace eft_app_guide.Models._Internal
+namespace eft_app_guide._Persistence.Entities.AuditLogs
 {
     [EntityTypeConfiguration(typeof(AuditLogConfig))]
     public class AuditLog

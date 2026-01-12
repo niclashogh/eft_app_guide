@@ -1,5 +1,5 @@
 ﻿using eft_app_guide._Persistence;
-using eft_app_guide.Models._Internal;
+using eft_app_guide.DataTransferObjects;
 using System.IO;
 using System.Text.Json;
 
