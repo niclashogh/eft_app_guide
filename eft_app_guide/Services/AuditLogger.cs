@@ -1,5 +1,5 @@
-﻿using eft_app_guide.Attributes;
-using eft_app_guide.Database;
+﻿using eft_app_guide._Attributes;
+using eft_app_guide._Persistence;
 using eft_app_guide.Models._Internal.Enums;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
@@ -22,7 +22,7 @@ namespace eft_app_guide.Services
         }
 
         public async Task LogEntryChanged(int entityId, string forEntity, object oldValues, object newValues) => await Log(entityId, AuditActions.Changed, forEntity, oldValues, newValues);
-        public async Task LogEntryCreation(int entityId, string forEntity, object newValues) => await Log(entityId, AuditActions.Created, forEntity, null, newValues);
+        public async Task LogEntryCreated(int entityId, string forEntity, object newValues) => await Log(entityId, AuditActions.Created, forEntity, null, newValues);
         public async Task LogEntryRemoved(int entityId, string forEntity, object oldValues) => await Log(entityId, AuditActions.Removed, forEntity, oldValues, null);
         
         public async Task ClearEntireLog()

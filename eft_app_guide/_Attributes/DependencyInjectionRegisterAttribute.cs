@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 
-namespace eft_app_guide.Attributes
+namespace eft_app_guide._Attributes
 {
     [AttributeUsage(AttributeTargets.Class)]
     public class DependencyInjectionRegisterAttribute : Attribute

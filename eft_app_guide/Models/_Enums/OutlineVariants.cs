@@ -1,4 +1,4 @@
-﻿namespace eft_app_guide.Models._Internal.Enums
+﻿namespace eft_app_guide.Models._Enums
 {
     public enum OutlineVariants
     {

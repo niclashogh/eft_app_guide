@@ -1,4 +1,5 @@
-﻿using eft_app_guide.Models._Internal;
+﻿using eft_app_guide._Persistence;
+using eft_app_guide.Models._Internal;
 using System.IO;
 using System.Text.Json;
 
@@ -7,18 +8,11 @@ namespace eft_app_guide.Services
 {
     public static class ConfigurationManager
     {
-        private readonly static string FILE_PATH = Path.Combine(App.ROOT_DATA_FOLDER, "config.json");
-
         public static SystemConfiguration Read()
         {
-            if (!File.Exists(FILE_PATH))
-            {
-                using (File.Create(FILE_PATH)) { }
-                Save(new());
-                return new();
-            }
+            StorageFolder.EnsureConfigFile();
 
-            string? json = File.ReadAllText(FILE_PATH);
+            string? json = File.ReadAllText(StorageFolder.CONFIG_FILE);
             if (string.IsNullOrEmpty(json)) return new();
 
             try
@@ -34,7 +28,7 @@ namespace eft_app_guide.Services
         public static void Save(SystemConfiguration config)
         {
             string json = JsonSerializer.Serialize(config, new JsonSerializerOptions { WriteIndented = true });
-            File.WriteAllText(FILE_PATH, json);
+            File.WriteAllText(StorageFolder.CONFIG_FILE, json);
         }
 
         public static void Update(Action<SystemConfiguration> updateAction)

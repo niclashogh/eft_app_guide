@@ -1,5 +1,5 @@
-﻿using eft_app_guide.Attributes;
-using eft_app_guide.Database;
+﻿using eft_app_guide._Attributes;
+using eft_app_guide._Persistence;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using System;

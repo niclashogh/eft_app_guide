@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore.Diagnostics;
 using System.Data.Common;
 
-namespace eft_app_guide.Database
+namespace eft_app_guide._Persistence
 {
     public class ForeignKeyInterceptor : DbConnectionInterceptor
     {
