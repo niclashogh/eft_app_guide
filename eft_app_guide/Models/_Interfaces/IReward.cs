@@ -7,6 +7,6 @@ namespace eft_app_guide.Models._Interfaces
         string Description { get; set; }
         RewardTypes Type { get; set; }
         int TypeKey { get; set; }
-        int Amount { get; set; }
+        int Quantity { get; set; }
     }
 }

@@ -13,11 +13,11 @@ namespace eft_app_guide.Models.Items.Config
             builder
                 .HasOne(x => x.Category)
                 .WithMany(x => x.Items)
-                .HasForeignKey(x => x.CategoryId);
+                .HasForeignKey(x => x.ItemCategoryId);
 
             // Link Item to LocationLoot
             builder
-                .HasMany(x => x.LocationLoot)
+                .HasMany(x => x.LocationItems)
                 .WithOne(x => x.Item)
                 .HasForeignKey(x => x.ItemId);
 

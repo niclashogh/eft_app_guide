@@ -13,7 +13,7 @@ namespace eft_app_guide.Models.Items.Config
             builder
                 .HasMany(x => x.Items)
                 .WithOne(x => x.Category)
-                .HasForeignKey(x => x.CategoryId);
+                .HasForeignKey(x => x.ItemCategoryId);
         }
     }
 }

@@ -1,6 +1,4 @@
-﻿using eft_app_guide.Models._Enums;
-using eft_app_guide.Models.Interfaces;
-using eft_app_guide.Models.Maps;
+﻿using eft_app_guide.Models.Maps;
 using eft_app_guide.Models.Markers.Config;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
@@ -8,26 +6,19 @@ using System.ComponentModel.DataAnnotations;
 namespace eft_app_guide.Models.Markers
 {
     [EntityTypeConfiguration(typeof(MarkerConfig))]
-    public class Marker : IPosition, ISize
+    public class Marker
     {
         #region Keys
         [Key] public int Id { get; init; }
         [Required] public string MapId { get; set; }
-        [Required] public int MarkerIconId { get; set; }
         #endregion
 
         [Required] public string Name { get; set; }
         [Required] public string Description { get; set; }
 
-        [Required] public double X { get; set; }
-        [Required] public double Y { get; set; }
-        [Required] public double Width { get; set; }
-        [Required] public double Height { get; set; }
-        [Required] public OutlineVariants Outline { get; set; }
-
         #region Relations
         public Map? Map { get; set; }
-        public MarkerIcon? Icon { get; set; }
+        public MarkerDisplay? Display { get; set; }
         #endregion
     }
 }

@@ -17,7 +17,7 @@ namespace eft_app_guide.Models.Quests
         [Required] public string Description { get; set; }
         [Required] public RewardTypes Type { get; set; }
         [Required] public int TypeKey { get; set; }
-        [Required] public int Amount { get; set; }
+        [Required] public int Quantity { get; set; }
 
         #region Relations
         public Quest? Quest { get; set; }

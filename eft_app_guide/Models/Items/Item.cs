@@ -12,7 +12,7 @@ namespace eft_app_guide.Models.Items
     {
         #region Keys
         [Key] public int Id { get; init; }
-        [Required] public int CategoryId { get; set; }
+        [Required] public int ItemCategoryId { get; set; }
         #endregion
 
         [Required] public string Name { get; set; }
@@ -21,7 +21,7 @@ namespace eft_app_guide.Models.Items
         #region Relations
         public ItemCategory? Category { get; set; }
 
-        public List<LocationLoot> LocationLoot { get; set; } = new();
+        public List<LocationItem> LocationItems { get; set; } = new();
         public List<TraderItem> TraderItems { get; set; } = new();
         public List<StationItem> StationItems { get; set; } = new();
         #endregion

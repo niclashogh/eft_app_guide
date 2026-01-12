@@ -14,7 +14,7 @@ namespace eft_app_guide.Models.Markers
         [Required] public string Icon { get; set; }
 
         #region Relations
-        public List<Marker> Markers { get; set; } = new();
+        public List<MarkerDisplay> MarkerDisplays { get; set; } = new();
         #endregion
     }
 }

@@ -20,7 +20,7 @@ namespace eft_app_guide.Models.Locations
         public Map? Map { get; set; }
         public LocationDisplay? Display { get; set; }
 
-        public List<LocationLoot> Loot { get; set; } = new();
+        public List<LocationItem> Items { get; set; } = new();
         public List<LocationAccess> Access { get; set; } = new();
         public List<Container> Containers { get; set; } = new();
         #endregion

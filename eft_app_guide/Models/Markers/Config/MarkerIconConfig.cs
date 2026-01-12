@@ -9,9 +9,9 @@ namespace eft_app_guide.Models.Markers.Config
         {
             builder.HasKey(x => x.Id);
 
-            // Link MarkerIcon to Marker
+            // Link MarkerIcon to MarkerDisplay
             builder
-                .HasMany(x => x.Markers)
+                .HasMany(x => x.MarkerDisplays)
                 .WithOne(x => x.Icon)
                 .HasForeignKey(x => x.MarkerIconId);
         }

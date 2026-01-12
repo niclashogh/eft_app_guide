@@ -17,7 +17,7 @@ namespace eft_app_guide.Models.Locations.Config
 
             // Link Location to LocationLoot
             builder
-                .HasMany(x => x.Loot)
+                .HasMany(x => x.Items)
                 .WithOne(x => x.Location)
                 .HasForeignKey(x => x.LocationId);
 
