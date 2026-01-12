@@ -20,6 +20,12 @@ namespace eft_app_guide.Models.Extractions.Config
                 .HasMany(x => x.Requirements)
                 .WithOne(x => x.Extraction)
                 .HasForeignKey(x => x.ExtractionId);
+
+            // Link Extraction to ExtractionDisplay
+            builder
+                .HasOne(x => x.Display)
+                .WithOne(x => x.Extraction)
+                .HasForeignKey<ExtractionDisplay>(x => x.ExtractionId);
         }
     }
 }

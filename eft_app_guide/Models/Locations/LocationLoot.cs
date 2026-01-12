@@ -10,7 +10,7 @@ namespace eft_app_guide.Models.Locations
     {
         #region Keys
         [Key] public int Id { get; init; }
-        [Required] public int LocationId { get; set; } // Mix key?
+        [Required] public int LocationId { get; set; }
         [Required] public int ItemId { get; set; }
         #endregion
 

@@ -1,4 +1,4 @@
-﻿using eft_app_guide.Models.Hideout;
+﻿using eft_app_guide.Models.HideoutStations;
 using eft_app_guide.Models.Items.Config;
 using eft_app_guide.Models.Locations;
 using eft_app_guide.Models.Traders;

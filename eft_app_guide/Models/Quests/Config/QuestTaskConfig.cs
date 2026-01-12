@@ -20,6 +20,12 @@ namespace eft_app_guide.Models.Quests.Config
                 .HasOne(x => x.Map)
                 .WithMany(x => x.QuestTasks)
                 .HasForeignKey(x => x.MapId);
+
+            // Link QuestTask to QuestTaskDisplay
+            builder
+                .HasOne(x => x.Display)
+                .WithOne(x => x.QuestTask)
+                .HasForeignKey<QuestTaskDisplay>(x => x.QuestTaskId);
         }
     }
 }

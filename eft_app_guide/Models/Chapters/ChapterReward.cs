@@ -1,16 +1,22 @@
-﻿using eft_app_guide.Models.Quests.Enums;
+﻿using eft_app_guide.Models._Enums;
+using eft_app_guide.Models._Interfaces;
+using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Chapters
 {
-    public class ChapterReward
+    [EntityTypeConfiguration(typeof(ChapterReward))]
+    public class ChapterReward : IReward
     {
         #region Keys
         [Key] public int Id { get; init; }
         [Required] public int ChapterId { get; set; }
         #endregion
 
-        public string Reward { get; set; }
+        [Required] public string Description { get; set; }
+        [Required] public RewardTypes Type { get; set; }
+        [Required] public int TypeKey { get; set; }
+        [Required] public int Amount { get; set; }
 
         #region Relatations
         public Chapter? Chapter { get; set; }

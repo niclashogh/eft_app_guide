@@ -8,7 +8,7 @@ using System.ComponentModel.DataAnnotations;
 namespace eft_app_guide.Models.Markers
 {
     [EntityTypeConfiguration(typeof(MarkerConfig))]
-    public class Marker : BasePositionAndSize, IPositionAndSize
+    public class Marker : IPosition, ISize
     {
         #region Keys
         [Key] public int Id { get; init; }
@@ -18,6 +18,11 @@ namespace eft_app_guide.Models.Markers
 
         [Required] public string Name { get; set; }
         [Required] public string Description { get; set; }
+
+        [Required] public double X { get; set; }
+        [Required] public double Y { get; set; }
+        [Required] public double Width { get; set; }
+        [Required] public double Height { get; set; }
         [Required] public OutlineVariants Outline { get; set; }
 
         #region Relations

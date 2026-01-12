@@ -18,6 +18,7 @@ namespace eft_app_guide.Models.Locations
 
         #region Relations
         public Map? Map { get; set; }
+        public LocationDisplay? Display { get; set; }
 
         public List<LocationLoot> Loot { get; set; } = new();
         public List<LocationAccess> Access { get; set; } = new();

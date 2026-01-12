@@ -1,4 +1,4 @@
-﻿namespace eft_app_guide.Models.Quests.Enums
+﻿namespace eft_app_guide.Models._Enums
 {
     public enum QuestAccess
     {

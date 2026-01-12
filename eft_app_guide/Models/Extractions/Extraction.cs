@@ -7,7 +7,7 @@ using System.ComponentModel.DataAnnotations;
 namespace eft_app_guide.Models.Extractions
 {
     [EntityTypeConfiguration(typeof(ExtractionConfig))]
-    public class Extraction : BasePosition, IPosition
+    public class Extraction
     {
         #region Keys
         [Key] public int Id { get; init; }
@@ -19,6 +19,7 @@ namespace eft_app_guide.Models.Extractions
 
         #region Relations
         public Map? Map { get; set; }
+        public ExtractionDisplay? Display { get; set; }
 
         public List<ExtractionRequirement> Requirements { get; set; } = new(); 
         #endregion

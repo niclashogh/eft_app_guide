@@ -1,4 +1,5 @@
-﻿using eft_app_guide.Models.Enums;
+﻿using eft_app_guide.Models._Enums;
+using eft_app_guide.Models._Interfaces;
 using eft_app_guide.Models.Quests.Config;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
@@ -6,7 +7,7 @@ using System.ComponentModel.DataAnnotations;
 namespace eft_app_guide.Models.Quests
 {
     [EntityTypeConfiguration(typeof(QuestRewardConfig))]
-    public class QuestReward
+    public class QuestReward : IReward
     {
         #region Keys
         [Key] public int Id { get; init; }
@@ -15,7 +16,8 @@ namespace eft_app_guide.Models.Quests
 
         [Required] public string Description { get; set; }
         [Required] public RewardTypes Type { get; set; }
-        [Required] public int TypeId { get; set; }
+        [Required] public int TypeKey { get; set; }
+        [Required] public int Amount { get; set; }
 
         #region Relations
         public Quest? Quest { get; set; }

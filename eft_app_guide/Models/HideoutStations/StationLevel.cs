@@ -1,7 +1,10 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using eft_app_guide.Models.HideoutStations.Config;
+using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations;
 
-namespace eft_app_guide.Models.Hideout
+namespace eft_app_guide.Models.HideoutStations
 {
+    [EntityTypeConfiguration(typeof(StationLevelConfig))]
     public class StationLevel
     {
         #region Keys
@@ -10,6 +13,7 @@ namespace eft_app_guide.Models.Hideout
         #endregion
 
         [Required] public int Level {  get; set; }
+        [Required] public bool IsBuild { get; set; }
 
         #region Relations
         public Station? Station { get; set; }

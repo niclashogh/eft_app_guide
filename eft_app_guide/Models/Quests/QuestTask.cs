@@ -1,5 +1,4 @@
-﻿using eft_app_guide.Models.Interfaces;
-using eft_app_guide.Models.Maps;
+﻿using eft_app_guide.Models.Maps;
 using eft_app_guide.Models.Quests.Config;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
@@ -7,7 +6,7 @@ using System.ComponentModel.DataAnnotations;
 namespace eft_app_guide.Models.Quests
 {
     [EntityTypeConfiguration(typeof(QuestTaskConfig))]
-    public class QuestTask : BasePosition, IPosition
+    public class QuestTask
     {
         #region Keys
         [Key] public int Id { get; init; }
@@ -21,6 +20,7 @@ namespace eft_app_guide.Models.Quests
         #region Relations
         public Quest? Quest { get; set; }
         public Map? Map { get; set; }
+        public QuestTaskDisplay? Display { get; set; }
         #endregion
     }
 }

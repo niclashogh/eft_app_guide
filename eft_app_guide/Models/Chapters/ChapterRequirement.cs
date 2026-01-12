@@ -1,8 +1,12 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using eft_app_guide.Models._Interfaces;
+using eft_app_guide.Models.Chapters.Config;
+using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Chapters
 {
-    public class ChapterRequirement
+    [EntityTypeConfiguration(typeof(ChaperRequirementConfig))]
+    public class ChapterRequirement : IRequirement
     {
         #region Keys
         [Key] public int Id { get; init; }

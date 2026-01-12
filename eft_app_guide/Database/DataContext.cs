@@ -7,7 +7,7 @@ using eft_app_guide.Models.Quests;
 using eft_app_guide.Models.Traders;
 using Microsoft.EntityFrameworkCore;
 
-namespace eft_app_guide
+namespace eft_app_guide.Database
 {
     public class DataContext : DbContext
     {

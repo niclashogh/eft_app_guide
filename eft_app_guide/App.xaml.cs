@@ -1,4 +1,5 @@
-﻿using eft_app_guide.Extentions;
+﻿using eft_app_guide.Database;
+using eft_app_guide.Extentions;
 using eft_app_guide.Views;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
@@ -25,6 +26,7 @@ namespace eft_app_guide
             service.AddDbContextFactory<DataContext>(opt =>
             {
                 opt.UseSqlite($"Data Source={Path.Combine(ROOT_DATA_FOLDER, "version_1.db")}");
+                opt.AddInterceptors(new ForeignKeyInterceptor());
             });
 
             service.AddDependencyInjections();

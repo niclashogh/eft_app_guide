@@ -1,10 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace eft_app_guide.Models.Items.Config
 {
@@ -15,7 +10,10 @@ namespace eft_app_guide.Models.Items.Config
             builder.HasKey(x => x.Id);
 
             // Link ItemCategory to Item
-
+            builder
+                .HasMany(x => x.Items)
+                .WithOne(x => x.Category)
+                .HasForeignKey(x => x.CategoryId);
         }
     }
 }

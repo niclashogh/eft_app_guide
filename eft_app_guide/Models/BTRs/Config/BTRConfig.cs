@@ -14,6 +14,12 @@ namespace eft_app_guide.Models.BTRs.Config
                 .HasOne(x => x.Map)
                 .WithMany(x => x.BTRs)
                 .HasForeignKey(x => x.MapId);
+
+            // Link BTR to BTRDisplay
+            builder
+                .HasOne(x => x.Display)
+                .WithOne(x => x.BTR)
+                .HasForeignKey<BTRDisplay>(x => x.BTRId);
         }
     }
 }

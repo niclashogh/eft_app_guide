@@ -14,6 +14,12 @@ namespace eft_app_guide.Models.Containers.Config
                 .HasOne(x => x.Location)
                 .WithMany(x => x.Containers)
                 .HasForeignKey(x => x.LocationId);
+
+            // Link Container to ContainerAccess
+            builder
+                .HasOne(x => x.Access)
+                .WithOne(x => x.Container)
+                .HasForeignKey<ContainerAccess>(x => x.ContainerId);
         }
     }
 }

@@ -1,9 +1,12 @@
-﻿using eft_app_guide.Models.Maps;
+﻿using eft_app_guide.Models.Chapters.Config;
+using eft_app_guide.Models.Maps;
+using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Chapters
 {
-    public class ChapterTasks
+    [EntityTypeConfiguration(typeof(ChapterTaskConfig))]
+    public class ChapterTask
     {
         #region Keys
         [Key] public int Id { get; init; }
@@ -17,6 +20,7 @@ namespace eft_app_guide.Models.Chapters
         #region Relatations
         public Chapter? Chapter { get; set; }
         public Map? Map { get; set; }
+        public ChapterTaskDisplay? Display { get; set; }
         #endregion
     }
 }

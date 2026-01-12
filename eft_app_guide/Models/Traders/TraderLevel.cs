@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations;
 namespace eft_app_guide.Models.Traders
 {
     [EntityTypeConfiguration(typeof(TraderLevelConfig))]
-    public class TraderLevel // Add TraderLevelReward ?
+    public class TraderLevel
     {
         #region Keys
         [Key] public int Id { get; init; }
