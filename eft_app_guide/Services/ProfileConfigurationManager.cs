@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace eft_app_guide.Services
 {
-    public class ProfileManager
+    public class ProfileConfigurationManager
     {
 
     }

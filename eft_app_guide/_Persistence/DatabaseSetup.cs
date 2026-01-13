@@ -6,11 +6,11 @@ namespace eft_app_guide._Persistence
 {
     public static class DatabaseSetup
     {
-        private static string DATABASE_NAME = "default";
+        private static string DATABASE_NAME = "";
 
         public static ServiceCollection AddContextFactory(ServiceCollection service)
         {
-            // StorageFolder.EnsureProfilesFile(); ... { "Selected" : { }, "Profiles": [{Name: x, Database: default}, ...] }
+            // StorageFolder.EnsureProfilesFile(); ... { "Selected" : { }, "Profiles": [{Name: x, Database: y}, ...] }
             // DATABASE_NAME = StorageFolder.GetSelectedProfile().Database;
 
             service.AddDbContextFactory<DataContext>((serviceProvider, opt) =>

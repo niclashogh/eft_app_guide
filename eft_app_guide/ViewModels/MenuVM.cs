@@ -42,9 +42,9 @@ namespace eft_app_guide.ViewModels
 
         public MenuVM()
         {
-            MenuPosition = ConfigurationManager.GetValue(x => x.MenuPosition);
-            MenuItemOrientation = ConfigurationManager.GetValue(x => x.MenuItemOrientation);
-            MenuSlideIn = ConfigurationManager.GetValue(x => x.MenuSlideIn);
+            MenuPosition = SystemConfigurationManager.GetValue(x => x.MenuPosition);
+            MenuItemOrientation = SystemConfigurationManager.GetValue(x => x.MenuItemOrientation);
+            MenuSlideIn = SystemConfigurationManager.GetValue(x => x.MenuSlideIn);
         }
     }
 }

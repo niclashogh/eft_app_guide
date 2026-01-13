@@ -3,14 +3,23 @@ using eft_app_guide.DataTransferObjects;
 using System.IO;
 using System.Text.Json;
 
-
 namespace eft_app_guide.Services
 {
-    public static class ConfigurationManager
+    public static class SystemConfigurationManager
     {
+        private static void EnsureFileExists()
+        {
+            if (!File.Exists(StorageFolder.CONFIG_FILE))
+            {
+                File.Create(StorageFolder.CONFIG_FILE).Dispose();
+                string json = JsonSerializer.Serialize(new SystemConfiguration(), new JsonSerializerOptions { WriteIndented = true });
+                File.WriteAllText(StorageFolder.CONFIG_FILE, json);
+            }
+        }
+
         public static SystemConfiguration Read()
         {
-            StorageFolder.EnsureConfigFile();
+            EnsureFileExists();
 
             string? json = File.ReadAllText(StorageFolder.CONFIG_FILE);
             if (string.IsNullOrEmpty(json)) return new();
@@ -27,6 +36,8 @@ namespace eft_app_guide.Services
 
         public static void Save(SystemConfiguration config)
         {
+            EnsureFileExists();
+
             string json = JsonSerializer.Serialize(config, new JsonSerializerOptions { WriteIndented = true });
             File.WriteAllText(StorageFolder.CONFIG_FILE, json);
         }

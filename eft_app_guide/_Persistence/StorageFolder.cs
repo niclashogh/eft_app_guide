@@ -1,6 +1,4 @@
-﻿using eft_app_guide.DataTransferObjects;
-using System.IO;
-using System.Text.Json;
+﻿using System.IO;
 
 namespace eft_app_guide._Persistence
 {
@@ -25,16 +23,6 @@ namespace eft_app_guide._Persistence
             Directory.CreateDirectory(ROOT_FOLDER);
             Directory.CreateDirectory(ASSET_FOLDER);
             Directory.CreateDirectory(DATA_FOLDER);
-        }
-
-        public static void EnsureConfigFile()
-        {
-            if (!File.Exists(CONFIG_FILE))
-            {
-                File.Create(CONFIG_FILE);
-                string json = JsonSerializer.Serialize(new SystemConfiguration(), new JsonSerializerOptions { WriteIndented = true });
-                File.WriteAllText(CONFIG_FILE, json);
-            }
         }
     }
 }
