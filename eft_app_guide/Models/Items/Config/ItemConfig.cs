@@ -26,6 +26,12 @@ namespace eft_app_guide.Models.Items.Config
                 .HasMany(x => x.TraderItems)
                 .WithOne(x => x.Item)
                 .HasForeignKey(x => x.ItemId);
+
+            // Link Item to FleaMarketItem
+            builder
+                .HasMany(x => x.FleaMarketItems)
+                .WithOne(x => x.Item)
+                .HasForeignKey (x => x.ItemId);
         }
     }
 }

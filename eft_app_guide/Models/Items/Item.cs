@@ -1,4 +1,5 @@
-﻿using eft_app_guide.Models.HideoutStations;
+﻿using eft_app_guide.Models.FleaMarket;
+using eft_app_guide.Models.HideoutStations;
 using eft_app_guide.Models.Items.Config;
 using eft_app_guide.Models.Locations;
 using eft_app_guide.Models.Traders;
@@ -24,6 +25,7 @@ namespace eft_app_guide.Models.Items
         public List<LocationItem> LocationItems { get; set; } = new();
         public List<TraderItem> TraderItems { get; set; } = new();
         public List<StationItem> StationItems { get; set; } = new();
+        public List<FleaMarketItem> FleaMarketItems { get; set; } = new();
         #endregion
     }
 }
