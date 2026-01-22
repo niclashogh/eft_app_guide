@@ -9,7 +9,7 @@ namespace eft_app_guide.Models.Extractions
     public class ExtractionDisplay : IPosition
     {
         #region Keys
-        [Key] public int ExtractionId { get; set; }
+        [Key] public int ExtractionId { get; init; }
         #endregion
 
         [Required] public double X { get; set; }

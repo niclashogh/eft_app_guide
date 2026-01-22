@@ -9,7 +9,7 @@ namespace eft_app_guide.Models.Containers
     public class ContainerAccess
     {
         #region Keys
-        [Key] public int ContainerId { get; set; }
+        [Key] public int ContainerId { get; init; }
         [Required] public int AccessKeyId { get; set; }
         #endregion
 

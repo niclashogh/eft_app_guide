@@ -9,7 +9,7 @@ namespace eft_app_guide.Models.BTRs
     public class BTRDisplay : IPosition
     {
         #region Keys
-        [Key] public int BTRId { get; set; }
+        [Key] public int BTRId { get; init; }
         #endregion
 
         [Required] public double X { get; set; }

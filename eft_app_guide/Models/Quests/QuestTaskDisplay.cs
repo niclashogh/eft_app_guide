@@ -9,7 +9,7 @@ namespace eft_app_guide.Models.Quests
     public class QuestTaskDisplay : IPosition
     {
         #region Keys
-        [Key] public int QuestTaskId { get; set; }
+        [Key] public int QuestTaskId { get; init; }
         #endregion
 
         [Required] public double X { get; set; }

@@ -9,7 +9,7 @@ namespace eft_app_guide.Models.Chapters
     public class ChapterTaskDisplay : IPosition
     {
         #region Keys
-        [Key] public int ChapterTaskId { get; set; }
+        [Key] public int ChapterTaskId { get; init; }
         #endregion
 
         [Required] public double X { get; set; }

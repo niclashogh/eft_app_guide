@@ -13,6 +13,11 @@ namespace eft_app_guide._Persistence
     {
         public DataContext(DbContextOptions<DataContext> opt) : base(opt) { }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.ApplyConfigurationsFromAssembly(typeof(DataContext).Assembly);
+        }
+
         DbSet<Map> Maps { get; set; }
         DbSet<Trader> Traders { get; set; }
 

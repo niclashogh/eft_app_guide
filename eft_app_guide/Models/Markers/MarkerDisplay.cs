@@ -10,7 +10,7 @@ namespace eft_app_guide.Models.Markers
     public class MarkerDisplay : IPosition, ISize
     {
         #region Keys
-        [Key] public int MarkerId { get; set; }
+        [Key] public int MarkerId { get; init; }
         [Required] public int MarkerIconId { get; set; }
         #endregion
 
