@@ -1,24 +1,21 @@
 ﻿using eft_app_guide.Models.Accounts.Config;
-using eft_app_guide.Models.Characters;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Accounts
 {
-    [EntityTypeConfiguration(typeof(AccountConfig))]
-    public class Account
+    [EntityTypeConfiguration(typeof(AccountEditionRewardConfig))]
+    public class AccountEditionReward
     {
         #region Keys
         [Key] public int Id { get; init; }
         [Required] public int AccountEditionId { get; set; }
         #endregion
 
-        [Required] public string Name { get; set; }
-        [Required] public DateTime WipeDate { get; set; }
+        // ...
 
         #region Relations
         public AccountEdition? Edition { get; set; }
-        public Character? Character { get; set; }
         #endregion
     }
 }

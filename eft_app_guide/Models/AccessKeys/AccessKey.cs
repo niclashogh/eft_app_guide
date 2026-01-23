@@ -16,8 +16,8 @@ namespace eft_app_guide.Models.AccessKeys
         [Required] public string Name { get; set; }
 
         #region relations
-        public List<LocationAccess> LocationAccess { get; set; } = new();
-        public List<ContainerAccess> ContainerAccess { get; set; } = new();
+        public List<LocationAccess> LocationAccess { get; set; } = [];
+        public List<ContainerAccess> ContainerAccess { get; set; } = [];
         #endregion
     }
 }

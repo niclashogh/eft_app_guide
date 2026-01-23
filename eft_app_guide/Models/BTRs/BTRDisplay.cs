@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations;
 namespace eft_app_guide.Models.BTRs
 {
     [EntityTypeConfiguration(typeof(BTRDisplayConfig))]
-    public class BTRDisplay : IPosition
+    public class BTRDisplay : IPosition // Extends BTR
     {
         #region Keys
         [Key] public int BTRId { get; init; }

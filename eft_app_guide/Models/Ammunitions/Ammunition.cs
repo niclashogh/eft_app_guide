@@ -1,7 +1,10 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using eft_app_guide.Models.Ammunitions.Config;
+using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Ammunitions
 {
+    [EntityTypeConfiguration(typeof(AmmunitionConfig))]
     public class Ammunition
     {
         #region Keys

@@ -1,7 +1,10 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using eft_app_guide.Models.Ammunitions.Config;
+using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Ammunitions
 {
+    [EntityTypeConfiguration(typeof(AmmunitionCaliberConfig))]
     public class AmmunitionCaliber
     {
         #region Keys
@@ -12,7 +15,7 @@ namespace eft_app_guide.Models.Ammunitions
         [Required] public string ShortendName { get; set; }
 
         #region Relations
-        public List<Ammunition> Ammunitions { get; set; } = new();
+        public List<Ammunition> Ammunitions { get; set; } = [];
         #endregion
     }
 }

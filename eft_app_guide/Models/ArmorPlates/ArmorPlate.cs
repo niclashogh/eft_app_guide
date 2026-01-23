@@ -14,7 +14,7 @@ namespace eft_app_guide.Models.ArmorPlates
         [Required] public byte Durability { get; set; }
 
         #region Relations
-        public List<ArmorPlateEffect> Effects { get; set; } = new();
+        public List<ArmorPlateEffect> ArmorPlateEffects { get; set; } = [];
         #endregion
     }
 }

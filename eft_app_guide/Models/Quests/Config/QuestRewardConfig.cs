@@ -12,7 +12,7 @@ namespace eft_app_guide.Models.Quests.Config
             // Link QuestReward to Quest
             builder
                 .HasOne(x => x.Quest)
-                .WithMany(x => x.Rewards)
+                .WithMany(x => x.QuestRewards)
                 .HasForeignKey(x => x.QuestId);
         }
     }

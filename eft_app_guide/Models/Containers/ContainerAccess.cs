@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations;
 namespace eft_app_guide.Models.Containers
 {
     [EntityTypeConfiguration(typeof(ContainerAccessConfig))]
-    public class ContainerAccess
+    public class ContainerAccess // Extends Container
     {
         #region Keys
         [Key] public int ContainerId { get; init; }

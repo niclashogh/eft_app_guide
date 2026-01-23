@@ -6,7 +6,7 @@ namespace eft_app_guide.Models.HideoutStations
     {
         #region Keys
         [Key] public int Id { get; init; }
-        [Required] public int StationId { get; set; } // init?
+        [Required] public int StationId { get; set; }
         #endregion
 
         [Required] public

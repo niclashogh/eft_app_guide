@@ -12,7 +12,7 @@ namespace eft_app_guide.Models.Quests.Config
             // Link QuestRequirement to Quest
             builder
                 .HasOne(x => x.Quest)
-                .WithMany(x => x.Requirements)
+                .WithMany(x => x.QuestRequirements)
                 .HasForeignKey(x => x.QuestId);
         }
     }

@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations;
 namespace eft_app_guide.Models.Chapters
 {
     [EntityTypeConfiguration(typeof(ChapterTaskDisplayConfig))]
-    public class ChapterTaskDisplay : IPosition
+    public class ChapterTaskDisplay : IPosition // Extends ChapterTask
     {
         #region Keys
         [Key] public int ChapterTaskId { get; init; }

@@ -1,9 +1,12 @@
 ﻿using eft_app_guide.DataTransferObjects.ValueObjects;
+using eft_app_guide.Models.Ammunitions.Config;
+using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Ammunitions
 {
-    public class AmmunitionPerformance
+    [EntityTypeConfiguration(typeof(AmmunitionPerformanceConfig))]
+    public class AmmunitionPerformance // Extends Ammunition
     {
         #region Keys
         [Key] public int AmmunitionId { get; init; }

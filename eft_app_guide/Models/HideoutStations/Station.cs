@@ -14,8 +14,8 @@ namespace eft_app_guide.Models.HideoutStations
         [Required] public string Name { get; set; }
 
         #region Relations
-        public List<StationLevel> Levels { get; set; } = new();
-        public List<StationItem> Items { get; set; } = new();
+        public List<StationLevel> Levels { get; set; } = [];
+        public List<StationItem> Items { get; set; } = [];
         #endregion
     }
 }

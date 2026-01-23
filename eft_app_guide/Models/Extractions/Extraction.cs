@@ -1,5 +1,4 @@
 ﻿using eft_app_guide.Models.Extractions.Config;
-using eft_app_guide.Models.Interfaces;
 using eft_app_guide.Models.Maps;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
@@ -15,13 +14,15 @@ namespace eft_app_guide.Models.Extractions
         #endregion
 
         [Required] public string Name { get; set; }
+        [Required] public bool IsSingleUse { get; set; }
         [Required] public bool IsRandom { get; set; }
 
         #region Relations
         public Map? Map { get; set; }
         public ExtractionDisplay? Display { get; set; }
 
-        public List<ExtractionRequirement> Requirements { get; set; } = new(); 
+        public List<ExtractionRequirement> Requirements { get; set; } = [];
+        public List<ExtractionFaction> ExtractionFactions { get; set; } = [];
         #endregion
     }
 }

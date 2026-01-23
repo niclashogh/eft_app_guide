@@ -1,4 +1,4 @@
-﻿using eft_app_guide.Models._Enums;
+﻿using eft_app_guide.Models.Characters;
 using eft_app_guide.Models.Quests.Config;
 using eft_app_guide.Models.Traders;
 using Microsoft.EntityFrameworkCore;
@@ -16,17 +16,15 @@ namespace eft_app_guide.Models.Quests
         #endregion
 
         [Required] public string Name { get; set; }
-        [Required] public QuestAccess Access { get; set; }
-        [Required] public bool IsActive { get; set; }
-        [Required] public bool IsComplete { get; set; }
 
         #region Relations
         public QuestLine? QuestLine { get; set; }
         public Trader? Trader { get; set; }
 
-        public List<QuestRequirement> Requirements { get; set; } = new();
-        public List<QuestReward> Rewards { get; set; } = new();
-        public List<QuestTask> Tasks { get; set; } = new();
+        public List<QuestRequirement> QuestRequirements { get; set; } = [];
+        public List<QuestReward> QuestRewards { get; set; } = [];
+        public List<QuestTask> QuestTasks { get; set; } = [];
+        public List<CharacterQuest> CharacterQuests { get; set; } = [];
         #endregion
     }
 }

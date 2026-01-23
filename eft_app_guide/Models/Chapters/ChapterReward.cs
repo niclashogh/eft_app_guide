@@ -1,11 +1,12 @@
 ﻿using eft_app_guide.Models._Enums;
 using eft_app_guide.Models._Interfaces;
+using eft_app_guide.Models.Chapters.Config;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Chapters
 {
-    [EntityTypeConfiguration(typeof(ChapterReward))]
+    [EntityTypeConfiguration(typeof(ChapterRewardConfig))]
     public class ChapterReward : IReward
     {
         #region Keys

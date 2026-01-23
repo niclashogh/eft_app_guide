@@ -1,10 +1,9 @@
 ﻿using eft_app_guide.Models.Characters;
-using eft_app_guide.Models.Extractions;
 using System.ComponentModel.DataAnnotations;
 
-namespace eft_app_guide.Models.Factions
+namespace eft_app_guide.Models.Operator
 {
-    public class Faction
+    public class OperatorSkillType
     {
         #region Keys
         [Key] public int Id { get; init; }
@@ -13,8 +12,8 @@ namespace eft_app_guide.Models.Factions
         [Required] public string Name { get; set; }
 
         #region Relations
-        public List<Character> Characters { get; set; } = [];
-        public List<ExtractionFaction> ExtractionFactions { get; set; } = [];
+        public List<OperatorSkillLevel> OperatorSkillLevels { get; set; } = [];
+        public List<CharacterOperatorSkillType> CharacterOperatorSkillTypes { get; set; } = [];
         #endregion
     }
 }
