@@ -2,7 +2,7 @@
 
 namespace eft_app_guide.Models.FleaMarket
 {
-    public class FleaMarket
+    public class FleaMarket // MISSING
     {
         #region Keys
         [Key] public int Id { get; init; }

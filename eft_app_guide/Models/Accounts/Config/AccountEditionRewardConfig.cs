@@ -1,12 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace eft_app_guide.Models.Accounts.Config
 {
-    internal class AccountEditionRewardConfig
+    public class AccountEditionRewardConfig : IEntityTypeConfiguration<AccountEditionReward>
     {
+        public void Configure(EntityTypeBuilder<AccountEditionReward> builder)
+        {
+            builder.HasKey(x => new { x.AccountEditionId, x.RewardId });
+
+            // Link @ to AccountEdition
+            builder
+                .HasOne(x => x.Edition)
+                .WithMany(x => x.Rewards)
+                .HasForeignKey(x => x.AccountEditionId);
+
+            // Link @ to Reward
+            builder
+                .HasOne(x => x.Reward)
+                .WithMany(x => x.AccountEditionRewards)
+                .HasForeignKey(x => x.RewardId);
+        }
     }
 }

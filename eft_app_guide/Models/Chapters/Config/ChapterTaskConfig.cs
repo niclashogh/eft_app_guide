@@ -9,23 +9,29 @@ namespace eft_app_guide.Models.Chapters.Config
         {
             builder.HasKey(x => x.Id);
 
-            // Link ChapterTask to Chapter
+            // Link @ to Chapter
             builder
                 .HasOne(x => x.Chapter)
                 .WithMany(x => x.Tasks)
                 .HasForeignKey(x => x.ChapterId);
 
-            // Link ChapterTask to Map
-            builder
-                .HasOne(x => x.Map)
-                .WithMany(x => x.ChapterTasks)
-                .HasForeignKey(x => x.MapId);
-
-            // Link ChapterTaskDisplay to ChapterTask
+            // Link @ to ChapterTaskDisplay
             builder
                 .HasOne(x => x.Display)
-                .WithOne(x => x.ChapterTask)
+                .WithOne(x => x.Task)
                 .HasForeignKey<ChapterTaskDisplay>(x => x.ChapterTaskId);
+
+            // Link @ to ChapterTaskMap
+            builder
+                .HasMany(x => x.MapRelations)
+                .WithOne(x => x.ChapterTask)
+                .HasForeignKey(x => x.ChapterTaskId);
+
+            // Link @ to ChapterRewards
+            builder
+                .HasMany(x => x.Rewards)
+                .WithOne(x => x.Task)
+                .HasForeignKey(x => x.ChapterTaskId);
         }
     }
 }

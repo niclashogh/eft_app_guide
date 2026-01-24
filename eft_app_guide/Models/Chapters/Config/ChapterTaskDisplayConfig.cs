@@ -9,9 +9,9 @@ namespace eft_app_guide.Models.Chapters.Config
         {
             builder.HasKey(x => x.ChapterTaskId);
 
-            // Link ChapterTaskDisplay to ChapterTask
+            // Link @ to ChapterTask
             builder
-                .HasOne(x => x.ChapterTask)
+                .HasOne(x => x.Task)
                 .WithOne(x => x.Display)
                 .HasForeignKey<ChapterTaskDisplay>(x => x.ChapterTaskId)
                 .OnDelete(DeleteBehavior.Cascade);

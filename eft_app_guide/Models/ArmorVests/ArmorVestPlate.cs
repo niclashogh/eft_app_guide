@@ -2,7 +2,7 @@
 
 namespace eft_app_guide.Models.ArmorVests
 {
-    public class ArmorVestPlate
+    public class ArmorVestPlate // MISSING
     {
         #region Keys
         [Key] public int Id { get; init; }

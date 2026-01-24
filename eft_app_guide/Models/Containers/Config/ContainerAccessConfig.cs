@@ -7,20 +7,19 @@ namespace eft_app_guide.Models.Containers.Config
     {
         public void Configure(EntityTypeBuilder<ContainerAccess> builder)
         {
-            builder.HasKey(x => x.ContainerId);
+            builder.HasKey(x => new { x.ContainerId, x.AccessKeyId });
 
-            // Link ContainerAccess to Container
+            // Link @ to Container
             builder
                 .HasOne(x => x.Container)
-                .WithOne(x => x.Access)
-                .HasForeignKey<ContainerAccess>(x => x.ContainerId)
-                .OnDelete(DeleteBehavior.Cascade);
+                .WithMany(x => x.Access)
+                .HasForeignKey(x => x.ContainerId);
 
-            // Link ContainerAccess to AccessKey
+            // Link @ to AccessKey
             builder
                 .HasOne(x => x.AccessKey)
                 .WithMany(x => x.ContainerAccess)
-                .HasForeignKey(x => x.AccessKey);
+                .HasForeignKey(x => x.AccessKeyId);
         }
     }
 }

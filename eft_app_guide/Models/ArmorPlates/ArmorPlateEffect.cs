@@ -2,7 +2,7 @@
 
 namespace eft_app_guide.Models.ArmorPlates
 {
-    public class ArmorPlateEffect
+    public class ArmorPlateEffect // MISSING
     {
         #region Keys
         [Key] public int Id { get; init; }

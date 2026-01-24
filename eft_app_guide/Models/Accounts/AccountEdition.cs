@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations;
 namespace eft_app_guide.Models.Accounts
 {
     [EntityTypeConfiguration(typeof(AccountEditionConfig))]
-    public class AccountEdition // Standard, LeftBehind, PrepareForEscape, EdgeOfDarkness & TheUnheard
+    public class AccountEdition // LookupTable - Standard, LeftBehind, PrepareForEscape, EdgeOfDarkness & TheUnheard
     {
         #region Keys
         [Key] public int Id { get; init; }

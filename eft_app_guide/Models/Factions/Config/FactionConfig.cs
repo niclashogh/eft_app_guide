@@ -9,15 +9,15 @@ namespace eft_app_guide.Models.Factions.Config
         {
             builder.HasKey(x => x.Id);
 
-            // Link Faction to Character
+            // Link @ to Character
             builder
                 .HasMany(x => x.Characters)
                 .WithOne(x => x.Faction)
                 .HasForeignKey(x => x.FactionId);
 
-            // Link Faction to ExtractionFaction
+            // Link @ to ExtractionFaction
             builder
-                .HasMany(x => x.ExtractionFactions)
+                .HasMany(x => x.ExtractionRelations)
                 .WithOne(x => x.Faction)
                 .HasForeignKey(x => x.FactionId);
         }

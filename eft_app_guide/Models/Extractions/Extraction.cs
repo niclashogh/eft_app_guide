@@ -22,7 +22,7 @@ namespace eft_app_guide.Models.Extractions
         public ExtractionDisplay? Display { get; set; }
 
         public List<ExtractionRequirement> Requirements { get; set; } = [];
-        public List<ExtractionFaction> ExtractionFactions { get; set; } = [];
+        public List<ExtractionFaction> FactionRelations { get; set; } = [];
         #endregion
     }
 }

@@ -10,13 +10,13 @@ namespace eft_app_guide.Models.Accounts.Config
         {
             builder.HasKey(x => x.Id);
 
-            // link Account to AccountEdition
+            // link @ to AccountEdition
             builder
                 .HasOne(x => x.Edition)
                 .WithMany(x => x.Accounts)
                 .HasForeignKey(x => x.AccountEditionId);
 
-            // Link Account to Character
+            // Link @ to Character
             builder
                 .HasOne(x => x.Character)
                 .WithOne(x => x.Account)

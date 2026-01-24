@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace eft_app_guide.Models.FleaMarket.Config
 {
-    public class FleaMarketItemConfig : IEntityTypeConfiguration<FleaMarketItem>
+    public class FleaMarketItemConfig : IEntityTypeConfiguration<FleaMarketItem> // MISSING
     {
         public void Configure(EntityTypeBuilder<FleaMarketItem> builder)
         {

@@ -24,7 +24,6 @@ namespace eft_app_guide.Models.Items
 
         public List<LocationItem> LocationItems { get; set; } = new();
         public List<TraderItem> TraderItems { get; set; } = new();
-        public List<StationItem> StationItems { get; set; } = new();
         public List<FleaMarketItem> FleaMarketItems { get; set; } = new();
         #endregion
     }

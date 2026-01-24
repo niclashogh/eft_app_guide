@@ -7,8 +7,7 @@ namespace eft_app_guide.Models.Currency
     [EntityTypeConfiguration(typeof(CurrencyConversionConfig))]
     public class CurrencyConversion
     {
-        #region Keys
-        [Key] public int Id { get; init; }
+        #region Keys (CompositeKeys)
         [Required] public int FromCurrencyId { get; set; }
         [Required] public int ToCurrencyId { get; set; }
         #endregion

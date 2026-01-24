@@ -9,7 +9,7 @@ namespace eft_app_guide.Models.Currency.Config
         {
             builder.HasKey(x => x.Id);
 
-            // Link Currency to CurrencyConversion
+            // Link @ to CurrencyConversion
             builder
                 .HasMany(x => x.Conversions)
                 .WithOne(x => x.FromCurrency)

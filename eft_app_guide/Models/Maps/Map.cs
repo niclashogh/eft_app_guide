@@ -18,13 +18,13 @@ namespace eft_app_guide.Models.Maps
         #endregion
 
         [Required] public string Name { get; set; }
-        [Required] public bool IsLocked { get; set; }
+        [Required] public bool IsLocked { get; set; } // move to CharacterMapAccess junctiontable
 
         #region Relatations
         public List<Location> Locations { get; set; } = new();
         public List<Extraction> Extractions { get; set; } = new();
         public List<QuestTask> QuestTasks { get; set; } = new();
-        public List<ChapterTask> ChapterTasks { get; set; } = new();
+        public List<ChapterTaskMap> ChapterTaskRelations { get; set; } = [];
         public List<BTR> BTRs { get; set; } = new();
         public List<Marker> Markers { get; set; } = new();
         #endregion

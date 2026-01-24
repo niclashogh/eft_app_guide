@@ -7,18 +7,16 @@ namespace eft_app_guide.Models.Currency.Config
     {
         public void Configure(EntityTypeBuilder<CurrencyConversion> builder)
         {
-            builder.HasKey(x => x.Id);
+            builder.HasKey(x => new { x.FromCurrency, x.ToCurrency });
 
-            builder
-                .HasIndex(x => new { x.FromCurrency, x.ToCurrency })
-                .IsUnique();
-
+            // Link @ to FromCurrency
             builder
                 .HasOne(x => x.FromCurrency)
                 .WithMany()
                 .HasForeignKey(x => x.FromCurrencyId)
                 .OnDelete(DeleteBehavior.Restrict);
 
+            // Link @ to ToCurrency
             builder
                 .HasOne(x => x.ToCurrency)
                 .WithMany()

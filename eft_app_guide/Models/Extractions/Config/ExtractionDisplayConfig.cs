@@ -9,7 +9,7 @@ namespace eft_app_guide.Models.Extractions.Config
         {
             builder.HasKey(x => x.ExtractionId);
 
-            // Link ExtractionDisplay to Extraction
+            // Link @ to Extraction
             builder
                 .HasOne(x => x.Extraction)
                 .WithOne(x => x.Display)

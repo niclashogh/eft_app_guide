@@ -9,27 +9,27 @@ namespace eft_app_guide.Models.Extractions.Config
         {
             builder.HasKey(x => x.Id);
 
-            // Link Extraction to Map
+            // Link @ to Map
             builder
                 .HasOne(x => x.Map)
                 .WithMany(x => x.Extractions)
                 .HasForeignKey(x => x.MapId);
 
-            // Link Extraction to ExtractionRequirement
+            // Link @ to ExtractionRequirement
             builder
                 .HasMany(x => x.Requirements)
                 .WithOne(x => x.Extraction)
                 .HasForeignKey(x => x.ExtractionId);
 
-            // Link Extraction to ExtractionDisplay
+            // Link @ to ExtractionDisplay
             builder
                 .HasOne(x => x.Display)
                 .WithOne(x => x.Extraction)
                 .HasForeignKey<ExtractionDisplay>(x => x.ExtractionId);
 
-            // Link Extraction to ExtractionFaction
+            // Link @ to ExtractionFaction
             builder
-                .HasMany(x => x.ExtractionFactions)
+                .HasMany(x => x.FactionRelations)
                 .WithOne(x => x.Extraction)
                 .HasForeignKey(x => x.ExtractionId);
         }

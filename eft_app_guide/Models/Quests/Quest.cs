@@ -24,7 +24,7 @@ namespace eft_app_guide.Models.Quests
         public List<QuestRequirement> QuestRequirements { get; set; } = [];
         public List<QuestReward> QuestRewards { get; set; } = [];
         public List<QuestTask> QuestTasks { get; set; } = [];
-        public List<CharacterQuest> CharacterQuests { get; set; } = [];
+        public List<CharacterQuestProgress> CharacterQuestProgressions { get; set; } = [];
         #endregion
     }
 }

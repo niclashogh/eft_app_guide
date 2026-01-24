@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.ArmorVests
 {
-    public class ArmorVest
+    public class ArmorVest // MISSING
     {
         #region Keys
         [Key] public int Id { get; init; }

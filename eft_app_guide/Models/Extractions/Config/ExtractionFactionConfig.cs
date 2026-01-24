@@ -7,22 +7,18 @@ namespace eft_app_guide.Models.Extractions.Config
     {
         public void Configure(EntityTypeBuilder<ExtractionFaction> builder)
         {
-            builder.HasKey(x => x.Id);
+            builder.HasKey(x => new { x.ExtractionId, x.FactionId });
 
-            builder
-                .HasIndex(x => new { x.ExtractionId, x.FactionId })
-                .IsUnique();
-
-            // Link ExtractionFaction to Extraction
+            // Link @ to Extraction
             builder
                 .HasOne(x => x.Extraction)
-                .WithMany(x => x.ExtractionFactions)
+                .WithMany(x => x.FactionRelations)
                 .HasForeignKey(x => x.ExtractionId);
 
-            // Link ExtractionFaction to Faction
+            // Link @ to Faction
             builder
                 .HasOne(x => x.Faction)
-                .WithMany(x => x.ExtractionFactions)
+                .WithMany(x => x.ExtractionRelations)
                 .HasForeignKey(x => x.FactionId);
         }
     }

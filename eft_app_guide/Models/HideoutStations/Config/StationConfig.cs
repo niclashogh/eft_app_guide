@@ -9,15 +9,9 @@ namespace eft_app_guide.Models.HideoutStations.Config
         {
             builder.HasKey(x => x.Id);
 
-            // Link Station to StationItem
+            // Link @ to StationLevel
             builder
-                .HasMany(x => x.Items)
-                .WithOne(x => x.Station)
-                .HasForeignKey(x => x.StationId);
-
-            // Link Station to StationLevel
-            builder
-                .HasMany(x => x.Levels)
+                .HasMany(x => x.LevelDefinitions)
                 .WithOne(x => x.Station)
                 .HasForeignKey(x => x.StationId);
         }

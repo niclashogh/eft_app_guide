@@ -6,21 +6,19 @@ namespace eft_app_guide.Models.Characters
 {
     public class Character
     {
-        #region Keys
-        [Key] public int Id { get; init; }
+        #region Keys (CompositeKeys)
         [Required] public int AccountId { get; set; }
         [Required] public int FactionId { get; set; }
         #endregion
 
-        [Required] public string Name { get; set; }
         [Required] public int ExperiencePoint { get; set; }
 
         #region Relations
         public Account? Account { get; set; }
         public Faction? Faction { get; set; }
 
-        public List<CharacterOperatorSkillType> CharacterOperatorSkillTypes { get; set; } = [];
-        public List<CharacterQuest> CharacterQuests { get; set; } = [];
+        public List<CharacterSkillProgress> SkillProgressions { get; set; } = [];
+        public List<CharacterQuestProgress> QuestProgressions { get; set; } = [];
         #endregion
     }
 }

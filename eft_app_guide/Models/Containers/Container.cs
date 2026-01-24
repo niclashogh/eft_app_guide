@@ -14,10 +14,13 @@ namespace eft_app_guide.Models.Containers
         [Required] public int ContainerTypeId { get; set; }
         #endregion
 
+        [Required] public bool IsLocked { get; set; }
+
         #region Relations
         public Location? Location { get; set; }
         public ContainerType? Type { get; set; }
-        public ContainerAccess? Access { get; set; }
+
+        public List<ContainerAccess> Access { get; set; } = [];
         #endregion
     }
 }

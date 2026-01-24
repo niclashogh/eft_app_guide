@@ -3,10 +3,9 @@ using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Characters
 {
-    public class CharacterQuest // JunctionTable to save quest-progressing per character
+    public class CharacterQuestProgress // JunctionTable, AssociationEntity
     {
-        #region Keys
-        [Key] public int Id { get; init; }
+        #region Keys (CompositeKeys)
         [Required] public int CharacterId { get; set; }
         [Required] public int QuestId { get; set; }
         #endregion

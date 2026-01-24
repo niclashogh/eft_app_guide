@@ -1,9 +1,9 @@
 ﻿using eft_app_guide.Models.Characters;
 using System.ComponentModel.DataAnnotations;
 
-namespace eft_app_guide.Models.Operator
+namespace eft_app_guide.Models.Leveling
 {
-    public class OperatorLevel // Standalone table to determine a characters level
+    public class LevelDefinition // LookupTable
     {
         #region Keys
         [Key] public int Id { get; init; }

@@ -9,7 +9,7 @@ namespace eft_app_guide.Models.Containers.Config
         {
             builder.HasKey(x => x.Id);
 
-            // Link ContainerType to Container
+            // Link @ to Container
             builder
                 .HasMany(x => x.Containers)
                 .WithOne(x => x.Type)

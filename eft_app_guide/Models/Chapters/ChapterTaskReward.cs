@@ -1,23 +1,21 @@
 ﻿using eft_app_guide.Models._Interfaces;
-using eft_app_guide.Models.Accounts.Config;
 using eft_app_guide.Models.Rewards;
-using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 
-namespace eft_app_guide.Models.Accounts
+namespace eft_app_guide.Models.Chapters
 {
-    [EntityTypeConfiguration(typeof(AccountEditionRewardConfig))]
-    public class AccountEditionReward : IRewardProvider // JunctionTable, AssociationEntity
+    public class ChapterTaskReward : IRewardProvider // JunctionTable, AssociationEntity
     {
+
         #region Keys (CompositeKeys)
-        [Required] public int AccountEditionId { get; set; }
+        [Required] public int ChapterTaskId { get; set; }
         [Required] public int RewardId { get; set; }
         #endregion
 
         [Required] public string Description { get; set; }
 
         #region Relations
-        public AccountEdition? Edition { get; set; }
+        public ChapterTask? Task { get; set; }
         public Reward? Reward { get; set; }
         #endregion
     }

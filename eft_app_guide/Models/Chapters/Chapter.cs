@@ -15,8 +15,6 @@ namespace eft_app_guide.Models.Chapters
 
         #region Relatations
         public List<ChapterTask> Tasks { get; set; } = [];
-        public List<ChapterRequirement> Requirements { get; set; } = [];
-        public List<ChapterReward> Rewards { get; set; } = [];
         #endregion
     }
 }

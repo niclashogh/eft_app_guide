@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.FleaMarket
 {
-    public class FleaMarketItem
+    public class FleaMarketItem // MISSING
     {
         #region Keys
         [Key] public int Id { get; init; }

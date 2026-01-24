@@ -6,14 +6,12 @@ using System.ComponentModel.DataAnnotations;
 namespace eft_app_guide.Models.Containers
 {
     [EntityTypeConfiguration(typeof(ContainerAccessConfig))]
-    public class ContainerAccess // Extends Container
+    public class ContainerAccess // JunctionTable
     {
-        #region Keys
+        #region Keys (CompositeKeys)
         [Key] public int ContainerId { get; init; }
         [Required] public int AccessKeyId { get; set; }
         #endregion
-
-        [Required] public bool IsLocked { get; set; }
 
         #region Relations
         public Container? Container { get; set; }

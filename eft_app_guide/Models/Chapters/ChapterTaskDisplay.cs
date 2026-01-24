@@ -16,7 +16,7 @@ namespace eft_app_guide.Models.Chapters
         [Required] public double Y { get; set; }
 
         #region Relations
-        public ChapterTask? ChapterTask { get; set; }
+        public ChapterTask? Task { get; set; }
         #endregion
     }
 }

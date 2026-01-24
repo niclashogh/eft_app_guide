@@ -41,7 +41,7 @@ namespace eft_app_guide.Models.Quests.Config
 
             // Link Quest to CharacterQuest
             builder
-                .HasMany(x => x.CharacterQuests)
+                .HasMany(x => x.CharacterQuestProgressions)
                 .WithOne(x => x.Quest)
                 .HasForeignKey(x => x.QuestId);
         }

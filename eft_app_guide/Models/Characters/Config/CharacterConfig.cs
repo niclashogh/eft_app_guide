@@ -7,33 +7,29 @@ namespace eft_app_guide.Models.Characters.Config
     {
         public void Configure(EntityTypeBuilder<Character> builder)
         {
-            builder.HasKey(x => x.Id);
+            builder.HasKey(x => new { x.AccountId, x.FactionId });
 
-            builder
-                .HasIndex(x => x.AccountId)
-                .IsUnique();
-
-            // Link Character to Account
+            // Link @ to Account
             builder
                 .HasOne(x => x.Account)
                 .WithOne(x => x.Character)
                 .HasForeignKey<Character>(x => x.AccountId);
 
-            // Link Character to Faction
+            // Link @ to Faction
             builder
                 .HasOne(x => x.Faction)
                 .WithMany(x => x.Characters)
                 .HasForeignKey(x => x.FactionId);
 
-            // link Character to CharacterOperatorSkillType
+            // link @ to CharacterSkillProgress
             builder
-                .HasMany(x => x.CharacterOperatorSkillTypes)
+                .HasMany(x => x.SkillProgressions)
                 .WithOne(x => x.Character)
                 .HasForeignKey(x => x.CharacterId);
 
-            // Link Character to CharacterQuest
+            // Link @ to CharacterQuestProgress
             builder
-                .HasMany(x => x.CharacterQuests)
+                .HasMany(x => x.QuestProgressions)
                 .WithOne(x => x.Character)
                 .HasForeignKey(x => x.CharacterId);
         }

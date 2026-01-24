@@ -14,7 +14,7 @@ namespace eft_app_guide.Models.Factions
 
         #region Relations
         public List<Character> Characters { get; set; } = [];
-        public List<ExtractionFaction> ExtractionFactions { get; set; } = [];
+        public List<ExtractionFaction> ExtractionRelations { get; set; } = [];
         #endregion
     }
 }
