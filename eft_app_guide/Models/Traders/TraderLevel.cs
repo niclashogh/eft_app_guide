@@ -13,7 +13,7 @@ namespace eft_app_guide.Models.Traders
         #endregion
 
         [Required] public int Level { get; set; }
-        [Required] public bool IsLocked { get; set; }
+        [Required] public bool IsLocked { get; set; } // move to CharacterTraderProgress
         [Required] public double MinReputation { get; set; }
         [Required] public double MaxReputation { get; set; }
 

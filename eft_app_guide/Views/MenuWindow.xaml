@@ -4,7 +4,9 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:eft_app_guide.Views"
+        xmlns:viewmodels="clr-namespace:eft_app_guide.ViewModels"
         mc:Ignorable="d"
+        d:DataContext="{d:DesignInstance Type=viewmodels:MenuVM, IsDesignTimeCreatable=True}"
         
         Title="Menu"
         WindowStyle="None"

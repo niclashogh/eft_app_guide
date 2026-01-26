@@ -13,7 +13,6 @@ namespace eft_app_guide.Models.HideoutStations
         #endregion
 
         [Required] public int Level {  get; set; }
-        [Required] public bool IsBuild { get; set; } // move to CharacterStaionProgress junctiontable
 
         #region Relations
         public Station? Station { get; set; }
