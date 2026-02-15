@@ -32,6 +32,12 @@ namespace eft_app_guide.Models.Characters.Config
                 .HasMany(x => x.CharacterQuestProgressions)
                 .WithOne(x => x.Character)
                 .HasForeignKey(x => x.CharacterId);
+
+            // Link @ to CharacterStationProgress
+            builder
+                .HasMany(x => x.CharacterStationProgressions)
+                .WithOne(x => x.Character)
+                .HasForeignKey(x => x.CharacterId);
         }
     }
 }

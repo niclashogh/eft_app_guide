@@ -8,6 +8,7 @@ namespace eft_app_guide.Models.AccessKeys.Config
         public void Configure(EntityTypeBuilder<AccessKey> builder)
         {
             builder.HasKey(x => x.Id);
+            //builder.HasIndex(x => x.ShortendName);
 
             // Link @ to LocationAccess
             builder

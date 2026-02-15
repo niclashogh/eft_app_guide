@@ -39,6 +39,12 @@ namespace eft_app_guide.Models.Maps.Config
                 .WithOne(x => x.Map)
                 .HasForeignKey(x => x.MapId);
 
+            // Link @ to ChapterTaskMap
+            builder
+                .HasMany(x => x.ChapterTaskMaps)
+                .WithOne(x => x.Map)
+                .HasForeignKey(x => x.MapId);
+
             // Link @ to CharacterMapAccess
             builder
                 .HasMany(x => x.CharacterMapAccesses)

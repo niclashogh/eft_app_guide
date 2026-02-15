@@ -10,7 +10,7 @@ namespace eft_app_guide.Models.Locations
     public class LocationDisplay : IPosition
     {
         #region Keys
-        [Key] public int LocationId { get; init; }
+        [Key] public int LocationId { get; set; }
         #endregion
 
         [Required] public double X { get; set; }

@@ -7,7 +7,7 @@ namespace eft_app_guide.Models.Locations.Config
     {
         public void Configure(EntityTypeBuilder<LocationItem> builder)
         {
-            builder.HasKey(x => x.Id);
+            builder.HasKey(x => new { x.LocationId, x.ItemId });
 
             // Link @ to Location
             builder

@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Leveling
 {
-    /// <summary> DefinitionEntity </summary>
+    /// <summary> ChildEntity (Skill) </summary>
     [EntityTypeConfiguration(typeof(SkillLevelConfig))]
     public class SkillLevel
     {

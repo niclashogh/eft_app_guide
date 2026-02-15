@@ -1,16 +1,17 @@
 ﻿using eft_app_guide._Persistence.Objects;
+using eft_app_guide.Models.Characters;
 using eft_app_guide.Models.HideoutStations.Config;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.HideoutStations
 {
-    /// <summary> DefinitionEntity </summary>
+    /// <summary> ChildEntity (Station) </summary>
     [EntityTypeConfiguration(typeof(StationLevelConfig))]
     public class StationLevel
     {
         #region Keys
-        [Key] public int Id { get; set; }
+        [Key] public int Id { get; init; }
         [Required] public int StationId { get; set; }
         #endregion
 
@@ -20,6 +21,7 @@ namespace eft_app_guide.Models.HideoutStations
         public Station? Station { get; set; }
 
         public JunctionList<StationLevelCrafting> StationLevelCraftings { get; set; } = [];
+        public AssociationList<CharacterStationProgress> CharacterStationProgressions { get; set; } = [];
         #endregion
     }
 }

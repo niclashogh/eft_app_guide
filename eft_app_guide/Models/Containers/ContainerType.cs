@@ -9,14 +9,14 @@ namespace eft_app_guide.Models.Containers
     public class ContainerType
     {
         #region Keys
-        [Key] public int Id { get; set; }
+        [Key] public int Id { get; init; }
         #endregion
 
         [Required] public string Name { get; set; }
         [Required] public string ShortendName { get; set; }
 
         #region Relations
-        public List<Container> Containers { get; set; } = new();
+        public List<Container> Containers { get; set; } = [];
         #endregion
     }
 }

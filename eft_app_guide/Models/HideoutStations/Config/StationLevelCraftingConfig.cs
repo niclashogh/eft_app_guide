@@ -9,7 +9,7 @@ namespace eft_app_guide.Models.HideoutStations.Config
         {
             builder.HasKey(x => new { x.StationLevelId, x.CraftingId });
 
-            // Link @ to StaionLevelDefinition
+            // Link @ to StaionLevel
             builder
                 .HasOne(x => x.StationLevel)
                 .WithMany(x => x.StationLevelCraftings)

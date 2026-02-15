@@ -5,9 +5,21 @@ namespace eft_app_guide.Models.Characters.Config
 {
     public class CharacterMapAccessConfig : IEntityTypeConfiguration<CharacterMapAccess>
     {
-        public void Configure(EntityTypeBuilder<CharacterMapAccess> builder) // MISSING
+        public void Configure(EntityTypeBuilder<CharacterMapAccess> builder)
         {
-            throw new NotImplementedException();
+            builder.HasKey(x => new { x.CharacterId, x.MapId });
+
+            // Link @ to Character
+            builder
+                .HasOne(x => x.Character)
+                .WithMany(x => x.CharacterMapAccesses)
+                .HasForeignKey(x => x.CharacterId);
+
+            // Link @ to Map
+            builder
+                .HasOne(x => x.Map)
+                .WithMany(x => x.CharacterMapAccesses)
+                .HasForeignKey(x => x.MapId);
         }
     }
 }

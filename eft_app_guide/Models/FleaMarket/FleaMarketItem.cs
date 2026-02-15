@@ -1,17 +1,18 @@
-﻿using eft_app_guide.Models.Items;
+﻿using eft_app_guide.Models.FleaMarket.Config;
+using eft_app_guide.Models.Items;
+using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.FleaMarket
 {
-    public class FleaMarketItem // MISSING
+    /// <summary> JunctionEntity (FleaMarketId + ItemId) </summary>
+    [EntityTypeConfiguration(typeof(FleaMarketItemConfig))]
+    public class FleaMarketItem
     {
-        #region Keys
-        [Key] public int Id { get; init; }
+        #region Keys (CompositeKeys)
         [Required] public int FleaMarketId { get; set; }
         [Required] public int ItemId { get; set; }
         #endregion
-
-        [Required] public int UnlockLevel { get; set; }
 
         #region Relations
         public FleaMarket? FleaMarket { get; set; }

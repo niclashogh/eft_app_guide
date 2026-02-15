@@ -1,5 +1,6 @@
 ﻿using eft_app_guide._Persistence.Enums;
 using eft_app_guide._Persistence.Objects;
+using eft_app_guide.Models.Accounts;
 using eft_app_guide.Models.Chapters;
 using eft_app_guide.Models.Rewards.Config;
 using Microsoft.EntityFrameworkCore;
@@ -19,6 +20,7 @@ namespace eft_app_guide.Models.Rewards
 
         #region Relations
         public AssociationList<ChapterTaskReward> ChapterTaskRewards { get; set; } = [];
+        public List<AccountEditionReward> AccountEditionRewards { get; set; } = [];
         #endregion
     }
 }

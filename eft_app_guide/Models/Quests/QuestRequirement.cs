@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Quests
 {
-    /// <summary> DefinitionEntity </summary>
+    /// <summary> ChildEntity </summary>
     [EntityTypeConfiguration(typeof(QuestRequirementConfig))]
     public class QuestRequirement
     {

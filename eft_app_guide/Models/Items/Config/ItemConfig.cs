@@ -15,6 +15,18 @@ namespace eft_app_guide.Models.Items.Config
                 .WithMany(x => x.Items)
                 .HasForeignKey(x => x.ItemCategoryId);
 
+            // Link @ to Crafting
+            builder
+                .HasMany(x => x.Craftings)
+                .WithOne(x => x.Item)
+                .HasForeignKey(x => x.ItemId);
+
+            // Link @ to CraftingItem
+            builder
+                .HasMany(x => x.CraftingItems)
+                .WithOne(x => x.Item)
+                .HasForeignKey(x => x.ItemId);
+
             // Link @ to LocationItem
             builder
                 .HasMany(x => x.LocationItems)

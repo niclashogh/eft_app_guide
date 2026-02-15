@@ -15,6 +15,12 @@ namespace eft_app_guide.Models.Locations.Config
                 .WithMany(x => x.Locations)
                 .HasForeignKey(x => x.MapId);
 
+            // Link @ to LocationDisplay
+            builder
+                .HasOne(x => x.LocationDisplay)
+                .WithOne(x => x.Location)
+                .HasForeignKey<LocationDisplay>(x => x.LocationId);
+
             // Link @ to LocationItem
             builder
                 .HasMany(x => x.LocationItems)

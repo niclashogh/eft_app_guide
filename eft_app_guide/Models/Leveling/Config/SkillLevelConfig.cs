@@ -6,10 +6,15 @@ namespace eft_app_guide.Models.Leveling.Config
 {
     public class SkillLevelConfig : IEntityTypeConfiguration<SkillLevel>
     {
-        public void Configure(EntityTypeBuilder<SkillLevel> builder) // MISSING
+        public void Configure(EntityTypeBuilder<SkillLevel> builder)
         {
+            builder.HasKey(x => x.Id);
+
+            // Link @ to Skill
             builder
-                .HasKey(x => x.Id);
+                .HasOne(x => x.Skill)
+                .WithMany(x => x.SkillLevels)
+                .HasForeignKey(x => x.SkillId);
         }
     }
 }

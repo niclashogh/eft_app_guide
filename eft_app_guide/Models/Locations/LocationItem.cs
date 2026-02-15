@@ -9,8 +9,7 @@ namespace eft_app_guide.Models.Locations
     [EntityTypeConfiguration(typeof(LocationItemConfig))]
     public class LocationItem
     {
-        #region Keys
-        [Key] public int Id { get; init; }
+        #region Keys (CompositeKeys)
         [Required] public int LocationId { get; set; }
         [Required] public int ItemId { get; set; }
         #endregion

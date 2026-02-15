@@ -16,6 +16,10 @@ namespace eft_app_guide.Models.AccessKeys
         #endregion
 
         [Required] public string Name { get; set; }
+        [Required] public string ShortendName { get; set; }
+
+        [Required] public bool LimitedUses { get; set; }
+        [Required] public int MaxUses { get; set; }
 
         #region relations
         public AssociationList<LocationAccess> LocationAccesses { get; set; } = [];
