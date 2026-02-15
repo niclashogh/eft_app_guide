@@ -12,13 +12,13 @@ namespace eft_app_guide.Models.Accounts.Config
             // Link @ to Account
             builder
                 .HasMany(x => x.Accounts)
-                .WithOne(x => x.Edition)
+                .WithOne(x => x.AccountEdition)
                 .HasForeignKey(x => x.AccountEditionId);
 
             // Link @ to AccountEditionReward
             builder
-                .HasMany(x => x.Rewards)
-                .WithOne(x => x.Edition)
+                .HasMany(x => x.AccountEditionRewards)
+                .WithOne(x => x.AccountEdition)
                 .HasForeignKey(x => x.AccountEditionId);
         }
     }

@@ -1,22 +1,26 @@
 ﻿using eft_app_guide.Models._Interfaces;
+using eft_app_guide.Models.Chapters.Config;
 using eft_app_guide.Models.Rewards;
+using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Chapters
 {
-    public class ChapterTaskReward : IRewardProvider // JunctionTable, AssociationEntity
+    /// <summary> AssociationEntity (ChapterTaskId + RewardDomainId) </summary>
+    [EntityTypeConfiguration(typeof(ChapterTaskRewardConfig))]
+    public class ChapterTaskReward : IRewardProvider
     {
-
         #region Keys (CompositeKeys)
         [Required] public int ChapterTaskId { get; set; }
-        [Required] public int RewardId { get; set; }
+        [Required] public int RewardDomainId { get; set; }
         #endregion
 
-        [Required] public string Description { get; set; }
+        [Required] public int DomainKey { get; set; }
+        [Required] public int Quantity { get; set; }
 
         #region Relations
         public ChapterTask? Task { get; set; }
-        public Reward? Reward { get; set; }
+        public RewardDomain? RewardDomain { get; set; }
         #endregion
     }
 }

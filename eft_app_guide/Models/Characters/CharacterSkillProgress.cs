@@ -1,20 +1,24 @@
-﻿using eft_app_guide.Models.Leveling;
+﻿using eft_app_guide.Models.Characters.Config;
+using eft_app_guide.Models.Leveling;
+using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Characters
 {
-    public class CharacterSkillProgress // JunctionTable, AssociationEntity
+    /// <summary> AssociationEntity (CharacterId + SkillId) </summary>
+    [EntityTypeConfiguration(typeof(CharacterSkillProgressConfig))]
+    public class CharacterSkillProgress
     {
         #region Keys (CompositeKeys)
         [Required] public int CharacterId { get; set; }
-        [Required] public int CharacterSkillTypeId { get; set; }
+        [Required] public int SkillId { get; set; }
         #endregion
 
         [Required] public int ExperiencePoint {  get; set; }
 
         #region Relations
         public Character? Character { get; set; }
-        public SkillType? SkillType { get; set; }
+        public Skill? Skill { get; set; }
         #endregion
     }
 }

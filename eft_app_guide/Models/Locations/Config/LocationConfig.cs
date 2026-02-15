@@ -9,25 +9,25 @@ namespace eft_app_guide.Models.Locations.Config
         {
             builder.HasKey(x => x.Id);
 
-            // Link Location to Map
+            // Link @ to Map
             builder
                 .HasOne(x => x.Map)
                 .WithMany(x => x.Locations)
                 .HasForeignKey(x => x.MapId);
 
-            // Link Location to LocationLoot
+            // Link @ to LocationItem
             builder
-                .HasMany(x => x.Items)
+                .HasMany(x => x.LocationItems)
                 .WithOne(x => x.Location)
                 .HasForeignKey(x => x.LocationId);
 
-            // Link Location to LocationAccess
+            // Link @ to LocationAccess
             builder
-                .HasMany(x => x.Access)
+                .HasMany(x => x.LocationAccesses)
                 .WithOne(x => x.Location)
                 .HasForeignKey(x => x.LocationId);
 
-            // Link Location to Container
+            // Link @ to Container
             builder
                 .HasMany(x => x.Containers)
                 .WithOne(x => x.Location)

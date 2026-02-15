@@ -12,7 +12,7 @@ namespace eft_app_guide.Models.Traders.Config
             // Link TraderLevel to Trader
             builder
                 .HasOne(x => x.Trader)
-                .WithMany(x => x.Levels)
+                .WithMany(x => x.TraderLevels)
                 .HasForeignKey(x => x.TraderId);
         }
     }

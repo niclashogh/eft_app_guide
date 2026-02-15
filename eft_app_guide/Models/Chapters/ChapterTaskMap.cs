@@ -1,9 +1,13 @@
-﻿using eft_app_guide.Models.Maps;
+﻿using eft_app_guide.Models.Chapters.Config;
+using eft_app_guide.Models.Maps;
+using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Chapters
 {
-    public class ChapterTaskMap // JunctionTable
+    /// <summary> JunctionEntity (ChapterTaskId + MapId) </summary>
+    [EntityTypeConfiguration(typeof(ChapterTaskMapConfig))]
+    public class ChapterTaskMap
     {
         #region Keys (CompositeKeys)
         [Required] public int ChapterTaskId { get; set; }

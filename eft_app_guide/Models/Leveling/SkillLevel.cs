@@ -1,12 +1,16 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using eft_app_guide.Models.Leveling.Config;
+using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Leveling
 {
-    public class SkillLevelDefinition // LookupTable
+    /// <summary> DefinitionEntity </summary>
+    [EntityTypeConfiguration(typeof(SkillLevelConfig))]
+    public class SkillLevel
     {
         #region Keys
         [Key] public int Id { get; init; }
-        [Required] public int SkillTypeId { get; set; }
+        [Required] public int SkillId { get; set; }
         #endregion
 
         [Required] public int Level { get; set; }
@@ -14,7 +18,7 @@ namespace eft_app_guide.Models.Leveling
         [Required] public int MaxExperiencePoint { get; set; }
 
         #region Relations
-        public SkillType? SkillType { get; set; }
+        public Skill? Skill { get; set; }
         #endregion
     }
 }

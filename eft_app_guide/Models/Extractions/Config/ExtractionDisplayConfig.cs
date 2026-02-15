@@ -12,7 +12,7 @@ namespace eft_app_guide.Models.Extractions.Config
             // Link @ to Extraction
             builder
                 .HasOne(x => x.Extraction)
-                .WithOne(x => x.Display)
+                .WithOne(x => x.ExtractionDisplay)
                 .HasForeignKey<ExtractionDisplay>(x => x.ExtractionId)
                 .OnDelete(DeleteBehavior.Cascade);
         }

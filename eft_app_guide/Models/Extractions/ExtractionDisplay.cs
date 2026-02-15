@@ -5,6 +5,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Extractions
 {
+    /// <summary> Extends Extraction </summary>
     [EntityTypeConfiguration(typeof(ExtractionDisplayConfig))]
     public class ExtractionDisplay : IPosition
     {

@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Items
 {
+    /// <summary> DifinitionTable (Medical, Food, Weapon, etc.) </summary>
     [EntityTypeConfiguration(typeof(ItemCategoryConfig))]
     public class ItemCategory
     {
@@ -14,7 +15,7 @@ namespace eft_app_guide.Models.Items
         [Required] public string Name { get; set; }
 
         #region Relations
-        public List<Item> Items { get; set; } = new();
+        public List<Item> Items { get; set; } = [];
         #endregion
     }
 }

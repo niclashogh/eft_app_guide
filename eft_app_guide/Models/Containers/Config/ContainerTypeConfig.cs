@@ -12,7 +12,7 @@ namespace eft_app_guide.Models.Containers.Config
             // Link @ to Container
             builder
                 .HasMany(x => x.Containers)
-                .WithOne(x => x.Type)
+                .WithOne(x => x.ContainerType)
                 .HasForeignKey(x => x.ContainerTypeId);
         }
     }

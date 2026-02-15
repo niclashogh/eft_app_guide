@@ -11,13 +11,13 @@ namespace eft_app_guide.Models.Ammunitions.Config
 
             // Link Ammunition to AmmunitionPerformance
             builder
-                .HasOne(x => x.Performance)
+                .HasOne(x => x.AmmunitionPerformance)
                 .WithOne(x => x.Ammunition)
                 .HasForeignKey<AmmunitionPerformance>(x => x.AmmunitionId);
 
             // Link Ammunition to AmmunitionCaliber
             builder
-                .HasOne(x => x.Caliber)
+                .HasOne(x => x.AmmunitionCaliber)
                 .WithMany(x => x.Ammunitions)
                 .HasForeignKey(x => x.AmmunitionCaliberId);
         }

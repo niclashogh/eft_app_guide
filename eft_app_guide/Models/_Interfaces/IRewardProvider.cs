@@ -4,7 +4,11 @@ namespace eft_app_guide.Models._Interfaces
 {
     public interface IRewardProvider
     {
-        string Description { get; set; }
-        Reward? Reward { get; set; }
+        public int RewardDomainId { get; set; }
+
+        public int DomainKey { get; set; }
+        public int Quantity { get; set; }
+
+        RewardDomain? RewardDomain { get; set; }
     }
 }

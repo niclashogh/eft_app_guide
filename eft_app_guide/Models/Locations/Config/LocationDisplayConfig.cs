@@ -9,10 +9,10 @@ namespace eft_app_guide.Models.Locations.Config
         {
             builder.HasKey(x => x.LocationId);
 
-            // Link LocationDisplay to Location
+            // Link @ to Location
             builder
                 .HasOne(x => x.Location)
-                .WithOne(x => x.Display)
+                .WithOne(x => x.LocationDisplay)
                 .HasForeignKey<LocationDisplay>(x => x.LocationId)
                 .OnDelete(DeleteBehavior.Cascade);
         }

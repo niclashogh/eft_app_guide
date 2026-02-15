@@ -9,7 +9,7 @@ namespace eft_app_guide.Models.Quests.Config
         {
             builder.HasKey(x => x.Id);
 
-            // Link QuestRequirement to Quest
+            // Link @ to Quest
             builder
                 .HasOne(x => x.Quest)
                 .WithMany(x => x.QuestRequirements)

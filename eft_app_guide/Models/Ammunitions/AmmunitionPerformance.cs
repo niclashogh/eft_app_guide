@@ -5,11 +5,12 @@ using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Ammunitions
 {
+    /// <summary> Extends Ammunition </summary>
     [EntityTypeConfiguration(typeof(AmmunitionPerformanceConfig))]
-    public class AmmunitionPerformance // Extends Ammunition
+    public class AmmunitionPerformance
     {
         #region Keys
-        [Key] public int AmmunitionId { get; init; }
+        [Key] public int AmmunitionId { get; set; }
         #endregion
 
         [Required] public double Damage { get; set; }

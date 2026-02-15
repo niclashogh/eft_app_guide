@@ -9,10 +9,10 @@ namespace eft_app_guide.Models.Locations.Config
         {
             builder.HasKey(x => x.Id);
 
-            // Link LocationAccess to Location
+            // Link @ to Location
             builder
                 .HasOne(x => x.Location)
-                .WithMany(x => x.Access)
+                .WithMany(x => x.LocationAccesses)
                 .HasForeignKey(x => x.LocationId);
         }
     }

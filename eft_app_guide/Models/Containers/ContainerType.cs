@@ -4,8 +4,9 @@ using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Containers
 {
+    /// <summary> DefintionEntity (Jackets, Bags, Drawers, etc.) </summary>
     [EntityTypeConfiguration(typeof(ContainerTypeConfig))]
-    public class ContainerType // Jackets, wooden crates, etc.
+    public class ContainerType
     {
         #region Keys
         [Key] public int Id { get; set; }

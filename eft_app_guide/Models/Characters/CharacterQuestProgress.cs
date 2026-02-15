@@ -1,9 +1,13 @@
-﻿using eft_app_guide.Models.Quests;
+﻿using eft_app_guide.Models.Characters.Config;
+using eft_app_guide.Models.Quests;
+using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Characters
 {
-    public class CharacterQuestProgress // JunctionTable, AssociationEntity
+    /// <summary> AssociationEntity (CharacterId + QuestId) </summary>
+    [EntityTypeConfiguration(typeof(CharacterQuestProgressConfig))]
+    public class CharacterQuestProgress
     {
         #region Keys (CompositeKeys)
         [Required] public int CharacterId { get; set; }

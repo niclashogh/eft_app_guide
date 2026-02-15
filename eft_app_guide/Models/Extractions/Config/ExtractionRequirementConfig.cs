@@ -12,7 +12,7 @@ namespace eft_app_guide.Models.Extractions.Config
             // Link @ to Extraction
             builder
                 .HasOne(x => x.Extraction)
-                .WithMany(x => x.Requirements)
+                .WithMany(x => x.ExtractionRequirements)
                 .HasForeignKey(x => x.ExtractionId);
         }
     }

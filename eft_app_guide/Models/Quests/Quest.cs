@@ -1,4 +1,5 @@
-﻿using eft_app_guide.Models.Characters;
+﻿using eft_app_guide._Persistence.Objects;
+using eft_app_guide.Models.Characters;
 using eft_app_guide.Models.Quests.Config;
 using eft_app_guide.Models.Traders;
 using Microsoft.EntityFrameworkCore;
@@ -6,6 +7,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Quests
 {
+    /// <summary> AggregativeEntity (QuestRequirement + QuestReward + QuestTask) </summary>
     [EntityTypeConfiguration(typeof(QuestConfig))]
     public class Quest
     {
@@ -22,9 +24,9 @@ namespace eft_app_guide.Models.Quests
         public Trader? Trader { get; set; }
 
         public List<QuestRequirement> QuestRequirements { get; set; } = [];
-        public List<QuestReward> QuestRewards { get; set; } = [];
+        public AssociationList<QuestReward> QuestRewards { get; set; } = [];
         public List<QuestTask> QuestTasks { get; set; } = [];
-        public List<CharacterQuestProgress> CharacterQuestProgressions { get; set; } = [];
+        public AssociationList<CharacterQuestProgress> CharacterQuestProgressions { get; set; } = [];
         #endregion
     }
 }

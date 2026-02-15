@@ -48,7 +48,7 @@ namespace eft_app_guide.Models.Ammunitions.Config
             // Link AmmunitionPerformance to Ammunition
             builder
                 .HasOne(x => x.Ammunition)
-                .WithOne(x => x.Performance)
+                .WithOne(x => x.AmmunitionPerformance)
                 .HasForeignKey<AmmunitionPerformance>(x => x.AmmunitionId)
                 .OnDelete(DeleteBehavior.Cascade);
         }

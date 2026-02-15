@@ -1,9 +1,13 @@
-﻿using eft_app_guide.Models.Factions;
+﻿using eft_app_guide.Models.Extractions.Config;
+using eft_app_guide.Models.Factions;
+using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Extractions
 {
-    public class ExtractionFaction // JunctionTable
+    /// <summary> JunctionEntity (ExtractonId + FactionId) </summary>
+    [EntityTypeConfiguration(typeof(ExtractionFactionConfig))]
+    public class ExtractionFaction
     {
         #region Keys (CompositeKeys)
         [Required] public int ExtractionId { get; set; }

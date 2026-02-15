@@ -4,15 +4,16 @@ using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Currency
 {
-    [EntityTypeConfiguration(typeof(CurrencyConversionConfig))]
-    public class CurrencyConversion
+    /// <summary> AssociationEntity (FromCurrencyId + ToCurrencyId) </summary>
+    [EntityTypeConfiguration(typeof(CurrencyExchangeConfig))]
+    public class CurrencyExchange
     {
         #region Keys (CompositeKeys)
         [Required] public int FromCurrencyId { get; set; }
         [Required] public int ToCurrencyId { get; set; }
         #endregion
 
-        /// <summary> 1 FromCurrecy = x ToCurrency </summary>
+        /// <summary> How many "ToCurrency", "FromCurrency" can buy </summary>
         [Required] public int Rate { get; set; }
 
         #region Relations

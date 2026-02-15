@@ -7,9 +7,9 @@ namespace eft_app_guide.Models.Quests.Config
     {
         public void Configure(EntityTypeBuilder<QuestReward> builder)
         {
-            builder.HasKey(x => x.Id);
+            builder.HasKey(x => x.QuestId);
 
-            // Link QuestReward to Quest
+            // Link @ to Quest
             builder
                 .HasOne(x => x.Quest)
                 .WithMany(x => x.QuestRewards)

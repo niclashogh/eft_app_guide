@@ -1,9 +1,11 @@
-﻿using eft_app_guide.Models.Currency.Config;
+﻿using eft_app_guide._Persistence.Objects;
+using eft_app_guide.Models.Currency.Config;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Currency
 {
+    /// <summary> AggregativeEntity (CurrencyConversion) </summary>
     [EntityTypeConfiguration(typeof(CurrencyConfig))]
     public class Currency
     {
@@ -14,7 +16,7 @@ namespace eft_app_guide.Models.Currency
         [Required] public string Name { get; set; }
 
         #region Relations
-        public List<CurrencyConversion> Conversions { get; set; } = [];
+        public AssociationList<CurrencyExchange> CurrencyExchanges { get; set; } = [];
         #endregion
     }
 }

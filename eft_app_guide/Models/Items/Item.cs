@@ -1,4 +1,5 @@
-﻿using eft_app_guide.Models.FleaMarket;
+﻿using eft_app_guide._Persistence.Objects;
+using eft_app_guide.Models.FleaMarket;
 using eft_app_guide.Models.HideoutStations;
 using eft_app_guide.Models.Items.Config;
 using eft_app_guide.Models.Locations;
@@ -8,6 +9,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Items
 {
+    /// <summary> AggregativeEntity (ItemCategory) </summary>
     [EntityTypeConfiguration(typeof(ItemConfig))]
     public class Item
     {
@@ -20,11 +22,11 @@ namespace eft_app_guide.Models.Items
         [Required] public string ShortendName { get; set; }
 
         #region Relations
-        public ItemCategory? Category { get; set; }
+        public ItemCategory? ItemCategory { get; set; }
 
-        public List<LocationItem> LocationItems { get; set; } = new();
-        public List<TraderItem> TraderItems { get; set; } = new();
-        public List<FleaMarketItem> FleaMarketItems { get; set; } = new();
+        public AssociationList<LocationItem> LocationItems { get; set; } = [];
+        public AssociationList<TraderItem> TraderItems { get; set; } = [];
+        public AssociationList<FleaMarketItem> FleaMarketItems { get; set; } = [];
         #endregion
     }
 }

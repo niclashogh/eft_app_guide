@@ -12,7 +12,7 @@ namespace eft_app_guide.Models.Characters.Config
             // Link @ to Character
             builder
                 .HasOne(x => x.Character)
-                .WithMany(x => x.QuestProgressions)
+                .WithMany(x => x.CharacterQuestProgressions)
                 .HasForeignKey(x => x.CharacterId);
 
             // Link @ to Quest

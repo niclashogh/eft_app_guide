@@ -1,9 +1,11 @@
-﻿using eft_app_guide.Models.Chapters.Config;
+﻿using eft_app_guide._Persistence.Objects;
+using eft_app_guide.Models.Chapters.Config;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Chapters
 {
+    /// <summary> AggregativeEntity (ChapterTaskMap + ChapterTaskReward) </summary>
     [EntityTypeConfiguration(typeof(ChapterTaskConfig))]
     public class ChapterTask
     {
@@ -16,10 +18,10 @@ namespace eft_app_guide.Models.Chapters
 
         #region Relatations
         public Chapter? Chapter { get; set; }
-        public ChapterTaskDisplay? Display { get; set; }
+        public ChapterTaskDisplay? ChapterTaskDisplay { get; set; }
 
-        public List<ChapterTaskMap> MapRelations { get; set; } = [];
-        public List<ChapterTaskReward> Rewards { get; set; } = [];
+        public JunctionList<ChapterTaskMap> ChapterTaskMaps { get; set; } = [];
+        public AssociationList<ChapterTaskReward> ChapterTaskRewards { get; set; } = [];
         #endregion
     }
 }

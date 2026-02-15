@@ -12,13 +12,13 @@ namespace eft_app_guide.Models.Chapters.Config
             // Link @ to ChapterTask
             builder
                 .HasOne(x => x.ChapterTask)
-                .WithMany(x => x.MapRelations)
+                .WithMany(x => x.ChapterTaskMaps)
                 .HasForeignKey(x => x.ChapterTaskId);
 
             // Link @ to Map
             builder
                 .HasOne(x => x.Map)
-                .WithMany(x => x.ChapterTaskRelations)
+                .WithMany(x => x.ChapterTaskMaps)
                 .HasForeignKey(x => x.MapId);
         }
     }

@@ -9,10 +9,10 @@ namespace eft_app_guide.Models.Items.Config
         {
             builder.HasKey(x => x.Id);
 
-            // Link ItemCategory to Item
+            // Link @ to Item
             builder
                 .HasMany(x => x.Items)
-                .WithOne(x => x.Category)
+                .WithOne(x => x.ItemCategory)
                 .HasForeignKey(x => x.ItemCategoryId);
         }
     }

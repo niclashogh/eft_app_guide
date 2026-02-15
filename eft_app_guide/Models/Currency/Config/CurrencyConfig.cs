@@ -11,7 +11,7 @@ namespace eft_app_guide.Models.Currency.Config
 
             // Link @ to CurrencyConversion
             builder
-                .HasMany(x => x.Conversions)
+                .HasMany(x => x.CurrencyExchanges)
                 .WithOne(x => x.FromCurrency)
                 .HasForeignKey(x => x.FromCurrencyId);
         }

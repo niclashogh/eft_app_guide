@@ -3,9 +3,9 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace eft_app_guide.Models.Currency.Config
 {
-    public class CurrencyConversionConfig : IEntityTypeConfiguration<CurrencyConversion>
+    public class CurrencyExchangeConfig : IEntityTypeConfiguration<CurrencyExchange>
     {
-        public void Configure(EntityTypeBuilder<CurrencyConversion> builder)
+        public void Configure(EntityTypeBuilder<CurrencyExchange> builder)
         {
             builder.HasKey(x => new { x.FromCurrency, x.ToCurrency });
 

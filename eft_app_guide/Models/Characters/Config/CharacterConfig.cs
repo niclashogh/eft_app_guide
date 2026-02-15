@@ -23,13 +23,13 @@ namespace eft_app_guide.Models.Characters.Config
 
             // link @ to CharacterSkillProgress
             builder
-                .HasMany(x => x.SkillProgressions)
+                .HasMany(x => x.CharacterSkillProgressions)
                 .WithOne(x => x.Character)
                 .HasForeignKey(x => x.CharacterId);
 
             // Link @ to CharacterQuestProgress
             builder
-                .HasMany(x => x.QuestProgressions)
+                .HasMany(x => x.CharacterQuestProgressions)
                 .WithOne(x => x.Character)
                 .HasForeignKey(x => x.CharacterId);
         }

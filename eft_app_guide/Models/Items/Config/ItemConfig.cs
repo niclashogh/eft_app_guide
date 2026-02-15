@@ -9,25 +9,25 @@ namespace eft_app_guide.Models.Items.Config
         {
             builder.HasKey(x => x.Id);
 
-            // Link Item to ItemCategory
+            // Link @ to ItemCategory
             builder
-                .HasOne(x => x.Category)
+                .HasOne(x => x.ItemCategory)
                 .WithMany(x => x.Items)
                 .HasForeignKey(x => x.ItemCategoryId);
 
-            // Link Item to LocationLoot
+            // Link @ to LocationItem
             builder
                 .HasMany(x => x.LocationItems)
                 .WithOne(x => x.Item)
                 .HasForeignKey(x => x.ItemId);
 
-            // Link Item to TraderItem
+            // Link @ to TraderItem
             builder
                 .HasMany(x => x.TraderItems)
                 .WithOne(x => x.Item)
                 .HasForeignKey(x => x.ItemId);
 
-            // Link Item to FleaMarketItem
+            // Link @ to FleaMarketItem
             builder
                 .HasMany(x => x.FleaMarketItems)
                 .WithOne(x => x.Item)

@@ -5,7 +5,8 @@ using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Locations
 {
-    [EntityTypeConfiguration(typeof(LocationLootConfig))]
+    /// <summary> AssociationEntity (LocationId + ItemId) </summary>
+    [EntityTypeConfiguration(typeof(LocationItemConfig))]
     public class LocationItem
     {
         #region Keys

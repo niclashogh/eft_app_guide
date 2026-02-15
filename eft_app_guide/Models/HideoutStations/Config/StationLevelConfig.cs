@@ -4,23 +4,23 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace eft_app_guide.Models.HideoutStations.Config
 {
-    public class StationLevelDefinitionConfig : IEntityTypeConfiguration<StationLevelDefinition>
+    public class StationLevelConfig : IEntityTypeConfiguration<StationLevel>
     {
-        public void Configure(EntityTypeBuilder<StationLevelDefinition> builder)
+        public void Configure(EntityTypeBuilder<StationLevel> builder)
         {
             builder.HasKey(x => x.Id);
 
             // Link @ to StationLevel
             builder
                 .HasOne(x => x.Station)
-                .WithMany(x => x.LevelDefinitions)
+                .WithMany(x => x.StationLevels)
                 .HasForeignKey(x => x.StationId);
 
             // Link @ to StationLevelDefintionCrafting
             builder
-                .HasMany(x => x.CraftingRelations)
+                .HasMany(x => x.StationLevelCraftings)
                 .WithOne(x => x.StationLevel)
-                .HasForeignKey(x => x.StationLevelDefinitionId);
+                .HasForeignKey(x => x.StationLevelId);
         }
     }
 }

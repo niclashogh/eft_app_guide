@@ -1,10 +1,12 @@
-﻿using eft_app_guide.Models.Containers.Config;
+﻿using eft_app_guide._Persistence.Objects;
+using eft_app_guide.Models.Containers.Config;
 using eft_app_guide.Models.Locations;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Containers
 {
+    /// <summary> AggregativeEntity (ContainerType + ContainerAccess) </summary>
     [EntityTypeConfiguration(typeof(ContainerConfig))]
     public class Container
     {
@@ -18,9 +20,9 @@ namespace eft_app_guide.Models.Containers
 
         #region Relations
         public Location? Location { get; set; }
-        public ContainerType? Type { get; set; }
+        public ContainerType? ContainerType { get; set; }
 
-        public List<ContainerAccess> Access { get; set; } = [];
+        public JunctionList<ContainerAccess> ContainerAccesses { get; set; } = [];
         #endregion
     }
 }

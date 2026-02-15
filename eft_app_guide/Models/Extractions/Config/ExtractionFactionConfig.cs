@@ -12,13 +12,13 @@ namespace eft_app_guide.Models.Extractions.Config
             // Link @ to Extraction
             builder
                 .HasOne(x => x.Extraction)
-                .WithMany(x => x.FactionRelations)
+                .WithMany(x => x.ExtractionFactions)
                 .HasForeignKey(x => x.ExtractionId);
 
             // Link @ to Faction
             builder
                 .HasOne(x => x.Faction)
-                .WithMany(x => x.ExtractionRelations)
+                .WithMany(x => x.ExtractionFactions)
                 .HasForeignKey(x => x.FactionId);
         }
     }

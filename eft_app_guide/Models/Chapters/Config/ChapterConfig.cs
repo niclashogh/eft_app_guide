@@ -11,7 +11,7 @@ namespace eft_app_guide.Models.Chapters.Config
 
             // Link @ to ChapterTask
             builder
-                .HasMany(x => x.Tasks)
+                .HasMany(x => x.ChapterTasks)
                 .WithOne(x => x.Chapter)
                 .HasForeignKey(x => x.Id);
         }

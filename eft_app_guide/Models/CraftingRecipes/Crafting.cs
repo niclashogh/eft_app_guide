@@ -12,7 +12,7 @@ namespace eft_app_guide.Models.CraftingRecipes
         // ...
 
         #region Relations
-        public List<StationLevelDefinitionCrafting> StationLevelRelations { get; set; } = [];
+        public List<StationLevelCrafting> StationLevelCraftings { get; set; } = [];
         #endregion
     }
 }

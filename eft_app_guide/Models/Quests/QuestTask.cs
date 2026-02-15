@@ -5,6 +5,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Quests
 {
+    /// <summary> DefinitionEntity </summary>
     [EntityTypeConfiguration(typeof(QuestTaskConfig))]
     public class QuestTask
     {
@@ -20,7 +21,7 @@ namespace eft_app_guide.Models.Quests
         #region Relations
         public Quest? Quest { get; set; }
         public Map? Map { get; set; }
-        public QuestTaskDisplay? Display { get; set; }
+        public QuestTaskDisplay? QuestTaskDisplay { get; set; }
         #endregion
     }
 }

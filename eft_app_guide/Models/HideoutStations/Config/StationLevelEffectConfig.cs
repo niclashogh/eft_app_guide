@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace eft_app_guide.Models.HideoutStations.Config
 {
-    internal class StationLevelDefinitionEffectConfig // MISSING
+    internal class StationLevelEffectConfig // MISSING
     {
     }
 }

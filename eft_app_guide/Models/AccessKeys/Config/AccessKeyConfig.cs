@@ -11,13 +11,13 @@ namespace eft_app_guide.Models.AccessKeys.Config
 
             // Link @ to LocationAccess
             builder
-                .HasMany(x => x.LocationAccess)
+                .HasMany(x => x.LocationAccesses)
                 .WithOne(x => x.AccessKey)
                 .HasForeignKey(x => x.AccessKeyId);
 
             // Link @ to ContainerAccess
             builder
-                .HasMany(x => x.ContainerAccess)
+                .HasMany(x => x.ContainerAccesses)
                 .WithOne(x => x.AccessKey)
                 .HasForeignKey(x => x.AccessKeyId);
         }

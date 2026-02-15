@@ -1,15 +1,18 @@
 ﻿using eft_app_guide.Models.Extractions;
 using eft_app_guide.Models.Markers;
 using eft_app_guide.Models.Quests;
-using eft_app_guide.Models.BTRs;
 using System.ComponentModel.DataAnnotations;
 using eft_app_guide.Models.Locations;
 using Microsoft.EntityFrameworkCore;
 using eft_app_guide.Models.Maps.Config;
 using eft_app_guide.Models.Chapters;
+using eft_app_guide.Models.Characters;
+using eft_app_guide.Models.Services;
+using eft_app_guide._Persistence.Objects;
 
 namespace eft_app_guide.Models.Maps
 {
+    /// <summary> AggregativeEntity (Location + Extraction + QuestTask + Btr + Marker + ChapterTaskMap + CharacterMapAccess) </summary>
     [EntityTypeConfiguration(typeof(MapConfig))]
     public class Map
     {
@@ -18,15 +21,16 @@ namespace eft_app_guide.Models.Maps
         #endregion
 
         [Required] public string Name { get; set; }
-        [Required] public bool IsLocked { get; set; } // move to CharacterMapAccess junctiontable
 
         #region Relatations
-        public List<Location> Locations { get; set; } = new();
-        public List<Extraction> Extractions { get; set; } = new();
-        public List<QuestTask> QuestTasks { get; set; } = new();
-        public List<ChapterTaskMap> ChapterTaskRelations { get; set; } = [];
-        public List<BTR> BTRs { get; set; } = new();
-        public List<Marker> Markers { get; set; } = new();
+        public List<Location> Locations { get; set; } = [];
+        public List<Extraction> Extractions { get; set; } = [];
+        public List<QuestTask> QuestTasks { get; set; } = [];
+        public List<Btr> Btrs { get; set; } = [];
+        public List<Marker> Markers { get; set; } = [];
+
+        public JunctionList<ChapterTaskMap> ChapterTaskMaps { get; set; } = [];
+        public AssociationList<CharacterMapAccess> CharacterMapAccesses { get; set; } = [];
         #endregion
     }
 }

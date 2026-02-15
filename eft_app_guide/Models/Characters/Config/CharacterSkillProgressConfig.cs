@@ -7,19 +7,19 @@ namespace eft_app_guide.Models.Characters.Config
     {
         public void Configure(EntityTypeBuilder<CharacterSkillProgress> builder)
         {
-            builder.HasKey(x => new { x.CharacterId, x.CharacterSkillTypeId });
+            builder.HasKey(x => new { x.CharacterId, x.SkillId });
 
             // Link @ to Character
             builder
                 .HasOne(x => x.Character)
-                .WithMany(x => x.SkillProgressions)
+                .WithMany(x => x.CharacterSkillProgressions)
                 .HasForeignKey(x => x.CharacterId);
 
-            // Link @ to SkillType
+            // Link @ to Skill
             builder
-                .HasOne(x => x.SkillType)
+                .HasOne(x => x.Skill)
                 .WithMany(x => x.CharacterSkillProgressions)
-                .HasForeignKey(x => x.CharacterSkillTypeId);
+                .HasForeignKey(x => x.SkillId);
         }
     }
 }

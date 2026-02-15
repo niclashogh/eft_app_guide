@@ -9,7 +9,7 @@ namespace eft_app_guide.Models.FleaMarket.Config
         {
             builder.HasKey(x => x.Id);
 
-            // Link FleaMarket to FleaMarketItem
+            // Link @ to FleaMarketItem
             builder
                 .HasMany(x => x.Items)
                 .WithOne(x => x.FleaMarket)

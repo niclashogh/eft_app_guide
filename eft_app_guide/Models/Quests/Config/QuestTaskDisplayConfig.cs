@@ -9,10 +9,10 @@ namespace eft_app_guide.Models.Quests.Config
         {
             builder.HasKey(x => x.QuestTaskId);
 
-            // link QuestTaskDisplay to QuestTask
+            // link @ to QuestTask
             builder
                 .HasOne(x => x.QuestTask)
-                .WithOne(x => x.Display)
+                .WithOne(x => x.QuestTaskDisplay)
                 .HasForeignKey<QuestTaskDisplay>(x => x.QuestTaskId)
                 .OnDelete(DeleteBehavior.Cascade);
         }

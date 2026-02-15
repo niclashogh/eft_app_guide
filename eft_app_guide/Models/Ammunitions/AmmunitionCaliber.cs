@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Ammunitions
 {
+    /// <summary> DefinitionEntity </summary>
     [EntityTypeConfiguration(typeof(AmmunitionCaliberConfig))]
     public class AmmunitionCaliber
     {

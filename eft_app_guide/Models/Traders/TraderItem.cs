@@ -5,11 +5,12 @@ using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Traders
 {
+    /// <summary> AssociationEntity (TraderId + ItemId) </summary>
     [EntityTypeConfiguration(typeof(TraderItemConfig))]
-    public class TraderItem
+    public class TraderItem // MISSING PAYMENT
     {
         #region Keys
-        [Key] public int Id { get; init; }
+        [Key] public int Id { get; init; } // Remove and make composite key w/ int PaymentGroup
         [Required] public int TraderId { get; set; }
         [Required] public int ItemId { get; set; }
         #endregion

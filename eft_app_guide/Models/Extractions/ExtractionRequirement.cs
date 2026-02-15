@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Extractions
 {
+    /// <summary> DefinitionEntity </summary>
     [EntityTypeConfiguration(typeof(ExtractionRequirementConfig))]
     public class ExtractionRequirement
     {

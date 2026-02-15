@@ -1,12 +1,13 @@
-﻿using eft_app_guide.Models.BTRs.Config;
-using eft_app_guide.Models.Maps;
+﻿using eft_app_guide.Models.Maps;
+using eft_app_guide.Models.Services.Config;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 
-namespace eft_app_guide.Models.BTRs
+namespace eft_app_guide.Models.Services
 {
-    [EntityTypeConfiguration(typeof(BTRConfig))]
-    public class BTR
+    /// <summary> DefintionEntity </summary>
+    [EntityTypeConfiguration(typeof(BtrConfig))]
+    public class Btr
     {
         #region Keys
         [Key] public int Id { get; init; }
@@ -17,7 +18,7 @@ namespace eft_app_guide.Models.BTRs
 
         #region Relations
         public Map? Map { get; set; }
-        public BTRDisplay? Display { get; set; }
+        public BtrDisplay? BtrDisplay { get; set; }
         #endregion
     }
 }

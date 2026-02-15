@@ -5,6 +5,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Accounts
 {
+    /// <summary> AggregativeEntity (AccountEdition + Character) </summary>
     [EntityTypeConfiguration(typeof(AccountConfig))]
     public class Account
     {
@@ -17,7 +18,7 @@ namespace eft_app_guide.Models.Accounts
         [Required] public DateTime WipeDate { get; set; }
 
         #region Relations
-        public AccountEdition? Edition { get; set; }
+        public AccountEdition? AccountEdition { get; set; }
         public Character? Character { get; set; }
         #endregion
     }

@@ -7,19 +7,19 @@ namespace eft_app_guide.Models.Chapters.Config
     {
         public void Configure(EntityTypeBuilder<ChapterTaskReward> builder)
         {
-            builder.HasKey(x => new { x.ChapterTaskId, x.RewardId });
+            builder.HasKey(x => new { x.ChapterTaskId, x.RewardDomainId });
 
             // Link @ to ChapterTask
             builder
                 .HasOne(x => x.Task)
-                .WithMany(x => x.Rewards)
-                .HasForeignKey(x => x.RewardId);
-
-            // Link @ to Reward
-            builder
-                .HasOne(x => x.Reward)
                 .WithMany(x => x.ChapterTaskRewards)
-                .HasForeignKey(x => x.RewardId);
+                .HasForeignKey(x => x.RewardDomainId);
+
+            // Link @ to RewardDomain
+            builder
+                .HasOne(x => x.RewardDomain)
+                .WithMany(x => x.ChapterTaskRewards)
+                .HasForeignKey(x => x.RewardDomainId);
         }
     }
 }

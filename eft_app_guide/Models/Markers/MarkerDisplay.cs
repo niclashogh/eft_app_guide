@@ -6,6 +6,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Markers
 {
+    /// <summary> Extends Marker </summary>
     [EntityTypeConfiguration(typeof(MarkerDisplayConfig))]
     public class MarkerDisplay : IPosition, ISize
     {
@@ -22,7 +23,7 @@ namespace eft_app_guide.Models.Markers
 
         #region Relations
         public Marker? Marker { get; set; }
-        public MarkerIcon? Icon { get; set; }
+        public MarkerIcon? MarkerIcon { get; set; }
         #endregion
     }
 }

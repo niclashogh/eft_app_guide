@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Chapters
 {
+    /// <summary> AggregativeEntity (ChapterTask) </summary>
     [EntityTypeConfiguration(typeof(ChapterConfig))]
     public class Chapter
     {
@@ -14,7 +15,7 @@ namespace eft_app_guide.Models.Chapters
         [Required] public string Name { get; set; }
 
         #region Relatations
-        public List<ChapterTask> Tasks { get; set; } = [];
+        public List<ChapterTask> ChapterTasks { get; set; } = [];
         #endregion
     }
 }

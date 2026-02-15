@@ -2,7 +2,7 @@
 
 namespace eft_app_guide.Models.Weapons
 {
-    public class WeaponSkillType
+    public class WeaponSkillType // MISSING
     {
         #region Keys
         [Key] public int Id { get; init; }

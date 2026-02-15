@@ -12,7 +12,7 @@ namespace eft_app_guide.Models.Traders.Config
             // Link TraderItem to Trader
             builder
                 .HasOne(x => x.Trader)
-                .WithMany(x => x.Items)
+                .WithMany(x => x.TraderItems)
                 .HasForeignKey(x => x.TraderId);
 
             // Link TraderItem to Item

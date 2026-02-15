@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.HideoutStations
 {
+    /// <summary> AggregativeEntity (StationLevel) </summary>
     [EntityTypeConfiguration(typeof(StationConfig))]
     public class Station
     {
@@ -14,7 +15,7 @@ namespace eft_app_guide.Models.HideoutStations
         [Required] public string Name { get; set; }
 
         #region Relations
-        public List<StationLevelDefinition> LevelDefinitions { get; set; } = [];
+        public List<StationLevel> StationLevels { get; set; } = [];
         #endregion
     }
 }

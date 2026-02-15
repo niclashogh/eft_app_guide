@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Traders
 {
+    /// <summary> DefinitionEntity </summary>
     [EntityTypeConfiguration(typeof(TraderLevelConfig))]
     public class TraderLevel
     {
@@ -13,9 +14,9 @@ namespace eft_app_guide.Models.Traders
         #endregion
 
         [Required] public int Level { get; set; }
-        [Required] public bool IsLocked { get; set; } // move to CharacterTraderProgress
         [Required] public double MinReputation { get; set; }
         [Required] public double MaxReputation { get; set; }
+        [Required] public string RequiredTradeVolume { get; set; }
 
         #region Relations
         public Trader? Trader { get; set; }

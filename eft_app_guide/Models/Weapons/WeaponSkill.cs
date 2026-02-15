@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Weapons
 {
-    public class WeaponSkill
+    public class WeaponSkill // MISSING
     {
         #region Keys
         [Key] public int WeaponId { get; set; }

@@ -12,13 +12,13 @@ namespace eft_app_guide.Models.Containers.Config
             // Link @ to Container
             builder
                 .HasOne(x => x.Container)
-                .WithMany(x => x.Access)
+                .WithMany(x => x.ContainerAccesses)
                 .HasForeignKey(x => x.ContainerId);
 
             // Link @ to AccessKey
             builder
                 .HasOne(x => x.AccessKey)
-                .WithMany(x => x.ContainerAccess)
+                .WithMany(x => x.ContainerAccesses)
                 .HasForeignKey(x => x.AccessKeyId);
         }
     }

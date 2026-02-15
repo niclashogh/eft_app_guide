@@ -9,33 +9,39 @@ namespace eft_app_guide.Models.Maps.Config
         {
             builder.HasKey(x => x.Id);
 
-            // Link Map to Location
+            // Link @ to Location
             builder
                 .HasMany(x => x.Locations)
                 .WithOne(x => x.Map)
                 .HasForeignKey(x => x.MapId);
 
-            // Link Map to Extraction
+            // Link @ to Extraction
             builder
                 .HasMany(x => x.Extractions)
                 .WithOne(x => x.Map)
                 .HasForeignKey(x => x.MapId);
 
-            // Link Map to QuestTask
+            // Link @ to QuestTask
             builder
                 .HasMany(x => x.QuestTasks)
                 .WithOne(x => x.Map)
                 .HasForeignKey(x => x.MapId);
 
-            // Link Map to BTR
+            // Link @ to Btr
             builder
-                .HasMany(x => x.BTRs)
+                .HasMany(x => x.Btrs)
                 .WithOne(x => x.Map)
                 .HasForeignKey(x => x.MapId);
 
-            // Link Map to Marker
+            // Link @ to Marker
             builder
                 .HasMany(x => x.Markers)
+                .WithOne(x => x.Map)
+                .HasForeignKey(x => x.MapId);
+
+            // Link @ to CharacterMapAccess
+            builder
+                .HasMany(x => x.CharacterMapAccesses)
                 .WithOne(x => x.Map)
                 .HasForeignKey(x => x.MapId);
         }

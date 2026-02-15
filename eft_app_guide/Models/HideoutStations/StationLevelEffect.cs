@@ -2,7 +2,7 @@
 
 namespace eft_app_guide.Models.HideoutStations
 {
-    public class StationLevelDefinitionEffect // MISSING
+    public class StationLevelEffect // MISSING
     {
         #region Keys
         [Key] public int Id { get; init; }

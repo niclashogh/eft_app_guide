@@ -5,6 +5,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Markers
 {
+    /// <summary> DefinitionEntity </summary>
     [EntityTypeConfiguration(typeof(MarkerConfig))]
     public class Marker
     {
@@ -18,7 +19,7 @@ namespace eft_app_guide.Models.Markers
 
         #region Relations
         public Map? Map { get; set; }
-        public MarkerDisplay? Display { get; set; }
+        public MarkerDisplay? MarkerDisplay { get; set; }
         #endregion
     }
 }

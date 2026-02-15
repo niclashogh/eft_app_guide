@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Ammunitions
 {
+    /// <summary> AggregativeEntity (AmmunitionPerformance + AmmunitionCaliber) </summary>
     [EntityTypeConfiguration(typeof(AmmunitionConfig))]
     public class Ammunition
     {
@@ -16,8 +17,8 @@ namespace eft_app_guide.Models.Ammunitions
         [Required] public string ShortendName { get; set; }
 
         #region Relations
-        public AmmunitionPerformance? Performance { get; set; }
-        public AmmunitionCaliber? Caliber { get; set; }
+        public AmmunitionPerformance? AmmunitionPerformance { get; set; }
+        public AmmunitionCaliber? AmmunitionCaliber { get; set; }
         #endregion
     }
 }

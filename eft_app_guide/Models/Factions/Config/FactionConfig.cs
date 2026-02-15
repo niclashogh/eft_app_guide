@@ -17,7 +17,7 @@ namespace eft_app_guide.Models.Factions.Config
 
             // Link @ to ExtractionFaction
             builder
-                .HasMany(x => x.ExtractionRelations)
+                .HasMany(x => x.ExtractionFactions)
                 .WithOne(x => x.Faction)
                 .HasForeignKey(x => x.FactionId);
         }

@@ -1,4 +1,5 @@
-﻿using eft_app_guide.Models.AccessKeys.Config;
+﻿using eft_app_guide._Persistence.Objects;
+using eft_app_guide.Models.AccessKeys.Config;
 using eft_app_guide.Models.Containers;
 using eft_app_guide.Models.Locations;
 using Microsoft.EntityFrameworkCore;
@@ -6,6 +7,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.AccessKeys
 {
+    /// <summary> DefintionEntity (Keys, Keycards, etc.) </summary>
     [EntityTypeConfiguration(typeof(AccessKeyConfig))]
     public class AccessKey
     {
@@ -16,8 +18,8 @@ namespace eft_app_guide.Models.AccessKeys
         [Required] public string Name { get; set; }
 
         #region relations
-        public List<LocationAccess> LocationAccess { get; set; } = [];
-        public List<ContainerAccess> ContainerAccess { get; set; } = [];
+        public AssociationList<LocationAccess> LocationAccesses { get; set; } = [];
+        public JunctionList<ContainerAccess> ContainerAccesses { get; set; } = [];
         #endregion
     }
 }

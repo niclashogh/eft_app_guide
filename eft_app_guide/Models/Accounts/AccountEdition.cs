@@ -1,11 +1,13 @@
-﻿using eft_app_guide.Models.Accounts.Config;
+﻿using eft_app_guide._Persistence.Objects;
+using eft_app_guide.Models.Accounts.Config;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Accounts
 {
+    /// <summary> DefinitionEntity (Standard, Left Behind, Prepare for Escape, Edge of Darkness, The Unheard) </summary>
     [EntityTypeConfiguration(typeof(AccountEditionConfig))]
-    public class AccountEdition // LookupTable - Standard, LeftBehind, PrepareForEscape, EdgeOfDarkness & TheUnheard
+    public class AccountEdition
     {
         #region Keys
         [Key] public int Id { get; init; }
@@ -15,7 +17,7 @@ namespace eft_app_guide.Models.Accounts
 
         #region Relations
         public List<Account> Accounts { get; set; } = [];
-        public List<AccountEditionReward> Rewards { get; set; } = [];
+        public AssociationList<AccountEditionReward> AccountEditionRewards { get; set; } = [];
         #endregion
     }
 }

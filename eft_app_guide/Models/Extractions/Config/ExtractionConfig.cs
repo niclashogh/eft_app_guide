@@ -17,19 +17,19 @@ namespace eft_app_guide.Models.Extractions.Config
 
             // Link @ to ExtractionRequirement
             builder
-                .HasMany(x => x.Requirements)
+                .HasMany(x => x.ExtractionRequirements)
                 .WithOne(x => x.Extraction)
                 .HasForeignKey(x => x.ExtractionId);
 
             // Link @ to ExtractionDisplay
             builder
-                .HasOne(x => x.Display)
+                .HasOne(x => x.ExtractionDisplay)
                 .WithOne(x => x.Extraction)
                 .HasForeignKey<ExtractionDisplay>(x => x.ExtractionId);
 
             // Link @ to ExtractionFaction
             builder
-                .HasMany(x => x.FactionRelations)
+                .HasMany(x => x.ExtractionFactions)
                 .WithOne(x => x.Extraction)
                 .HasForeignKey(x => x.ExtractionId);
         }

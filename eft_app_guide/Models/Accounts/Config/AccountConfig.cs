@@ -12,7 +12,7 @@ namespace eft_app_guide.Models.Accounts.Config
 
             // link @ to AccountEdition
             builder
-                .HasOne(x => x.Edition)
+                .HasOne(x => x.AccountEdition)
                 .WithMany(x => x.Accounts)
                 .HasForeignKey(x => x.AccountEditionId);
 

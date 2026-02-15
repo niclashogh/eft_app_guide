@@ -5,6 +5,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Locations
 {
+    /// <summary> Extends Location </summary>
     [EntityTypeConfiguration(typeof(LocationDisplayConfig))]
     public class LocationDisplay : IPosition
     {
