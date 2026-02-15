@@ -18,13 +18,18 @@ namespace eft_app_guide.Models.Locations
 
         [Required] public string Name { get; set; }
 
-        #region Relations
+        #region Relations (Parents)
         public Map? Map { get; set; }
-        public LocationDisplay? LocationDisplay { get; set; }
+        #endregion
 
+        #region Relations (Children)
         public AssociationList<LocationItem> LocationItems { get; set; } = [];
         public AssociationList<LocationAccess> LocationAccesses { get; set; } = [];
         public List<Container> Containers { get; set; } = [];
+        #endregion
+
+        #region Relations (Extensions)
+        public LocationDisplay? LocationDisplay { get; set; }
         #endregion
     }
 }

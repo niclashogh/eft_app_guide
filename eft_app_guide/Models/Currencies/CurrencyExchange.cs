@@ -1,8 +1,8 @@
-﻿using eft_app_guide.Models.Currency.Config;
+﻿using eft_app_guide.Models.Currencies.Config;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 
-namespace eft_app_guide.Models.Currency
+namespace eft_app_guide.Models.Currencies
 {
     /// <summary> AssociationEntity (FromCurrencyId + ToCurrencyId) </summary>
     [EntityTypeConfiguration(typeof(CurrencyExchangeConfig))]
@@ -16,7 +16,7 @@ namespace eft_app_guide.Models.Currency
         /// <summary> How many "ToCurrency", "FromCurrency" can buy </summary>
         [Required] public int Rate { get; set; }
 
-        #region Relations
+        #region Relations (Parents)
         public Currency? FromCurrency { get; set; }
         public Currency? ToCurrency { get; set; }
         #endregion

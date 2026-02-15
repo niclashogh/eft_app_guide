@@ -21,7 +21,7 @@ namespace eft_app_guide.Models.AccessKeys
         [Required] public bool LimitedUses { get; set; }
         [Required] public int MaxUses { get; set; }
 
-        #region relations
+        #region relations (Children)
         public AssociationList<LocationAccess> LocationAccesses { get; set; } = [];
         public JunctionList<ContainerAccess> ContainerAccesses { get; set; } = [];
         #endregion

@@ -27,7 +27,7 @@ namespace eft_app_guide.Models.Ammunitions
 
         [Required] public Percent Heat { get; set; }
 
-        #region Relations
+        #region Relations (Parents)
         public Ammunition? Ammunition { get; set; }
         #endregion
     }

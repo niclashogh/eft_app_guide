@@ -1,20 +1,20 @@
-﻿using eft_app_guide.Models.Chapters.Config;
+﻿using eft_app_guide.Models._Interfaces;
+using eft_app_guide.Models.Chapters.Config;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Chapters
 {
-    /// <summary> ChildEntity (ChapterTask) </summary>
+    /// <summary> Extends ChapterTask </summary>
     [EntityTypeConfiguration(typeof(ChapterTaskGroupConfig))]
-    public class ChapterTaskGroup
+    public class ChapterTaskGroup : IGroup
     {
         #region Keys
-        [Key] public int Id { get; init; }
+        [Key] public int ChapterTaskId { get; set; }
         [Required] public string GUID { get; set; }
-        [Required] public int ChapterTaskId { get; set; }
         #endregion
 
-        #region Relations
+        #region Relations (Parents)
         public ChapterTask? ChapterTask { get; set; }
         #endregion
     }

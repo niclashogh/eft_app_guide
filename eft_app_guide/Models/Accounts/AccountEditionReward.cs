@@ -18,7 +18,7 @@ namespace eft_app_guide.Models.Accounts
         [Required] public int DomainKey { get; set; }
         [Required] public int Quantity { get; set; }
 
-        #region Relations
+        #region Relations (Parents)
         public AccountEdition? AccountEdition { get; set; }
         public RewardDomain? RewardDomain { get; set; }
         #endregion

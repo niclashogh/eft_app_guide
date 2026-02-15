@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace eft_app_guide.Models.Currency.Config
+namespace eft_app_guide.Models.Currencies.Config
 {
     public class CurrencyConfig : IEntityTypeConfiguration<Currency>
     {
@@ -14,6 +14,12 @@ namespace eft_app_guide.Models.Currency.Config
                 .HasMany(x => x.CurrencyExchanges)
                 .WithOne(x => x.FromCurrency)
                 .HasForeignKey(x => x.FromCurrencyId);
+
+            // Link @ to TraderLevel
+            builder
+                .HasMany(x => x.TraderLevels)
+                .WithOne(x => x.Currency)
+                .HasForeignKey(x => x.CurrencyId);
         }
     }
 }

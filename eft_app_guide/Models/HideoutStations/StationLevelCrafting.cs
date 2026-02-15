@@ -14,7 +14,7 @@ namespace eft_app_guide.Models.HideoutStations
         [Required] public int CraftingId { get; set; }
         #endregion
 
-        #region Relations
+        #region Relations (Parents)
         public StationLevel? StationLevel {  get; set; }
         public Crafting? Crafting { get; set; }
         #endregion

@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Quests
 {
-    /// <summary> ChildEntity </summary>
+    /// <summary> ChildEntity (Quest) </summary>
     [EntityTypeConfiguration(typeof(QuestRequirementConfig))]
     public class QuestRequirement
     {
@@ -15,7 +15,7 @@ namespace eft_app_guide.Models.Quests
 
         [Required] public string Description { get; set; }
 
-        #region Relations
+        #region Relations (Parents)
         public Quest? Quest { get; set; }
         #endregion
     }

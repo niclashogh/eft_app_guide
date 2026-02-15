@@ -7,7 +7,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Characters
 {
-    /// <summary> AggregativeEntity (Faction + CharacterMapAccess + CharacterQuestProgress + CharacterSkillProgress + CharacterStationProgress) </summary>
+    /// <summary> AggregativeEntity (Faction + CharacterMapAccess + CharacterQuestProgress + CharacterSkillProgress + CharacterStationProgress + CharacterTraderReputation) </summary>
     [EntityTypeConfiguration(typeof(CharacterConfig))]
     public class Character
     {
@@ -18,14 +18,17 @@ namespace eft_app_guide.Models.Characters
 
         [Required] public int ExperiencePoint { get; set; }
 
-        #region Relations
+        #region Relations (Parents)
         public Account? Account { get; set; }
         public Faction? Faction { get; set; }
+        #endregion
 
+        #region Relations (Children)
         public AssociationList<CharacterMapAccess> CharacterMapAccesses { get; set; } = [];
         public AssociationList<CharacterQuestProgress> CharacterQuestProgressions { get; set; } = [];
         public AssociationList<CharacterSkillProgress> CharacterSkillProgressions { get; set; } = [];
         public AssociationList<CharacterStationProgress> CharacterStationProgressions { get; set; } = [];
+        public AssociationList<CharacterTraderReputation> CharacterTraderReputations { get; set; } = [];
         #endregion
     }
 }

@@ -16,7 +16,7 @@ namespace eft_app_guide.Models.Locations
 
         [Required] public bool IsLocked { get; set; }
 
-        #region Relations
+        #region Relations (Parents)
         public Location? Location { get; set; }
         public AccessKey? AccessKey { get; set; }
         #endregion

@@ -14,7 +14,7 @@ namespace eft_app_guide.Models.Items
 
         [Required] public string Name { get; set; }
 
-        #region Relations
+        #region Relations (Children)
         public List<Item> Items { get; set; } = [];
         #endregion
     }

@@ -16,7 +16,7 @@ namespace eft_app_guide.Models.Characters
 
         [Required] public int ExperiencePoint {  get; set; }
 
-        #region Relations
+        #region Relations (Parents)
         public Character? Character { get; set; }
         public Skill? Skill { get; set; }
         #endregion

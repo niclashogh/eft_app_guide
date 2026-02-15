@@ -7,8 +7,7 @@ namespace eft_app_guide.Models.Chapters.Config
     {
         public void Configure(EntityTypeBuilder<ChapterTaskGroup> builder)
         {
-            builder.HasKey(x => x.Id);
-            builder.HasIndex(x => new { x.ChapterTaskId, x.GUID });
+            builder.HasKey(x => x.ChapterTaskId);
 
             // Link @ to ChapterTask
             builder

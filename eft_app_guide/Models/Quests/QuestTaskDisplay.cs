@@ -16,7 +16,7 @@ namespace eft_app_guide.Models.Quests
         [Required] public double X { get; set; }
         [Required] public double Y { get; set; }
 
-        #region Relations
+        #region Relations (Parents)
         public QuestTask? QuestTask { get; set; }
         #endregion
     }

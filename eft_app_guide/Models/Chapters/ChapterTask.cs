@@ -16,13 +16,18 @@ namespace eft_app_guide.Models.Chapters
 
         [Required] public string Description { get; set; }
 
-        #region Relatations
+        #region Relations (Parents)
         public Chapter? Chapter { get; set; }
-        public ChapterTaskDisplay? ChapterTaskDisplay { get; set; }
-        public ChapterTaskGroup? ChapterTaskGroup { get; set; }
+        #endregion
 
+        #region Relations (Children)
         public JunctionList<ChapterTaskMap> ChapterTaskMaps { get; set; } = [];
         public AssociationList<ChapterTaskReward> ChapterTaskRewards { get; set; } = [];
+        #endregion
+
+        #region Relations (Extensions)
+        public ChapterTaskDisplay? ChapterTaskDisplay { get; set; }
+        public ChapterTaskGroup? ChapterTaskGroup { get; set; }
         #endregion
     }
 }

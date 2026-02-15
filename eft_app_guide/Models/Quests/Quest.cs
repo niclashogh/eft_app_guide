@@ -7,7 +7,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Quests
 {
-    /// <summary> AggregativeEntity (QuestRequirement + QuestReward + QuestTask) </summary>
+    /// <summary> AggregativeEntity (QuestGroup + QuestRequirement + QuestReward + QuestTask) </summary>
     [EntityTypeConfiguration(typeof(QuestConfig))]
     public class Quest
     {
@@ -19,14 +19,20 @@ namespace eft_app_guide.Models.Quests
 
         [Required] public string Name { get; set; }
 
-        #region Relations
+        #region Relations (Parents)
         public QuestLine? QuestLine { get; set; }
         public Trader? Trader { get; set; }
+        #endregion
 
+        #region Relations (Children)
         public List<QuestRequirement> QuestRequirements { get; set; } = [];
         public AssociationList<QuestReward> QuestRewards { get; set; } = [];
         public List<QuestTask> QuestTasks { get; set; } = [];
         public AssociationList<CharacterQuestProgress> CharacterQuestProgressions { get; set; } = [];
+        #endregion
+
+        #region Relations (Extensions)
+        public QuestGroup? QuestGroup { get; set; }
         #endregion
     }
 }

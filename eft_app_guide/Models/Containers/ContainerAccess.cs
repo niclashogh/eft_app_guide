@@ -14,7 +14,7 @@ namespace eft_app_guide.Models.Containers
         [Required] public int AccessKeyId { get; set; }
         #endregion
 
-        #region Relations
+        #region Relations (Parents)
         public Container? Container { get; set; }
         public AccessKey? AccessKey { get; set; }
         #endregion

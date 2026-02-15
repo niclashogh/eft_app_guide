@@ -9,21 +9,27 @@ namespace eft_app_guide.Models.Traders.Config
         {
             builder.HasKey(x => x.Id);
 
-            // Link Trader to TraderLevel
+            // Link @ to TraderLevel
             builder
                 .HasMany(x => x.TraderLevels)
                 .WithOne(x => x.Trader)
                 .HasForeignKey(x => x.TraderId);
 
-            // Link Trader to Quest
+            // Link @ to Quest
             builder
                 .HasMany(x => x.Quests)
                 .WithOne(x => x.Trader)
                 .HasForeignKey(x => x.TraderId);
 
-            // Link Trader to TraderItems
+            // Link @ to Trade
             builder
-                .HasMany(x => x.TraderItems)
+                .HasMany(x => x.Trades)
+                .WithOne(x => x.Trader)
+                .HasForeignKey(x => x.TraderId);
+
+            // Link @ to CharacterTraderReputation
+            builder
+                .HasMany(x => x.CharacterTraderReputations)
                 .WithOne(x => x.Trader)
                 .HasForeignKey(x => x.TraderId);
         }

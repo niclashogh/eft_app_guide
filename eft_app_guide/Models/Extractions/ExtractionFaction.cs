@@ -14,7 +14,7 @@ namespace eft_app_guide.Models.Extractions
         [Required] public int FactionId { get; set; }
         #endregion
 
-        #region Relations
+        #region Relations (Parents)
         public Extraction? Extraction { get; set; }
         public Faction? Faction { get; set; }
         #endregion

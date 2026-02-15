@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.HideoutStations
 {
-    /// <summary> ChildEntity (Station) </summary>
+    /// <summary> AggregativeEntity (StationLevelCrafting + StationLevelEffect + CharacterStationProgress) </summary>
     [EntityTypeConfiguration(typeof(StationLevelConfig))]
     public class StationLevel
     {
@@ -17,10 +17,13 @@ namespace eft_app_guide.Models.HideoutStations
 
         [Required] public int Level {  get; set; }
 
-        #region Relations
+        #region Relations (Parents)
         public Station? Station { get; set; }
+        #endregion
 
+        #region Relations (Children)
         public JunctionList<StationLevelCrafting> StationLevelCraftings { get; set; } = [];
+        public JunctionList<StationLevelEffect> StationLevelEffects { get; set; } = [];
         public AssociationList<CharacterStationProgress> CharacterStationProgressions { get; set; } = [];
         #endregion
     }

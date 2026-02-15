@@ -6,7 +6,7 @@ namespace eft_app_guide.Models.HideoutStations.Config
 {
     public class StationLevelConfig : IEntityTypeConfiguration<StationLevel>
     {
-        public void Configure(EntityTypeBuilder<StationLevel> builder)
+        public void Configure(EntityTypeBuilder<StationLevel> builder) // TODO - ADD Effect AND FINISH
         {
             builder.HasKey(x => x.Id);
 
@@ -19,6 +19,12 @@ namespace eft_app_guide.Models.HideoutStations.Config
             // Link @ to StationLevelCrafting
             builder
                 .HasMany(x => x.StationLevelCraftings)
+                .WithOne(x => x.StationLevel)
+                .HasForeignKey(x => x.StationLevelId);
+
+            // Link @ to StationLevelEffect
+            builder
+                .HasMany(x => x.StationLevelEffects)
                 .WithOne(x => x.StationLevel)
                 .HasForeignKey(x => x.StationLevelId);
 

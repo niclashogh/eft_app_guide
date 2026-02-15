@@ -16,8 +16,11 @@ namespace eft_app_guide.Models.Services
 
         [Required] public string Location { get; set; }
 
-        #region Relations
+        #region Relations (Parents)
         public Map? Map { get; set; }
+        #endregion
+
+        #region Relations (Extensions)
         public BtrDisplay? BtrDisplay { get; set; }
         #endregion
     }

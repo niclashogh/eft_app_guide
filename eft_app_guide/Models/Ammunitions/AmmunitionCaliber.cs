@@ -15,7 +15,7 @@ namespace eft_app_guide.Models.Ammunitions
         [Required] public string Name { get; set; }
         [Required] public string ShortendName { get; set; }
 
-        #region Relations
+        #region Relations (Children)
         public List<Ammunition> Ammunitions { get; set; } = [];
         #endregion
     }

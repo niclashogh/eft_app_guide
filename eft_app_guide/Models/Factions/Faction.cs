@@ -7,7 +7,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Factions
 {
-    /// <summary> DefinitionEntity (ANY, USEC, BEAR, SCAV, etc.) </summary>
+    /// <summary> DefinitionEntity (USEC, BEAR, SCAV, etc.) </summary>
     [EntityTypeConfiguration(typeof(FactionConfig))]
     public class Faction
     {
@@ -17,7 +17,7 @@ namespace eft_app_guide.Models.Factions
 
         [Required] public string Name { get; set; }
 
-        #region Relations
+        #region Relations (Children)
         public List<Character> Characters { get; set; } = [];
         public JunctionList<ExtractionFaction> ExtractionFactions { get; set; } = [];
         #endregion

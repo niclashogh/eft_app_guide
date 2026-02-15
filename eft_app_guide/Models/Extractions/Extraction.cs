@@ -19,12 +19,17 @@ namespace eft_app_guide.Models.Extractions
         [Required] public bool IsSingleUse { get; set; }
         [Required] public bool IsRandom { get; set; }
 
-        #region Relations
+        #region Relations (Parents)
         public Map? Map { get; set; }
-        public ExtractionDisplay? ExtractionDisplay { get; set; }
+        #endregion
 
+        #region Relations (Children)
         public List<ExtractionRequirement> ExtractionRequirements { get; set; } = [];
         public JunctionList<ExtractionFaction> ExtractionFactions { get; set; } = [];
+        #endregion
+
+        #region Relations (Extensions)
+        public ExtractionDisplay? ExtractionDisplay { get; set; }
         #endregion
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace eft_app_guide.Models.Weapons.Config
 {
-    internal class WeaponSkillConfig // MISSING
+    internal class WeaponSkillConfig // TODO - FINISH
     {
     }
 }

@@ -16,7 +16,7 @@ namespace eft_app_guide.Models.Locations
         [Required] public double X { get; set; }
         [Required] public double Y { get; set; }
 
-        #region Relations
+        #region Relations (Parents)
         public Location? Location { get; set; }
         #endregion
     }

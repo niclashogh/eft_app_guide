@@ -16,9 +16,12 @@ namespace eft_app_guide.Models.Ammunitions
         [Required] public string Name { get; set; }
         [Required] public string ShortendName { get; set; }
 
-        #region Relations
-        public AmmunitionPerformance? AmmunitionPerformance { get; set; }
+        #region Relations (Parents)
         public AmmunitionCaliber? AmmunitionCaliber { get; set; }
+        #endregion
+
+        #region Relations (Extensions)
+        public AmmunitionPerformance? AmmunitionPerformance { get; set; }
         #endregion
     }
 }

@@ -14,7 +14,7 @@ namespace eft_app_guide.Models.Chapters
         [Required] public int MapId { get; set; }
         #endregion
 
-        #region Relations
+        #region Relations (Parents)
         public ChapterTask? ChapterTask { get; set; }
         public Map? Map { get; set; }
         #endregion

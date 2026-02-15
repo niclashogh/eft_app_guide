@@ -15,7 +15,7 @@ namespace eft_app_guide.Models.Extractions
 
         [Required] public string Description { get; set; }
 
-        #region Relations
+        #region Relations (Parents)
         public Extraction? Extraction { get; set; }
         #endregion
     }

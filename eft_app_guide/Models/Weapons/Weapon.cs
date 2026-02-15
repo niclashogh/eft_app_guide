@@ -2,7 +2,7 @@
 
 namespace eft_app_guide.Models.Weapons
 {
-    public class Weapon // MISSING
+    public class Weapon // TODO - FINISH
     {
         #region Keys
         [Key] public int Id { get; init; }

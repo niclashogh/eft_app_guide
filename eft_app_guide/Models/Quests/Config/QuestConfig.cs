@@ -21,6 +21,12 @@ namespace eft_app_guide.Models.Quests.Config
                 .WithMany(x => x.Quests)
                 .HasForeignKey(x => x.TraderId);
 
+            // Link @ to QuestGroup
+            builder
+                .HasOne(x => x.QuestGroup)
+                .WithOne(x => x.Quest)
+                .HasForeignKey<QuestGroup>(x => x.QuestId);
+
             // Link @ to QuestRequirement
             builder
                 .HasMany(x => x.QuestRequirements)

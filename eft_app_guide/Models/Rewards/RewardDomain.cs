@@ -18,9 +18,9 @@ namespace eft_app_guide.Models.Rewards
 
         [Required] public string Description { get; set; }
 
-        #region Relations
+        #region Relations (Children)
+        public AssociationList<AccountEditionReward> AccountEditionRewards { get; set; } = [];
         public AssociationList<ChapterTaskReward> ChapterTaskRewards { get; set; } = [];
-        public List<AccountEditionReward> AccountEditionRewards { get; set; } = [];
         #endregion
     }
 }

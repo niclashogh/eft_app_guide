@@ -2,7 +2,7 @@
 
 namespace eft_app_guide.Models.ArmorVests
 {
-    public class ArmorVestEffect // MISSING
+    public class ArmorVestEffect // TODO - FINISH
     {
         #region Keys
         [Key] public int Id { get; init; }

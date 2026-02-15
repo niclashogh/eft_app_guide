@@ -18,10 +18,12 @@ namespace eft_app_guide.Models.Containers
 
         [Required] public bool IsLocked { get; set; }
 
-        #region Relations
+        #region Relations (Parents)
         public Location? Location { get; set; }
         public ContainerType? ContainerType { get; set; }
+        #endregion
 
+        #region Relations (Children)
         public JunctionList<ContainerAccess> ContainerAccesses { get; set; } = [];
         #endregion
     }

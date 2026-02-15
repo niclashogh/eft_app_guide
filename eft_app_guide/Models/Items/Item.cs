@@ -21,13 +21,18 @@ namespace eft_app_guide.Models.Items
         [Required] public string Name { get; set; }
         [Required] public string ShortendName { get; set; }
 
-        #region Relations
+        #region Relations (Parents)
         public ItemCategory? ItemCategory { get; set; }
+        #endregion
 
-        public List<Crafting> Craftings { get; set; } = [];
-        public AssociationList<CraftingItem> CraftingItems { get; set; } = [];
+        #region Relations (Children)
+        public AssociationList<CraftingIngredient> CraftingIngredients { get; set; } = [];
+        public AssociationList<CraftingResult> CraftingResults { get; set; } = [];
+        
+        public AssociationList<TradePayment> TradePayments { get; set; } = [];
+        public AssociationList<TradeResult> TradeResults { get; set; } = [];
+
         public AssociationList<LocationItem> LocationItems { get; set; } = [];
-        public AssociationList<TraderItem> TraderItems { get; set; } = [];
         public AssociationList<FleaMarketItem> FleaMarketItems { get; set; } = [];
         #endregion
     }

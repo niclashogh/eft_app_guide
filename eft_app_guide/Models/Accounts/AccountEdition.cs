@@ -15,7 +15,7 @@ namespace eft_app_guide.Models.Accounts
 
         [Required] public string Name { get; set; }
 
-        #region Relations
+        #region Relations (Children)
         public List<Account> Accounts { get; set; } = [];
         public AssociationList<AccountEditionReward> AccountEditionRewards { get; set; } = [];
         #endregion

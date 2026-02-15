@@ -14,7 +14,7 @@ namespace eft_app_guide.Models.Chapters
 
         [Required] public string Name { get; set; }
 
-        #region Relatations
+        #region Relatations (Chrildren)
         public List<ChapterTask> ChapterTasks { get; set; } = [];
         #endregion
     }

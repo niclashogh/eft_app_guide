@@ -15,15 +15,15 @@ namespace eft_app_guide.Models.Items.Config
                 .WithMany(x => x.Items)
                 .HasForeignKey(x => x.ItemCategoryId);
 
-            // Link @ to Crafting
+            // Link @ to CraftingResult
             builder
-                .HasMany(x => x.Craftings)
+                .HasMany(x => x.CraftingResults)
                 .WithOne(x => x.Item)
                 .HasForeignKey(x => x.ItemId);
 
-            // Link @ to CraftingItem
+            // Link @ to CraftingIngredient
             builder
-                .HasMany(x => x.CraftingItems)
+                .HasMany(x => x.CraftingIngredients)
                 .WithOne(x => x.Item)
                 .HasForeignKey(x => x.ItemId);
 
@@ -33,9 +33,15 @@ namespace eft_app_guide.Models.Items.Config
                 .WithOne(x => x.Item)
                 .HasForeignKey(x => x.ItemId);
 
-            // Link @ to TraderItem
+            // Link @ to TradePayment
             builder
-                .HasMany(x => x.TraderItems)
+                .HasMany(x => x.TradePayments)
+                .WithOne(x => x.Item)
+                .HasForeignKey(x => x.ItemId);
+
+            // Link @ to TradeResult
+            builder
+                .HasMany(x => x.TradeResults)
                 .WithOne(x => x.Item)
                 .HasForeignKey(x => x.ItemId);
 

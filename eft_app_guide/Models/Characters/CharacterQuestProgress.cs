@@ -17,7 +17,7 @@ namespace eft_app_guide.Models.Characters
         [Required] public bool IsActive { get; set; }
         [Required] public bool IsComplete { get; set; }
 
-        #region Relations
+        #region Relations (Parents)
         public Character? Character { get; set; }
         public Quest? Quest { get; set; }
         #endregion

@@ -17,7 +17,7 @@ namespace eft_app_guide.Models.Leveling
         [Required] public int MinExperincePoint { get; set; }
         [Required] public int MaxExperiencePoint { get; set; }
 
-        #region Relations
+        #region Relations (Parents)
         public Skill? Skill { get; set; }
         #endregion
     }

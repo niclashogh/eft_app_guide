@@ -9,15 +9,15 @@ namespace eft_app_guide.Models.CraftingRecipes.Config
         {
             builder.HasKey(x => x.Id);
 
-            // Link @ to Item
+            // Link @ to CraftingResult
             builder
-                .HasOne(x => x.Item)
-                .WithMany(x => x.Craftings)
-                .HasForeignKey(x => x.ItemId);
+                .HasMany(x => x.CraftingResults)
+                .WithOne(x => x.Crafting)
+                .HasForeignKey(x => x.CraftingId);
 
-            // Link @ to CraftingItem
+            // Link @ to CraftingIngredient
             builder
-                .HasMany(x => x.CraftingItems)
+                .HasMany(x => x.CraftingIngredients)
                 .WithOne(x => x.Crafting)
                 .HasForeignKey(x => x.CraftingId);
 

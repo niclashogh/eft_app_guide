@@ -16,7 +16,7 @@ namespace eft_app_guide.Models.Leveling
 
         [Required] public string Name { get; set; }
 
-        #region Relations
+        #region Relations (Children)
         public List<SkillLevel> SkillLevels { get; set; } = [];
         public AssociationList<CharacterSkillProgress> CharacterSkillProgressions { get; set; } = [];
         #endregion

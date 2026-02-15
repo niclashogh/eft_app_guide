@@ -1,4 +1,5 @@
-﻿using eft_app_guide.Models.FleaMarket.Config;
+﻿using eft_app_guide._Persistence.Objects;
+using eft_app_guide.Models.FleaMarket.Config;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 
@@ -14,8 +15,8 @@ namespace eft_app_guide.Models.FleaMarket
 
         [Required] public int PlayerLevel { get; set; }
 
-        #region Relations
-        public List<FleaMarketItem> FleaMarketItems { get; set; } = [];
+        #region Relations (Children)
+        public JunctionList<FleaMarketItem> FleaMarketItems { get; set; } = [];
         #endregion
     }
 }

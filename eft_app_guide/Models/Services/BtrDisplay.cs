@@ -10,13 +10,13 @@ namespace eft_app_guide.Models.Services
     public class BtrDisplay : IPosition
     {
         #region Keys
-        [Key] public int BtrId { get; init; }
+        [Key] public int BtrId { get; set; }
         #endregion
 
         [Required] public double X { get; set; }
         [Required] public double Y { get; set; }
 
-        #region Relations
+        #region Relations (Parents)
         public Btr? Btr { get; set; }
         #endregion
     }

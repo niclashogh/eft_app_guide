@@ -15,7 +15,7 @@ namespace eft_app_guide.Models.Containers
         [Required] public string Name { get; set; }
         [Required] public string ShortendName { get; set; }
 
-        #region Relations
+        #region Relations (Children)
         public List<Container> Containers { get; set; } = [];
         #endregion
     }

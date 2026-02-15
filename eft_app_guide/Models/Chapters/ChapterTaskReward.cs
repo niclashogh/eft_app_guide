@@ -18,7 +18,7 @@ namespace eft_app_guide.Models.Chapters
         [Required] public int DomainKey { get; set; }
         [Required] public int Quantity { get; set; }
 
-        #region Relations
+        #region Relations (Parents)
         public ChapterTask? Task { get; set; }
         public RewardDomain? RewardDomain { get; set; }
         #endregion

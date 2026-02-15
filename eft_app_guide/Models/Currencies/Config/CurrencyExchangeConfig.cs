@@ -1,13 +1,14 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using eft_app_guide.Models.Currencies;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace eft_app_guide.Models.Currency.Config
+namespace eft_app_guide.Models.Currencies.Config
 {
     public class CurrencyExchangeConfig : IEntityTypeConfiguration<CurrencyExchange>
     {
         public void Configure(EntityTypeBuilder<CurrencyExchange> builder)
         {
-            builder.HasKey(x => new { x.FromCurrency, x.ToCurrency });
+            builder.HasKey(x => new { x.FromCurrencyId, x.ToCurrencyId });
 
             // Link @ to FromCurrency
             builder

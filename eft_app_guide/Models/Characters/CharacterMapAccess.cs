@@ -16,7 +16,7 @@ namespace eft_app_guide.Models.Characters
 
         [Required] public bool IsLocked { get; set; }
 
-        #region Relations
+        #region Relations (Parents)
         public Character? Character { get; set; }
         public Map? Map { get; set; }
         #endregion

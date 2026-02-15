@@ -6,8 +6,8 @@ using System.ComponentModel.DataAnnotations;
 namespace eft_app_guide.Models.CraftingRecipes
 {
     /// <summary> AssociationEntity (CraftingId + ItemId) </summary>
-    [EntityTypeConfiguration(typeof(CraftingItemConfig))]
-    public class CraftingItem
+    [EntityTypeConfiguration(typeof(CraftingIngredientConfig))]
+    public class CraftingIngredient
     {
         #region Keys (CompositeKeys)
         [Required] public int CraftingId { get; set; }
@@ -16,7 +16,7 @@ namespace eft_app_guide.Models.CraftingRecipes
 
         [Required] public int Quantity { get; set; }
 
-        #region Relations
+        #region Relations (Parents)
         public Crafting? Crafting { get; set; }
         public Item? Item { get; set; }
         #endregion

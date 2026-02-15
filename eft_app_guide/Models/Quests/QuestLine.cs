@@ -14,7 +14,7 @@ namespace eft_app_guide.Models.Quests
 
         [Required] public string Name { get; set; }
 
-        #region Relations
+        #region Relations (Children)
         public List<Quest> Quests { get; set; } = [];
         #endregion
     }
