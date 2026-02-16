@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using eft_app_guide.Models.Characters.State;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace eft_app_guide.Models.Characters.Config
@@ -21,9 +22,9 @@ namespace eft_app_guide.Models.Characters.Config
                 .WithMany(x => x.Characters)
                 .HasForeignKey(x => x.FactionId);
 
-            // link @ to CharacterSkillProgress
+            // link @ to CharacterMajorSkillProgress
             builder
-                .HasMany(x => x.CharacterSkillProgressions)
+                .HasMany(x => x.CharacterMajorSkillProgressions)
                 .WithOne(x => x.Character)
                 .HasForeignKey(x => x.CharacterId);
 
@@ -33,9 +34,9 @@ namespace eft_app_guide.Models.Characters.Config
                 .WithOne(x => x.Character)
                 .HasForeignKey(x => x.CharacterId);
 
-            // Link @ to CharacterStationProgress
+            // Link @ to CharacterStationLevelProgress
             builder
-                .HasMany(x => x.CharacterStationProgressions)
+                .HasMany(x => x.CharacterStationLevelProgressions)
                 .WithOne(x => x.Character)
                 .HasForeignKey(x => x.CharacterId);
 

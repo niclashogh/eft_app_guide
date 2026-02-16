@@ -1,4 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using eft_app_guide.Models.Extractions.Design;
+using eft_app_guide.Models.Extractions.State;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace eft_app_guide.Models.Extractions.Config

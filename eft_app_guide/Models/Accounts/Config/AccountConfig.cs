@@ -1,4 +1,5 @@
-﻿using eft_app_guide.Models.Characters;
+﻿using eft_app_guide.Models.Accounts.State;
+using eft_app_guide.Models.Characters.State;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 

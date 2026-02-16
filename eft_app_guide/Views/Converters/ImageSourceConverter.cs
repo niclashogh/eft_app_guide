@@ -1,7 +1,7 @@
 ﻿using eft_app_guide._Persistence;
-using eft_app_guide.Models.Extractions;
-using eft_app_guide.Models.Maps;
-using eft_app_guide.Models.Traders;
+using eft_app_guide.Models.Extractions.Design;
+using eft_app_guide.Models.Maps.Design;
+using eft_app_guide.Models.Traders.Design;
 using System.Globalization;
 using System.IO;
 using System.Windows.Data;

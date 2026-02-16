@@ -6,7 +6,7 @@ namespace eft_app_guide.Models.Leveling
 {
     /// <summary> ChildEntity (Skill) </summary>
     [EntityTypeConfiguration(typeof(SkillLevelConfig))]
-    public class SkillLevel
+    public class SkillLevel // TODO - DEL?
     {
         #region Keys
         [Key] public int Id { get; init; }

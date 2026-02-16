@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using eft_app_guide.Models.Accounts.Design;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace eft_app_guide.Models.Accounts.Config
@@ -8,6 +9,7 @@ namespace eft_app_guide.Models.Accounts.Config
         public void Configure(EntityTypeBuilder<AccountEdition> builder)
         {
             builder.HasKey(x => x.Id);
+            builder.HasIndex(x => x.Name);
 
             // Link @ to Account
             builder

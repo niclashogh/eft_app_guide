@@ -4,7 +4,7 @@ using System.IO;
 
 namespace eft_app_guide._Persistence
 {
-    public static class DatabaseSetup
+    public static class DatabaseSetup // TODO - REMOVE SUPPORT FOR Profiles.json AND ADD SUPPORT FOR MULTIPLE DB FILES + SWITCHING
     {
         private static string DATABASE_NAME = "";
 

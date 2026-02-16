@@ -1,10 +1,10 @@
 ﻿using eft_app_guide._Persistence.Entities.AuditLogs;
-using eft_app_guide.Models.Extractions;
-using eft_app_guide.Models.Locations;
-using eft_app_guide.Models.Maps;
-using eft_app_guide.Models.Markers;
-using eft_app_guide.Models.Quests;
-using eft_app_guide.Models.Traders;
+using eft_app_guide.Models.Extractions.Design;
+using eft_app_guide.Models.Locations.Design;
+using eft_app_guide.Models.Maps.Design;
+using eft_app_guide.Models.Markers.Design;
+using eft_app_guide.Models.Quests.Design;
+using eft_app_guide.Models.Traders.Design;
 using Microsoft.EntityFrameworkCore;
 
 namespace eft_app_guide._Persistence

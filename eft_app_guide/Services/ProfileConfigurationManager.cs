@@ -5,7 +5,7 @@ using System.Text.Json;
 
 namespace eft_app_guide.Services
 {
-    public static class ProfileConfigurationManager
+    public static class ProfileConfigurationManager // TODO - DEL
     {
         private static void EnsureFileExists()
         {

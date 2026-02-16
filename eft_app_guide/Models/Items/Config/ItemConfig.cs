@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using eft_app_guide.Models.Items.Design;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace eft_app_guide.Models.Items.Config
@@ -47,7 +48,7 @@ namespace eft_app_guide.Models.Items.Config
 
             // Link @ to FleaMarketItem
             builder
-                .HasMany(x => x.FleaMarketItems)
+                .HasMany(x => x.MarketPlaceItems)
                 .WithOne(x => x.Item)
                 .HasForeignKey (x => x.ItemId);
         }

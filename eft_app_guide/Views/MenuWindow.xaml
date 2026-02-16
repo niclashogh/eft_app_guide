@@ -6,6 +6,9 @@
         xmlns:local="clr-namespace:eft_app_guide.Views"
         mc:Ignorable="d"
         
+        xmlns:viewmodels="clr-namespace:eft_app_guide.ViewModels"
+        d:DataContext="{d:DesignInstance Type=viewmodels:MenuVM, IsDesignTimeCreatable=True}"
+        
         Title="Menu"
         WindowStyle="None"
         AllowsTransparency="True"

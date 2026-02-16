@@ -1,4 +1,4 @@
-﻿using eft_app_guide.Models.Characters;
+﻿using eft_app_guide.Models.Characters.State;
 using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Weapons

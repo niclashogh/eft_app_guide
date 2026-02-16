@@ -13,11 +13,6 @@ namespace eft_app_guide._Persistence
         /// </summary>
         public readonly static string CONFIG_FILE = Path.Combine(DATA_FOLDER, "config.json");
 
-        /// <summary>
-        /// Holds Profiles and associated DB
-        /// </summary>
-        public readonly static string PROFILES_FILE = Path.Combine(DATA_FOLDER, "profiles.json");
-
         public static void CreateDirectory()
         {
             Directory.CreateDirectory(ROOT_FOLDER);

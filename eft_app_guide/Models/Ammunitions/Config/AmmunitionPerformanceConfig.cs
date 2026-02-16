@@ -1,4 +1,5 @@
 ﻿using eft_app_guide.DataTransferObjects.ValueObjects;
+using eft_app_guide.Models.Ammunitions.Design;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 

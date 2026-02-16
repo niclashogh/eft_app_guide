@@ -1,4 +1,4 @@
-﻿using eft_app_guide.Models.Currencies;
+﻿using eft_app_guide.Models.Currencies.Design;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 

@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using eft_app_guide.Models.HideoutStations.Design;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 
@@ -6,7 +7,7 @@ namespace eft_app_guide.Models.HideoutStations.Config
 {
     public class StationLevelConfig : IEntityTypeConfiguration<StationLevel>
     {
-        public void Configure(EntityTypeBuilder<StationLevel> builder) // TODO - ADD Effect AND FINISH
+        public void Configure(EntityTypeBuilder<StationLevel> builder)
         {
             builder.HasKey(x => x.Id);
 
@@ -30,7 +31,7 @@ namespace eft_app_guide.Models.HideoutStations.Config
 
             // Link @ to CharacterStationProgress
             builder
-                .HasMany(x => x.CharacterStationProgressions)
+                .HasMany(x => x.CharacterStationLevelProgressions)
                 .WithOne(x => x.StationLevel)
                 .HasForeignKey(x => x.StationLevelId);
         }

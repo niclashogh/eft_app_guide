@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using eft_app_guide.Models.Chapters.Design;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace eft_app_guide.Models.Chapters.Config
@@ -8,6 +9,7 @@ namespace eft_app_guide.Models.Chapters.Config
         public void Configure(EntityTypeBuilder<Chapter> builder)
         {
             builder.HasKey(x => x.Id);
+            builder.HasIndex(x => x.Name);
 
             // Link @ to ChapterTask
             builder

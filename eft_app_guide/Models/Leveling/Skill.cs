@@ -1,5 +1,5 @@
 ﻿using eft_app_guide._Persistence.Objects;
-using eft_app_guide.Models.Characters;
+using eft_app_guide.Models.Characters.State;
 using eft_app_guide.Models.Leveling.Config;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
@@ -8,7 +8,7 @@ namespace eft_app_guide.Models.Leveling
 {
     /// <summary> AggregativeEntity (SkillLevel) </summary>
     [EntityTypeConfiguration(typeof(SkillConfig))]
-    public class Skill
+    public class Skill // TODO - DEL?
     {
         #region Keys
         [Key] public int Id { get; init; }
@@ -18,7 +18,7 @@ namespace eft_app_guide.Models.Leveling
 
         #region Relations (Children)
         public List<SkillLevel> SkillLevels { get; set; } = [];
-        public AssociationList<CharacterSkillProgress> CharacterSkillProgressions { get; set; } = [];
+        public AssociationList<CharacterMajorSkillProgress> CharacterSkillProgressions { get; set; } = [];
         #endregion
     }
 }
