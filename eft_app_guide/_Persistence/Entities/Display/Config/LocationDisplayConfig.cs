@@ -1,8 +1,8 @@
-﻿using eft_app_guide.Models.Locations.State;
+﻿using eft_app_guide._Persistence.Entities.Display.Poi;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace eft_app_guide.Models.Locations.Config
+namespace eft_app_guide._Persistence.Entities.Display.Config
 {
     public class LocationDisplayConfig : IEntityTypeConfiguration<LocationDisplay>
     {
@@ -13,9 +13,8 @@ namespace eft_app_guide.Models.Locations.Config
             // Link @ to Location
             builder
                 .HasOne(x => x.Location)
-                .WithOne(x => x.LocationDisplay)
-                .HasForeignKey<LocationDisplay>(x => x.LocationId)
-                .OnDelete(DeleteBehavior.Cascade);
+                .WithMany(x => x.LocationDisplays)
+                .HasForeignKey(x => x.LocationId);
         }
     }
 }

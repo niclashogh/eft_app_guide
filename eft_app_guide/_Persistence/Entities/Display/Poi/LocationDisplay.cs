@@ -1,17 +1,19 @@
-﻿using eft_app_guide.Models.Interfaces;
-using eft_app_guide.Models.Locations.Config;
+﻿using eft_app_guide._Persistence.Entities.Display.Config;
+using eft_app_guide._Persistence.Entities.Display.Maps;
+using eft_app_guide.Models.Interfaces;
 using eft_app_guide.Models.Locations.Design;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 
-namespace eft_app_guide.Models.Locations.State
+namespace eft_app_guide._Persistence.Entities.Display.Poi
 {
-    /// <summary> Extends Location </summary>
+    /// <summary> AssociationEntity (LocationId + MapDisplayId) </summary>
     [EntityTypeConfiguration(typeof(LocationDisplayConfig))]
     public class LocationDisplay : IPosition
     {
         #region Keys
-        [Key] public int LocationId { get; set; }
+        [Required] public int LocationId { get; set; }
+        [Required] public int MapDisplayId { get; set; }
         #endregion
 
         [Required] public double X { get; set; }
@@ -19,6 +21,7 @@ namespace eft_app_guide.Models.Locations.State
 
         #region Relations (Parents)
         public Location? Location { get; set; }
+        public MapDisplay? MapDisplay { get; set; }
         #endregion
     }
 }

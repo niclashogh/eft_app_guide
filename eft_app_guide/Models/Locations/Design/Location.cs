@@ -1,14 +1,14 @@
-﻿using eft_app_guide._Persistence.Objects;
+﻿using eft_app_guide._Persistence.Entities.Display.Poi;
+using eft_app_guide._Persistence.Objects;
 using eft_app_guide.Models.Containers.Design;
 using eft_app_guide.Models.Locations.Config;
-using eft_app_guide.Models.Locations.State;
 using eft_app_guide.Models.Maps.Design;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Locations.Design
 {
-    /// <summary> AggregativeEntity (LocationDisplay + LocationItem + LocationAccess + Container) </summary>
+    /// <summary> AggregativeEntity (LocationItem + LocationAccess + Container + LocationDisplay) </summary>
     [EntityTypeConfiguration(typeof(LocationConfig))]
     public class Location
     {
@@ -27,10 +27,7 @@ namespace eft_app_guide.Models.Locations.Design
         public AssociationList<LocationItem> LocationItems { get; set; } = [];
         public AssociationList<LocationAccess> LocationAccesses { get; set; } = [];
         public List<Container> Containers { get; set; } = [];
-        #endregion
-
-        #region Relations (Extensions)
-        public LocationDisplay? LocationDisplay { get; set; }
+        public AssociationList<LocationDisplay> LocationDisplays { get; set; } = [];
         #endregion
     }
 }

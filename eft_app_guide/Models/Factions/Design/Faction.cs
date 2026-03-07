@@ -7,7 +7,16 @@ using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Factions.Design
 {
-    /// <summary> DefinitionEntity (USEC, BEAR, SCAV, etc.) </summary>
+    /// <summary> DefinitionEntity (
+    /// USEC - United Security,
+    /// BEAR - Battle Encounter Assault Regiment,
+    /// SCAV - Scavengers,
+    /// SCAV Raiders,
+    /// Rouges - Former USEC,
+    /// RUAF - The Russian Armed Forces,
+    /// Black Division
+    /// Cultists
+    /// ) </summary>
     [EntityTypeConfiguration(typeof(FactionConfig))]
     public class Faction
     {
@@ -16,6 +25,7 @@ namespace eft_app_guide.Models.Factions.Design
         #endregion
 
         [Required] public string Name { get; set; }
+        [Required] public string Description { get; set; }
 
         #region Relations (Children)
         public List<Character> Characters { get; set; } = [];

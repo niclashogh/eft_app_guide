@@ -1,5 +1,4 @@
 ﻿using eft_app_guide.Models.Services.Design;
-using eft_app_guide.Models.Services.State;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
@@ -19,9 +18,9 @@ namespace eft_app_guide.Models.Services.Config
 
             // Link @ to BtrDisplay
             builder
-                .HasOne(x => x.BtrDisplay)
+                .HasMany(x => x.BtrDisplays)
                 .WithOne(x => x.Btr)
-                .HasForeignKey<BtrDisplay>(x => x.BtrId);
+                .HasForeignKey(x => x.BtrId);
         }
     }
 }

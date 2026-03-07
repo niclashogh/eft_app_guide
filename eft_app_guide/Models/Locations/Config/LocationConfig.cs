@@ -1,5 +1,4 @@
 ﻿using eft_app_guide.Models.Locations.Design;
-using eft_app_guide.Models.Locations.State;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
@@ -19,9 +18,9 @@ namespace eft_app_guide.Models.Locations.Config
 
             // Link @ to LocationDisplay
             builder
-                .HasOne(x => x.LocationDisplay)
+                .HasMany(x => x.LocationDisplays)
                 .WithOne(x => x.Location)
-                .HasForeignKey<LocationDisplay>(x => x.LocationId);
+                .HasForeignKey(x => x.LocationId);
 
             // Link @ to LocationItem
             builder

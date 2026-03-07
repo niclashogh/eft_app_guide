@@ -1,6 +1,7 @@
-﻿using eft_app_guide.Models.Maps.Design;
+﻿using eft_app_guide._Persistence.Entities.Display.Poi;
+using eft_app_guide._Persistence.Objects;
+using eft_app_guide.Models.Maps.Design;
 using eft_app_guide.Models.Services.Config;
-using eft_app_guide.Models.Services.State;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 
@@ -21,8 +22,8 @@ namespace eft_app_guide.Models.Services.Design
         public Map? Map { get; set; }
         #endregion
 
-        #region Relations (Extensions)
-        public BtrDisplay? BtrDisplay { get; set; }
+        #region Relations (Children)
+        public AssociationList<BtrDisplay> BtrDisplays { get; set; } = [];
         #endregion
     }
 }

@@ -28,12 +28,6 @@ namespace eft_app_guide.Models.Maps.Config
                 .WithOne(x => x.Map)
                 .HasForeignKey(x => x.MapId);
 
-            // Link @ to Marker
-            builder
-                .HasMany(x => x.Markers)
-                .WithOne(x => x.Map)
-                .HasForeignKey(x => x.MapId);
-
             // Link @ to ChapterTaskMap
             builder
                 .HasMany(x => x.ChapterTaskMaps)
@@ -49,6 +43,12 @@ namespace eft_app_guide.Models.Maps.Config
             // Link @ to CharacterMapAccess
             builder
                 .HasMany(x => x.CharacterMapAccesses)
+                .WithOne(x => x.Map)
+                .HasForeignKey(x => x.MapId);
+
+            // Link @ to MapDisplay
+            builder
+                .HasMany(x => x.MapDisplays)
                 .WithOne(x => x.Map)
                 .HasForeignKey(x => x.MapId);
         }

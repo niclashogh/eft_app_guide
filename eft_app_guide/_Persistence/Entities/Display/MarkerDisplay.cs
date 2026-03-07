@@ -1,30 +1,29 @@
 ﻿using eft_app_guide.DataTransferObjects.Enums;
 using eft_app_guide.Models.Interfaces;
-using eft_app_guide.Models.Markers.Config;
-using eft_app_guide.Models.Markers.Design;
-using Microsoft.EntityFrameworkCore;
+using eft_app_guide.Models.Maps.Design;
 using System.ComponentModel.DataAnnotations;
 
-namespace eft_app_guide.Models.Markers.State
+namespace eft_app_guide._Persistence.Entities.Display
 {
-    /// <summary> Extends Marker </summary>
-    [EntityTypeConfiguration(typeof(MarkerDisplayConfig))]
     public class MarkerDisplay : IPosition, ISize
     {
         #region Keys
-        [Key] public int MarkerId { get; init; }
-        [Required] public int MarkerIconId { get; set; }
+        [Key] public int Id { get; init; }
+        [Required] public string MapDisplayId { get; set; }
         #endregion
+
+        [Required] public string Name { get; set; }
+        [Required] public string Description { get; set; }
 
         [Required] public double X { get; set; }
         [Required] public double Y { get; set; }
         [Required] public double Width { get; set; }
         [Required] public double Height { get; set; }
         [Required] public OutlineVariants Outline { get; set; }
+        [Required] public string Icon { get; set; }
 
         #region Relations
-        public Marker? Marker { get; set; }
-        public MarkerIcon? MarkerIcon { get; set; }
+        public Map? Map { get; set; }
         #endregion
     }
 }

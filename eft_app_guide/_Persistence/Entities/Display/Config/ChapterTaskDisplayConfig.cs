@@ -1,8 +1,8 @@
-﻿using eft_app_guide.Models.Chapters.Design;
+﻿using eft_app_guide._Persistence.Entities.Display.Poi;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace eft_app_guide.Models.Chapters.Config
+namespace eft_app_guide._Persistence.Entities.Display.Config
 {
     public class ChapterTaskDisplayConfig : IEntityTypeConfiguration<ChapterTaskDisplay>
     {
@@ -13,9 +13,8 @@ namespace eft_app_guide.Models.Chapters.Config
             // Link @ to ChapterTask
             builder
                 .HasOne(x => x.ChapterTask)
-                .WithOne(x => x.ChapterTaskDisplay)
-                .HasForeignKey<ChapterTaskDisplay>(x => x.ChapterTaskId)
-                .OnDelete(DeleteBehavior.Cascade);
+                .WithMany(x => x.ChapterTaskDisplays)
+                .HasForeignKey(x => x.ChapterTaskId);
         }
     }
 }

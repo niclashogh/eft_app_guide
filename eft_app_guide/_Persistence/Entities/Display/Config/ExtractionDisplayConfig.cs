@@ -1,8 +1,8 @@
-﻿using eft_app_guide.Models.Extractions.State;
+﻿using eft_app_guide._Persistence.Entities.Display.Poi;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace eft_app_guide.Models.Extractions.Config
+namespace eft_app_guide._Persistence.Entities.Display.Config
 {
     public class ExtractionDisplayConfig : IEntityTypeConfiguration<ExtractionDisplay>
     {
@@ -13,9 +13,8 @@ namespace eft_app_guide.Models.Extractions.Config
             // Link @ to Extraction
             builder
                 .HasOne(x => x.Extraction)
-                .WithOne(x => x.ExtractionDisplay)
-                .HasForeignKey<ExtractionDisplay>(x => x.ExtractionId)
-                .OnDelete(DeleteBehavior.Cascade);
+                .WithMany(x => x.ExtractionDisplays)
+                .HasForeignKey(x => x.ExtractionId);
         }
     }
 }

@@ -6,13 +6,13 @@ using eft_app_guide.Models.Characters.State;
 using eft_app_guide.Models.Chapters.Design;
 using eft_app_guide.Models.Extractions.Design;
 using eft_app_guide.Models.Locations.Design;
-using eft_app_guide.Models.Markers.Design;
 using eft_app_guide.Models.Quests.Design;
 using eft_app_guide.Models.Services.Design;
+using eft_app_guide._Persistence.Entities.Display.Maps;
 
 namespace eft_app_guide.Models.Maps.Design
 {
-    /// <summary> AggregativeEntity (Location + Extraction + Btr + Marker + ChapterTaskMap + QuestTaskMap + CharacterMapAccess) </summary>
+    /// <summary> AggregativeEntity (Location + Extraction + Btr + ChapterTaskMap + QuestTaskMap + CharacterMapAccess + MapDisplay) </summary>
     [EntityTypeConfiguration(typeof(MapConfig))]
     public class Map
     {
@@ -26,11 +26,11 @@ namespace eft_app_guide.Models.Maps.Design
         public List<Location> Locations { get; set; } = [];
         public List<Extraction> Extractions { get; set; } = [];
         public List<Btr> Btrs { get; set; } = [];
-        public List<Marker> Markers { get; set; } = [];
 
         public JunctionList<ChapterTaskMap> ChapterTaskMaps { get; set; } = [];
         public JunctionList<QuestTaskMap> QuestTasksMaps { get; set; } = [];
         public AssociationList<CharacterMapAccess> CharacterMapAccesses { get; set; } = [];
+        public AssociationList<MapDisplay> MapDisplays { get; set; } = [];
         #endregion
     }
 }

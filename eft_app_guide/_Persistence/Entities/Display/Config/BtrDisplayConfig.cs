@@ -1,8 +1,8 @@
-﻿using eft_app_guide.Models.Services.State;
+﻿using eft_app_guide._Persistence.Entities.Display.Poi;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace eft_app_guide.Models.Services.Config
+namespace eft_app_guide._Persistence.Entities.Display.Config
 {
     public class BtrDisplayConfig : IEntityTypeConfiguration<BtrDisplay>
     {
@@ -13,9 +13,8 @@ namespace eft_app_guide.Models.Services.Config
             // Link @ to Btr
             builder
                 .HasOne(x => x.Btr)
-                .WithOne(x => x.BtrDisplay)
-                .HasForeignKey<BtrDisplay>(x => x.BtrId)
-                .OnDelete(DeleteBehavior.Cascade);
+                .WithMany(x => x.BtrDisplays)
+                .HasForeignKey(x => x.BtrId);
         }
     }
 }

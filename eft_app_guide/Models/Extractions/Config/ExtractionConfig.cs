@@ -1,5 +1,4 @@
 ﻿using eft_app_guide.Models.Extractions.Design;
-using eft_app_guide.Models.Extractions.State;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
@@ -25,9 +24,9 @@ namespace eft_app_guide.Models.Extractions.Config
 
             // Link @ to ExtractionDisplay
             builder
-                .HasOne(x => x.ExtractionDisplay)
+                .HasMany(x => x.ExtractionDisplays)
                 .WithOne(x => x.Extraction)
-                .HasForeignKey<ExtractionDisplay>(x => x.ExtractionId);
+                .HasForeignKey(x => x.ExtractionId);
 
             // Link @ to ExtractionFaction
             builder

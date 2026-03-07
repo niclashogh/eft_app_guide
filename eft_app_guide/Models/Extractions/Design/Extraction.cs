@@ -1,13 +1,13 @@
-﻿using eft_app_guide._Persistence.Objects;
+﻿using eft_app_guide._Persistence.Entities.Display.Poi;
+using eft_app_guide._Persistence.Objects;
 using eft_app_guide.Models.Extractions.Config;
-using eft_app_guide.Models.Extractions.State;
 using eft_app_guide.Models.Maps.Design;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Extractions.Design
 {
-    /// <summary> AggregativeEntity (ExtractionDisplay + ExtractionRequirement + ExtractionFaction) </summary>
+    /// <summary> AggregativeEntity (ExtractionRequirement + ExtractionFaction + ExtractionDisplay) </summary>
     [EntityTypeConfiguration(typeof(ExtractionConfig))]
     public class Extraction
     {
@@ -27,10 +27,7 @@ namespace eft_app_guide.Models.Extractions.Design
         #region Relations (Children)
         public List<ExtractionRequirement> ExtractionRequirements { get; set; } = [];
         public JunctionList<ExtractionFaction> ExtractionFactions { get; set; } = [];
-        #endregion
-
-        #region Relations (Extensions)
-        public ExtractionDisplay? ExtractionDisplay { get; set; }
+        public AssociationList<ExtractionDisplay> ExtractionDisplays { get; set; } = [];
         #endregion
     }
 }

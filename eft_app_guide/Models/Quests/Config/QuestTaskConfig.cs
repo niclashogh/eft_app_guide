@@ -1,5 +1,4 @@
 ﻿using eft_app_guide.Models.Quests.Design;
-using eft_app_guide.Models.Quests.State;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
@@ -31,9 +30,9 @@ namespace eft_app_guide.Models.Quests.Config
 
             // Link @ to QuestTaskDisplay
             builder
-                .HasOne(x => x.QuestTaskDisplay)
+                .HasMany(x => x.QuestTaskDisplays)
                 .WithOne(x => x.QuestTask)
-                .HasForeignKey<QuestTaskDisplay>(x => x.QuestTaskId);
+                .HasForeignKey(x => x.QuestTaskId);
         }
     }
 }
