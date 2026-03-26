@@ -9,7 +9,7 @@ namespace eft_app_guide._Persistence
         public readonly static string DATA_FOLDER = Path.Combine(ROOT_FOLDER, "Data");
 
         /// <summary>
-        /// Holds SystemConfigurations data
+        /// Contains SystemConfigurations data
         /// </summary>
         public readonly static string CONFIG_FILE = Path.Combine(DATA_FOLDER, "config.json");
 

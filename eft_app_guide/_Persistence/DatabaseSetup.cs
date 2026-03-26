@@ -4,15 +4,12 @@ using System.IO;
 
 namespace eft_app_guide._Persistence
 {
-    public static class DatabaseSetup // TODO - REMOVE SUPPORT FOR Profiles.json ?AND ADD SUPPORT FOR MULTIPLE DB FILES + SWITCHING
+    public static class DatabaseSetup
     {
-        private static string DATABASE_NAME = "";
+        private static string DATABASE_NAME = "latest";
 
         public static ServiceCollection AddContextFactory(ServiceCollection service)
         {
-            // StorageFolder.EnsureProfilesFile(); ... { "Selected" : { }, "Profiles": [{Name: x, Database: y}, ...] }
-            // DATABASE_NAME = StorageFolder.GetSelectedProfile().Database;
-
             service.AddDbContextFactory<DataContext>((serviceProvider, opt) =>
             {
                 string path = Path.Combine(StorageFolder.DATA_FOLDER, DATABASE_NAME + ".db");
