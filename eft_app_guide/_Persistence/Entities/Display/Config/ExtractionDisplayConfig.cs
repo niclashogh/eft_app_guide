@@ -6,7 +6,7 @@ namespace eft_app_guide._Persistence.Entities.Display.Config
 {
     public class ExtractionDisplayConfig : IEntityTypeConfiguration<ExtractionDisplay>
     {
-        public void Configure(EntityTypeBuilder<ExtractionDisplay> builder)
+        public void Configure(EntityTypeBuilder<ExtractionDisplay> builder) // TODO + MapDisplay
         {
             builder.HasKey(x => x.ExtractionId);
 

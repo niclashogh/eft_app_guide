@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide._Persistence.Entities.Display
 {
-    public class MarkerDisplay : IPosition, ISize
+    public class MarkerDisplay : IPosition, ISize // TODO
     {
         #region Keys
         [Key] public int Id { get; init; }

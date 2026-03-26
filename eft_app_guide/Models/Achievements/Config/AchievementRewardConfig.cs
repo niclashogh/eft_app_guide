@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace eft_app_guide.Models.Achievements.Config
 {
-    internal class AchievementRewardConfig
+    internal class AchievementRewardConfig // TODO : + Achievement, + RewardDomain
     {
     }
 }

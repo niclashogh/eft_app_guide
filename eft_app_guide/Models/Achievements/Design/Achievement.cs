@@ -1,12 +1,13 @@
 ﻿using eft_app_guide._Persistence.Objects;
 using eft_app_guide.Models.Accounts.State;
+using eft_app_guide.Models.Achievements.Config;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Achievements.Design
 {
     /// <summary> AggregativeEntity (AchievementRarity + AccountAchievementProgress) </summary>
-    [EntityTypeConfiguration(typeof())]
+    [EntityTypeConfiguration(typeof(AchievementConfig))]
     public class Achievement
     {
         #region Keys

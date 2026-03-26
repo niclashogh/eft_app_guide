@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace eft_app_guide._Persistence.Entities.Display.Maps
 {
-    public class MapDisplayCreator
+    public class MapDisplayCreator // TODO
     {
         #region Keys
         [Key] public int Id { get; init; }

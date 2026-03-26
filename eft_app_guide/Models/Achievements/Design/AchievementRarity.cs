@@ -1,10 +1,11 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using eft_app_guide.Models.Achievements.Config;
+using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Achievements.Design
 {
     /// <summary> DefinitionEntity (Common, Rare, Legendary) </summary>
-    [EntityTypeConfiguration(typeof())]
+    [EntityTypeConfiguration(typeof(AchievementRarityConfig))]
     public class AchievementRarity
     {
         #region Keys
@@ -14,7 +15,7 @@ namespace eft_app_guide.Models.Achievements.Design
         [Required] public string Name { get; set; }
 
         #region Relations ()
-        // List<Achievement>
+        public List<Achievement> Achievements { get; set; } = [];
         #endregion
     }
 }

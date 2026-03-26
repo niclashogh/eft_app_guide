@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace eft_app_guide.Models.Raids
 {
-    public class Raid
+    public class Raid // TODO
     {
         #region Keys
         [Key] public int Id { get; init; }

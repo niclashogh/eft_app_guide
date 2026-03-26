@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace eft_app_guide.Models.Accounts.Config
 {
-    internal class AccountAchievementProgressConfig
+    internal class AccountAchievementProgressConfig // TODO : + Account, + Achievement
     {
     }
 }

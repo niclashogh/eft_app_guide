@@ -1,11 +1,12 @@
-﻿using eft_app_guide.Models.Rewards.Design;
+﻿using eft_app_guide.Models.Achievements.Config;
+using eft_app_guide.Models.Rewards.Design;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Achievements.Design
 {
     /// <summary> AssociationEntity (AchievementId + RewardDomainId) </summary>
-    [EntityTypeConfiguration(typeof())]
+    [EntityTypeConfiguration(typeof(AchievementRewardConfig))]
     public class AchievementReward
     {
         #region Keys (CompositeKeys)

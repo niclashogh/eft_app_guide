@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace eft_app_guide.Models.AI
 {
-    public class HumanLimb
+    public class HumanLimb // TODO
     {
         #region Keys
         [Key] public int Id { get; init; }

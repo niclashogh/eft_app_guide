@@ -10,7 +10,7 @@ namespace eft_app_guide._Persistence.Entities.Display.Config
 {
     public class MarkerDisplayConfig : IEntityTypeConfiguration<MarkerDisplay>
     {
-        public void Configure(EntityTypeBuilder<MarkerDisplay> builder)
+        public void Configure(EntityTypeBuilder<MarkerDisplay> builder) // TODO
         {
             builder.HasKey(x => x.Id);
 

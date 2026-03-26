@@ -6,7 +6,7 @@ namespace eft_app_guide._Persistence.Entities.Display.Config
 {
     public class ChapterTaskDisplayConfig : IEntityTypeConfiguration<ChapterTaskDisplay>
     {
-        public void Configure(EntityTypeBuilder<ChapterTaskDisplay> builder)
+        public void Configure(EntityTypeBuilder<ChapterTaskDisplay> builder) // TODO + MapDisplay
         {
             builder.HasKey(x => x.ChapterTaskId);
 

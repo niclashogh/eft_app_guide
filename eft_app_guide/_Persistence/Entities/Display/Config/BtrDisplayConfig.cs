@@ -6,7 +6,7 @@ namespace eft_app_guide._Persistence.Entities.Display.Config
 {
     public class BtrDisplayConfig : IEntityTypeConfiguration<BtrDisplay>
     {
-        public void Configure(EntityTypeBuilder<BtrDisplay> builder)
+        public void Configure(EntityTypeBuilder<BtrDisplay> builder) // TODO + MapDisplay
         {
             builder.HasKey(x => x.BtrId);
 

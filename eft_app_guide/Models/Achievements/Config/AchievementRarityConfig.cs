@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace eft_app_guide.Models.Achievements.Config
 {
-    internal class AchievementRarityConfig
+    internal class AchievementRarityConfig // TODO : + Achievement
     {
     }
 }

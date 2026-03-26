@@ -6,7 +6,7 @@ namespace eft_app_guide.Models.Rewards.Config
 {
     public class RewardDomainConfig : IEntityTypeConfiguration<RewardDomain>
     {
-        public void Configure(EntityTypeBuilder<RewardDomain> builder)
+        public void Configure(EntityTypeBuilder<RewardDomain> builder) // TODO : + AchievementReward, + QuestReward
         {
             builder.HasKey(x => x.Id);
 

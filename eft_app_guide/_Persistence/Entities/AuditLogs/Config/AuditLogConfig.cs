@@ -1,5 +1,4 @@
-﻿using eft_app_guide._Persistence.Entities.AuditLogs;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace eft_app_guide._Persistence.Entities.AuditLogs.Config
@@ -10,7 +9,7 @@ namespace eft_app_guide._Persistence.Entities.AuditLogs.Config
         {
             builder.HasKey(x => x.Id);
 
-            // Link AuditLog to Parent
+            // Link @ to Parent
             builder
                 .HasOne(x => x.Parent)
                 .WithMany(x => x.AssociatedLogs)

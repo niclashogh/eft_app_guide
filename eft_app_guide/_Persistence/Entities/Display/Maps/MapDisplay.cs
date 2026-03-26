@@ -8,14 +8,14 @@ using System.Threading.Tasks;
 
 namespace eft_app_guide._Persistence.Entities.Display.Maps
 {
-    public class MapDisplay
+    public class MapDisplay // TODO
     {
         #region Keys
         [Key] public int Id { get; init; }
         [Required] public int MapId { get; set; }
         #endregion
 
-        [Required] public int Versoin { get; set; }
+        [Required] public int Version { get; set; }
 
         #region Relations
         public Map? Map { get; set; }

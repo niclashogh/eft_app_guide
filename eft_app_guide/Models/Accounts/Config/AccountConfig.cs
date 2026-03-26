@@ -7,7 +7,7 @@ namespace eft_app_guide.Models.Accounts.Config
 {
     public class AccountConfig : IEntityTypeConfiguration<Account>
     {
-        public void Configure(EntityTypeBuilder<Account> builder)
+        public void Configure(EntityTypeBuilder<Account> builder) // TODO : + AccountAchievementProgress
         {
             builder.HasKey(x => x.Id);
 

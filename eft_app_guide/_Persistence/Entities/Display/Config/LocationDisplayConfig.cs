@@ -6,7 +6,7 @@ namespace eft_app_guide._Persistence.Entities.Display.Config
 {
     public class LocationDisplayConfig : IEntityTypeConfiguration<LocationDisplay>
     {
-        public void Configure(EntityTypeBuilder<LocationDisplay> builder)
+        public void Configure(EntityTypeBuilder<LocationDisplay> builder) // TODO + MapDisplay
         {
             builder.HasKey(x => x.LocationId);
 

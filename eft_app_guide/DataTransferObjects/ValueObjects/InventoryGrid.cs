@@ -1,7 +1,7 @@
 ﻿
 namespace eft_app_guide.DataTransferObjects.ValueObjects
 {
-    public readonly struct InventoryGrid // Maybe del and make a parsre/validator at the Repo-layer, instead of a model-layer
+    public readonly struct InventoryGrid // TODO : Maybe del and make a parsre/validator at the Repo-layer, instead of a model-layer
     {
         public byte Width { get; }
         public byte Height { get; }

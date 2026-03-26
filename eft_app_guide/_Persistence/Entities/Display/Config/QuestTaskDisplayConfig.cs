@@ -6,11 +6,11 @@ namespace eft_app_guide._Persistence.Entities.Display.Config
 {
     public class QuestTaskDisplayConfig : IEntityTypeConfiguration<QuestTaskDisplay>
     {
-        public void Configure(EntityTypeBuilder<QuestTaskDisplay> builder)
+        public void Configure(EntityTypeBuilder<QuestTaskDisplay> builder) // TODO + MapDisplay
         {
             builder.HasKey(x => x.QuestTaskId);
 
-            // link @ to QuestTask
+            // Link @ to QuestTask
             builder
                 .HasOne(x => x.QuestTask)
                 .WithMany(x => x.QuestTaskDisplays)
