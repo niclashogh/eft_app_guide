@@ -16,10 +16,10 @@ namespace eft_app_guide.Models.Leveling.Config
                 .HasForeignKey(x => x.SkillId);
 
             // Link @ to CharacterSkillProgress
-            builder
-                .HasMany(x => x.CharacterSkillProgressions)
-                .WithOne(x => x.Skill)
-                .HasForeignKey(x => x.SkillId);
+            //builder
+                //.HasMany(x => x.CharacterSkillProgressions)
+                //.WithOne(x => x.Skill)
+                //.HasForeignKey(x => x.SkillId);
         }
     }
 }
