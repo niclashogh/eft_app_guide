@@ -12,13 +12,13 @@ namespace eft_app_guide.Models.AI
         [Required] public string Name { get; set; }
         [Required] public Faction Faction { get; set; }
 
-        [Required] public int HeadHP { get; set; }
-        [Required] public int ThoraxHP { get; set; }
-        [Required] public int StomachHP { get; set; }
-        [Required] public int LeftArmHP { get; set; }
-        [Required] public int RightArmHP { get; set; }
-        [Required] public int LeftLegHP { get; set; }
-        [Required] public int RightLegHP { get; set; }
+        [Required] public HumanLimb Head { get; set; }
+        [Required] public HumanLimb Thorax { get; set; }
+        [Required] public HumanLimb Stomach { get; set; }
+        [Required] public HumanLimb LeftArm { get; set; }
+        [Required] public HumanLimb RightArm { get; set; }
+        [Required] public HumanLimb LeftLeg { get; set; }
+        [Required] public HumanLimb RightLeg { get; set; }
 
         #region Relations
         // Maps (many to many + TimeCondition, etc.) + Companions (many to many) + Equipement?

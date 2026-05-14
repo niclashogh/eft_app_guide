@@ -14,7 +14,7 @@ namespace eft_app_guide.Models.Factions.Design
     /// SCAV Raiders,
     /// Rouges - Former USEC,
     /// RUAF - The Russian Armed Forces,
-    /// Black Division
+    /// Black Division,
     /// Cultists
     /// ) </summary>
     [EntityTypeConfiguration(typeof(FactionConfig))]
