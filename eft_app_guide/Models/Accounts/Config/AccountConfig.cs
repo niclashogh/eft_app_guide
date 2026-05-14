@@ -7,7 +7,7 @@ namespace eft_app_guide.Models.Accounts.Config
 {
     public class AccountConfig : IEntityTypeConfiguration<Account>
     {
-        public void Configure(EntityTypeBuilder<Account> builder) // TODO : + AccountAchievementProgress
+        public void Configure(EntityTypeBuilder<Account> builder)
         {
             builder.HasKey(x => x.Id);
 
@@ -22,6 +22,12 @@ namespace eft_app_guide.Models.Accounts.Config
                 .HasOne(x => x.Character)
                 .WithOne(x => x.Account)
                 .HasForeignKey<Character>(x => x.AccountId);
+
+            // Link @ to AccountAchievementProgress
+            builder
+                .HasMany(x => x.AccountAchievementProgressions)
+                .WithOne(x => x.Account)
+                .HasForeignKey(x => x.AccountId);
         }
     }
 }

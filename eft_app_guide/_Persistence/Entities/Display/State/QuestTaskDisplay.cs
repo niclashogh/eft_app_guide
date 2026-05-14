@@ -1,11 +1,10 @@
 ﻿using eft_app_guide._Persistence.Entities.Display.Config;
-using eft_app_guide._Persistence.Entities.Display.Maps;
 using eft_app_guide.Models.Interfaces;
 using eft_app_guide.Models.Quests.Design;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 
-namespace eft_app_guide._Persistence.Entities.Display.Poi
+namespace eft_app_guide._Persistence.Entities.Display.State
 {
     /// <summary> AssociationEntity (QuestTaskId + MapDisplayId) </summary>
     [EntityTypeConfiguration(typeof(QuestTaskDisplayConfig))]

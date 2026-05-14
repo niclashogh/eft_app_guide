@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Accounts.Design
 {
-    /// <summary> DefinitionEntity (Standard, Left Behind, Prepare for Escape, Edge of Darkness, The Unheard) </summary>
+    /// <summary> DefinitionEntity (EOD, Unheard, etc.) </summary>
     [EntityTypeConfiguration(typeof(AccountEditionConfig))]
     public class AccountEdition
     {

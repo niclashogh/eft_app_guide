@@ -24,6 +24,7 @@ namespace eft_app_guide.Models.Achievements.Design
 
         #region Relations (Children)
         public AssociationList<AccountAchievementProgress> AccountAchievementProgressions { get; set; } = [];
+        public AssociationList<AchievementReward> AchievementRewards { get; set; } = [];
         #endregion
     }
 }

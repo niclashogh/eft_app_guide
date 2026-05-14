@@ -1,12 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using eft_app_guide.Models.Achievements.Design;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace eft_app_guide.Models.Achievements.Config
 {
-    internal class AchievementRarityConfig // TODO : + Achievement
+    public class AchievementRarityConfig : IEntityTypeConfiguration<AchievementRarity>
     {
+        public void Configure(EntityTypeBuilder<AchievementRarity> builder)
+        {
+            builder.HasKey(x => x.Id);
+
+            // Link @ to Achievement
+            builder
+                .HasMany(x => x.Achievements)
+                .WithOne(x => x.AchievementRarity)
+                .HasForeignKey(x => x.AchivementRarityId);
+        }
     }
 }

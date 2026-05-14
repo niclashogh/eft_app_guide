@@ -1,18 +1,17 @@
 ﻿using eft_app_guide._Persistence.Entities.Display.Config;
-using eft_app_guide._Persistence.Entities.Display.Maps;
-using eft_app_guide.Models.Extractions.Design;
+using eft_app_guide.Models.Chapters.Design;
 using eft_app_guide.Models.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 
-namespace eft_app_guide._Persistence.Entities.Display.Poi
+namespace eft_app_guide._Persistence.Entities.Display.State
 {
-    /// <summary> AssociationEntity (ExtractionId + MapDisplayId) </summary>
-    [EntityTypeConfiguration(typeof(ExtractionDisplayConfig))]
-    public class ExtractionDisplay : IPosition
+    /// <summary> AssociationEntity (ChapterTaskId + MapDisplayId) </summary>
+    [EntityTypeConfiguration(typeof(ChapterTaskDisplayConfig))]
+    public class ChapterTaskDisplay : IPosition
     {
         #region Keys (CompositeKeys)
-        [Required] public int ExtractionId { get; set; }
+        [Required] public int ChapterTaskId { get; set; }
         [Required] public int MapDisplayId { get; set; }
         #endregion
 
@@ -20,7 +19,7 @@ namespace eft_app_guide._Persistence.Entities.Display.Poi
         [Required] public double Y { get; set; }
 
         #region Relations (Parents)
-        public Extraction? Extraction { get; set; }
+        public ChapterTask? ChapterTask { get; set; }
         public MapDisplay? MapDisplay { get; set; }
         #endregion
     }

@@ -1,4 +1,4 @@
-﻿using eft_app_guide._Persistence.Entities.Display.Poi;
+﻿using eft_app_guide._Persistence.Entities.Display.State;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
@@ -6,7 +6,7 @@ namespace eft_app_guide._Persistence.Entities.Display.Config
 {
     public class LocationDisplayConfig : IEntityTypeConfiguration<LocationDisplay>
     {
-        public void Configure(EntityTypeBuilder<LocationDisplay> builder) // TODO + MapDisplay
+        public void Configure(EntityTypeBuilder<LocationDisplay> builder)
         {
             builder.HasKey(x => x.LocationId);
 
@@ -15,6 +15,12 @@ namespace eft_app_guide._Persistence.Entities.Display.Config
                 .HasOne(x => x.Location)
                 .WithMany(x => x.LocationDisplays)
                 .HasForeignKey(x => x.LocationId);
+
+            // Link @ to MapDisplay
+            builder
+                .HasOne(x => x.MapDisplay)
+                .WithMany(x => x.LocationDisplays)
+                .HasForeignKey(x => x.MapDisplayId);
         }
     }
 }

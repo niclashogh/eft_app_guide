@@ -1,11 +1,14 @@
-﻿using eft_app_guide.DataTransferObjects.Enums;
+﻿using eft_app_guide._Persistence.Entities.Display.Config;
+using eft_app_guide.DataTransferObjects.Enums;
 using eft_app_guide.Models.Interfaces;
-using eft_app_guide.Models.Maps.Design;
+using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 
-namespace eft_app_guide._Persistence.Entities.Display
+namespace eft_app_guide._Persistence.Entities.Display.State
 {
-    public class MarkerDisplay : IPosition, ISize // TODO
+    /// <summary> ChildEntity (MapDisplay) </summary>
+    [EntityTypeConfiguration(typeof(MarkerDisplayConfig))]
+    public class MarkerDisplay : IPosition, ISize
     {
         #region Keys
         [Key] public int Id { get; init; }
@@ -23,7 +26,7 @@ namespace eft_app_guide._Persistence.Entities.Display
         [Required] public string Icon { get; set; }
 
         #region Relations
-        public Map? Map { get; set; }
+        public MapDisplay? MapDisplay { get; set; }
         #endregion
     }
 }

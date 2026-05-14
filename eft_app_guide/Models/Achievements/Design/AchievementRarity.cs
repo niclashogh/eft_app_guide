@@ -14,7 +14,7 @@ namespace eft_app_guide.Models.Achievements.Design
 
         [Required] public string Name { get; set; }
 
-        #region Relations ()
+        #region Relations (Children)
         public List<Achievement> Achievements { get; set; } = [];
         #endregion
     }

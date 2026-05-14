@@ -21,6 +21,7 @@ namespace eft_app_guide.Models.Traders.Design
         public List<Quest> Quests { get; set; } = [];
         public List<TraderLevel> TraderLevels { get; set; } = [];
         public List<Trade> Trades { get; set; } = [];
+
         public AssociationList<CharacterTraderReputation> CharacterTraderReputations { get; set; } = [];
         #endregion
     }

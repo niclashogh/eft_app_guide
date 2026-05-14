@@ -6,7 +6,7 @@ namespace eft_app_guide.Models.Rewards.Config
 {
     public class RewardDomainConfig : IEntityTypeConfiguration<RewardDomain>
     {
-        public void Configure(EntityTypeBuilder<RewardDomain> builder) // TODO : + AchievementReward, + QuestReward
+        public void Configure(EntityTypeBuilder<RewardDomain> builder) // TODO
         {
             builder.HasKey(x => x.Id);
 
@@ -21,6 +21,15 @@ namespace eft_app_guide.Models.Rewards.Config
                 .HasMany(x => x.ChapterTaskRewards)
                 .WithOne(x => x.RewardDomain)
                 .HasForeignKey(x => x.RewardDomainId);
+
+            // Link @ to AchievementReward
+            builder
+                .HasMany(x => x.AchievementRewards)
+                .WithOne(x => x.RewardDomain)
+                .HasForeignKey(x => x.RewardDomainId);
+
+            // Link @ to QuestReward
+            
         }
     }
 }

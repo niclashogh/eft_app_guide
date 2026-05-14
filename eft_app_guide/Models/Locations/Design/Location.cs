@@ -1,4 +1,4 @@
-﻿using eft_app_guide._Persistence.Entities.Display.Poi;
+﻿using eft_app_guide._Persistence.Entities.Display.State;
 using eft_app_guide._Persistence.Objects;
 using eft_app_guide.Models.Containers.Design;
 using eft_app_guide.Models.Locations.Config;
