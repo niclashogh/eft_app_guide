@@ -6,7 +6,16 @@ using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide._Persistence.Entities.Display.State
 {
-    /// <summary> AggregativeEntity (BtrDisplay + ChapterTaskDisplay + ExtractionDisplay + LocationDisplay + MarkerDisplay + QuestTaskDisplay) </summary>
+    /// <summary><b>AggregativeEntity</b>
+    /// Relations:<code>
+    /// Map
+    /// BtrDisplay
+    /// ChapterTaskDisplay
+    /// ExtractionDisplay
+    /// LocationDisplay
+    /// MarkerDisplay
+    /// QuestTaskDisplay
+    /// </code></summary>
     [EntityTypeConfiguration(typeof(MapDisplayConfig))]
     public class MapDisplay
     {

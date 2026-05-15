@@ -6,7 +6,11 @@ using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide._Persistence.Entities.Display.State
 {
-    /// <summary> AssociationEntity (QuestTaskId + MapDisplayId) </summary>
+    /// <summary><b>AssociationEntity</b>
+    /// Between:<code>
+    /// QuestTaskId
+    /// MapDisplayId
+    /// </code></summary>
     [EntityTypeConfiguration(typeof(QuestTaskDisplayConfig))]
     public class QuestTaskDisplay : IPosition
     {

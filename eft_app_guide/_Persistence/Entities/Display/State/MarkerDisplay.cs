@@ -6,9 +6,9 @@ using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide._Persistence.Entities.Display.State
 {
-    /// <summary> ChildEntity (MapDisplay) </summary>
+    /// <summary><b>ChildEntity of MapDisplay</b></summary>
     [EntityTypeConfiguration(typeof(MarkerDisplayConfig))]
-    public class MarkerDisplay : IPosition, ISize
+    public class MarkerDisplay : IPosition, ISize // TODO: Make a Marker class w/ Name & Desc with a MarkerDisplay. This current options is good for admin-placed but when a player wants to mark somthing they have to create everything per mapdisplay.
     {
         #region Keys
         [Key] public int Id { get; init; }

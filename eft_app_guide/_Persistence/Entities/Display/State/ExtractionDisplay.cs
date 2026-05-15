@@ -6,7 +6,11 @@ using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide._Persistence.Entities.Display.State
 {
-    /// <summary> AssociationEntity (ExtractionId + MapDisplayId) </summary>
+    /// <summary><b>AssociationEntity</b>
+    /// Between:<code>
+    /// ExtractionId
+    /// MapDisplayId
+    /// </code></summary>
     [EntityTypeConfiguration(typeof(ExtractionDisplayConfig))]
     public class ExtractionDisplay : IPosition
     {
