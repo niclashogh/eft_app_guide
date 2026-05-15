@@ -7,7 +7,11 @@ using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Accounts.State
 {
-    /// <summary> AggregativeEntity (AccountEdition + Character + AccountAchievementProgress) </summary>
+    /// <summary><b>AggregativeEntity</b>
+    /// Relations:<code>
+    /// AccountEdition
+    /// Character
+    /// </code></summary>
     [EntityTypeConfiguration(typeof(AccountConfig))]
     public class Account
     {
@@ -25,8 +29,6 @@ namespace eft_app_guide.Models.Accounts.State
 
         #region Relations (Children)
         public Character? Character { get; set; }
-
-        public AssociationList<AccountAchievementProgress> AccountAchievementProgressions { get; set; } = [];
         #endregion
     }
 }

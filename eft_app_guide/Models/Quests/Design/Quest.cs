@@ -7,7 +7,16 @@ using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Quests.Design
 {
-    /// <summary> AggregativeEntity (QuestGroup + QuestRequirement + QuestReward + QuestTask) </summary>
+    /// <summary><b>AggregativeEntity</b>
+    /// Relations:<code>
+    /// QuestLine
+    /// Trader
+    /// QuestRequirement
+    /// QuestReward
+    /// QuestTask
+    /// CharacterQuestProgress
+    /// QuestGroup
+    /// </code></summary>
     [EntityTypeConfiguration(typeof(QuestConfig))]
     public class Quest
     {

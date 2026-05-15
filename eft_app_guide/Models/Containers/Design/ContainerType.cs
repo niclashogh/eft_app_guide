@@ -4,7 +4,13 @@ using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Containers.Design
 {
-    /// <summary> DefintionEntity (Jackets, Bags, Drawers, etc.) </summary>
+    /// <summary><b>DefintionEntity</b>
+    /// Containing:<code>
+    /// Jackets
+    /// Bags
+    /// Drawers
+    /// ...
+    /// </code></summary>
     [EntityTypeConfiguration(typeof(ContainerTypeConfig))]
     public class ContainerType
     {

@@ -5,7 +5,10 @@ using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.MarketPlaces.Design
 {
-    /// <summary> AggregativeEntity (MarketPlaceItem) </summary>
+    /// <summary><b>AggregativeEntity</b>
+    /// Relations:<code>
+    /// MarketPlaceItem
+    /// </code></summary>
     [EntityTypeConfiguration(typeof(MarketPlaceConfig))]
     public class MarketPlace
     {

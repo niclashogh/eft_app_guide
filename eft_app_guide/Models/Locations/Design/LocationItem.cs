@@ -5,7 +5,11 @@ using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Locations.Design
 {
-    /// <summary> AssociationEntity (LocationId + ItemId) </summary>
+    /// <summary><b>AssociationEntity</b>
+    /// Between:<code>
+    /// LocationId
+    /// ItemId
+    /// </code></summary>
     [EntityTypeConfiguration(typeof(LocationItemConfig))]
     public class LocationItem
     {

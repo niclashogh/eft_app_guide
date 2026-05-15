@@ -5,9 +5,9 @@ using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.HideoutStations.Design
 {
-    /// <summary> Extends StationEffect </summary>
+    /// <summary><b>Extends StationEffect</b></summary>
     [EntityTypeConfiguration(typeof(StationEffectCharacterMajorSkillConfig))]
-    public class StationEffectCharacterMajorSkill
+    public class StationEffectCharacterMajorSkill // TODO: Incorp. into StationEffect?
     {
         #region Keys
         [Key] public int StationEffectId { get; set; }

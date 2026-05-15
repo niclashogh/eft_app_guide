@@ -2,7 +2,7 @@
 
 namespace eft_app_guide.Models.Characters.Design
 {
-    /// <summary> DefinitionEntity </summary>
+    /// <summary><b>DefinitionEntity</b></summary>
     public class CharacterLevel
     {
         #region Keys

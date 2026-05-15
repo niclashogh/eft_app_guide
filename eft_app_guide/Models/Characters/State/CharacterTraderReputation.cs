@@ -5,7 +5,11 @@ using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Characters.State
 {
-    /// <summary> AssociationEntity (CharacterId + TraderId) </summary>
+    /// <summary><b>AssociationEntity</b>
+    /// Between:<code>
+    /// CharacterId
+    /// TraderId
+    /// </code></summary>
     [EntityTypeConfiguration(typeof(CharacterTraderReputationConfig))]
     public class CharacterTraderReputation
     {

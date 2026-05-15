@@ -6,7 +6,11 @@ using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Chapters.Design
 {
-    /// <summary> AssociationEntity (ChapterTaskId + RewardDomainId) </summary>
+    /// <summary><b>AssociationEntity</b>
+    /// Between:<code>
+    /// ChapterTaskId
+    /// RewardDomainId
+    /// </code></summary>
     [EntityTypeConfiguration(typeof(ChapterTaskRewardConfig))]
     public class ChapterTaskReward : IRewardProvider
     {

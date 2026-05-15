@@ -5,7 +5,11 @@ using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Extractions.Design
 {
-    /// <summary> JunctionEntity (ExtractonId + FactionId) </summary>
+    /// <summary><b>JunctionEntity</b>
+    /// Between:<code>
+    /// ExtractonId
+    /// FactionId
+    /// </code></summary>
     [EntityTypeConfiguration(typeof(ExtractionFactionConfig))]
     public class ExtractionFaction
     {

@@ -10,6 +10,12 @@ namespace eft_app_guide.Models.Maps.Config
         {
             builder.HasKey(x => x.Id);
 
+            // Link @ to Raid
+            builder
+                .HasMany(x => x.Raids)
+                .WithOne(x => x.Map)
+                .HasForeignKey(x => x.MapId);
+
             // Link @ to Location
             builder
                 .HasMany(x => x.Locations)

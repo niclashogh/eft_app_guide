@@ -7,7 +7,13 @@ using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Traders.Design
 {
-    /// <summary> AggregativeEntity (TraderLevel + Trade) </summary>
+    /// <summary><b>AggregativeEntity</b>
+    /// Relations:<code>
+    /// Quest
+    /// TraderLevel
+    /// Trade
+    /// CharacterTraderReputation
+    /// </code></summary>
     [EntityTypeConfiguration(typeof(TraderConfig))]
     public class Trader
     {

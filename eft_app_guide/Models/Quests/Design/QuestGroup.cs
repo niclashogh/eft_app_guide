@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Quests.Design
 {
-    /// <summary> Extends Quest </summary>
+    /// <summary><b>Extends Quest</b></summary>
     [EntityTypeConfiguration(typeof(QuestGroupConfig))]
     public class QuestGroup : IGroup
     {

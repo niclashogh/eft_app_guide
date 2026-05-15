@@ -6,7 +6,14 @@ using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.HideoutStations.Design
 {
-    /// <summary> DefinitionEntity (Fuel Consumption, Energy Regeneration Rate, Additional Raid EXP, Major/Minor Skill EXP Boost, etc.) </summary>
+    /// <summary><b>DefinitionEntity</b>
+    /// Containing:<code>
+    /// Fuel Consumption
+    /// Energy Regeneration Rate
+    /// Additional Raid EXP
+    /// Major/Minor Skill EXP Boost
+    /// ...
+    /// </code></summary>
     [EntityTypeConfiguration(typeof(StationEffectConfig))]
     public class StationEffect
     {
@@ -19,7 +26,6 @@ namespace eft_app_guide.Models.HideoutStations.Design
 
         #region Relations (Children)
         public StationEffectCharacterMajorSkill? StationEffectCharacterMajorSkill { get; set; }
-
         public AssociationList<StationLevelEffect> StationLevelEffects { get; set; } = [];
         #endregion
     }

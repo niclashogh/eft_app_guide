@@ -5,7 +5,11 @@ using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Characters.State
 {
-    /// <summary> AssociationEntity (CharacterId + CharacterMajorSkillId) </summary>
+    /// <summary><b>AssociationEntity</b>
+    /// Between:<code>
+    /// CharacterId
+    /// CharacterMajorSkillId
+    /// </code></summary>
     [EntityTypeConfiguration(typeof(CharacterMajorSkillProgressConfig))]
     public class CharacterMajorSkillProgress
     {

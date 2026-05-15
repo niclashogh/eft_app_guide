@@ -6,7 +6,13 @@ using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.HideoutStations.Design
 {
-    /// <summary> AggregativeEntity (StationLevelCrafting + StationLevelEffect + CharacterStationProgress) </summary>
+    /// <summary><b>AggregativeEntity</b>
+    /// Relations:<code>
+    /// Station
+    /// StationLevelCrafting
+    /// StationLevelEffect
+    /// CharacterStationProgress
+    /// </code></summary>
     [EntityTypeConfiguration(typeof(StationLevelConfig))]
     public class StationLevel
     {

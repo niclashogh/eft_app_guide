@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.MarketPlaces.Design
 {
-    public class MarketPlaceItemCategory // TODO - FINISH
+    public class MarketPlaceItemCategory // TODO
     {
         #region Keys (CompositeKeys)
         [Required] public int MarketPlaceId { get; set; }

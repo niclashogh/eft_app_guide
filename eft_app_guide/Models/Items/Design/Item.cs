@@ -9,7 +9,16 @@ using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Items.Design
 {
-    /// <summary> AggregativeEntity (ItemCategory) </summary>
+    /// <summary><b>AggregativeEntity</b>
+    /// Relations:<code>
+    /// ItemCategory
+    /// CraftingIngredient
+    /// CraftingResult
+    /// TradePayment
+    /// TradeResult
+    /// LocationItem
+    /// MarketPlaceItem
+    /// </code></summary>
     [EntityTypeConfiguration(typeof(ItemConfig))]
     public class Item
     {
@@ -28,10 +37,8 @@ namespace eft_app_guide.Models.Items.Design
         #region Relations (Children)
         public AssociationList<CraftingIngredient> CraftingIngredients { get; set; } = [];
         public AssociationList<CraftingResult> CraftingResults { get; set; } = [];
-        
         public AssociationList<TradePayment> TradePayments { get; set; } = [];
         public AssociationList<TradeResult> TradeResults { get; set; } = [];
-
         public AssociationList<LocationItem> LocationItems { get; set; } = [];
         public AssociationList<MarketPlaceItem> MarketPlaceItems { get; set; } = [];
         #endregion

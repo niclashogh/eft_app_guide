@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace eft_app_guide.Models.MarketPlaces.State
 {
-    internal class MarketPlaceCharacterTrade // TODO - INCL?
+    internal class MarketPlaceCharacterTrade // TODO ?
     {
     }
 }

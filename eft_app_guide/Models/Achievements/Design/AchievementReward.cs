@@ -5,7 +5,11 @@ using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Achievements.Design
 {
-    /// <summary> AssociationEntity (AchievementId + RewardDomainId) </summary>
+    /// <summary><b>AssociationEntity</b>
+    /// Between:<code>
+    /// AchievementId
+    /// RewardDomainId
+    /// </code></summary>
     [EntityTypeConfiguration(typeof(AchievementRewardConfig))]
     public class AchievementReward
     {

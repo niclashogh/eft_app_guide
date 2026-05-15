@@ -5,7 +5,11 @@ using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Traders.Design
 {
-    /// <summary> AssociationEntity (TradeId + ItemId) </summary>
+    /// <summary><b>AssociationEntity</b>
+    /// Between:<code>
+    /// TradeId
+    /// ItemId
+    /// </code></summary>
     [EntityTypeConfiguration(typeof(TradePaymentConfig))]
     public class TradePayment
     {

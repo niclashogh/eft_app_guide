@@ -8,15 +8,16 @@ using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Rewards.Design
 {
-    /// <summary> DefintionEntity </summary>
+    /// <summary><b>DefintionEntity</b></summary>
     [EntityTypeConfiguration(typeof(RewardDomainConfig))]
-    public class RewardDomain
+    public class RewardDomain // TODO
     {
         #region Keys
         [Key] public int Id { get; init; }
         #endregion
 
-        [Required] public string Description { get; set; }
+        /// <summary> Domain of which the reward originates from. Item, Currency, etc. </summary>
+        [Required] public string Domain {  get; set; }
 
         #region Relations (Children)
         public AssociationList<AccountEditionReward> AccountEditionRewards { get; set; } = [];

@@ -6,7 +6,11 @@ using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Quests.Design
 {
-    /// <summary> AssociationEntity (QuestId + RewardDomainId) </summary>
+    /// <summary><b>AssociationEntity</b>
+    /// Between:<code>
+    /// QuestId
+    /// RewardDomainId
+    /// </code></summary>
     [EntityTypeConfiguration(typeof(QuestRewardConfig))]
     public class QuestReward : IRewardProvider
     {

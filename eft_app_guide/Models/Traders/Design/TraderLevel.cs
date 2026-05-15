@@ -5,7 +5,11 @@ using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Traders.Design
 {
-    /// <summary> ChildEntity (Trader + Currency) </summary>
+    /// <summary><b>AssociationEntity</b>
+    /// Between:<code>
+    /// TraderId
+    /// CurrencyId
+    /// </code></summary>
     [EntityTypeConfiguration(typeof(TraderLevelConfig))]
     public class TraderLevel
     {

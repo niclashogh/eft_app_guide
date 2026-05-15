@@ -6,7 +6,11 @@ using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Currencies.Design
 {
-    /// <summary> AggregativeEntity (CurrencyExchange) </summary>
+    /// <summary><b>AggregativeEntity</b>
+    /// Relations:<code>
+    /// CurrencyExchange
+    /// TraderLevel
+    /// </code></summary>
     [EntityTypeConfiguration(typeof(CurrencyConfig))]
     public class Currency
     {

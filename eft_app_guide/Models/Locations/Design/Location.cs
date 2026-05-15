@@ -8,7 +8,14 @@ using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Locations.Design
 {
-    /// <summary> AggregativeEntity (LocationItem + LocationAccess + Container + LocationDisplay) </summary>
+    /// <summary><b>AggregativeEntity</b>
+    /// Relations:<code>
+    /// Map
+    /// Container
+    /// LocationItem
+    /// LocationAccess
+    /// LocationDisplay
+    /// </code></summary>
     [EntityTypeConfiguration(typeof(LocationConfig))]
     public class Location
     {
@@ -24,9 +31,9 @@ namespace eft_app_guide.Models.Locations.Design
         #endregion
 
         #region Relations (Children)
+        public List<Container> Containers { get; set; } = [];
         public AssociationList<LocationItem> LocationItems { get; set; } = [];
         public AssociationList<LocationAccess> LocationAccesses { get; set; } = [];
-        public List<Container> Containers { get; set; } = [];
         public AssociationList<LocationDisplay> LocationDisplays { get; set; } = [];
         #endregion
     }

@@ -6,7 +6,11 @@ using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Accounts.Design
 {
-    /// <summary> AssociationEntity (AccountEditionId + RewardDomainId) </summary>
+    /// <summary><b>AssociationEntity</b>
+    /// Between:<code>
+    /// AccountEditionId
+    /// RewardDomainId
+    /// </code></summary>
     [EntityTypeConfiguration(typeof(AccountEditionRewardConfig))]
     public class AccountEditionReward : IRewardProvider
     {

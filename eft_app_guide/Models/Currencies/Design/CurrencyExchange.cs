@@ -4,7 +4,11 @@ using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Currencies.Design
 {
-    /// <summary> AssociationEntity (FromCurrencyId + ToCurrencyId) </summary>
+    /// <summary><b>AssociationEntity</b>
+    /// Between:<code>
+    /// FromCurrencyId
+    /// ToCurrencyId
+    /// </code></summary>
     [EntityTypeConfiguration(typeof(CurrencyExchangeConfig))]
     public class CurrencyExchange
     {

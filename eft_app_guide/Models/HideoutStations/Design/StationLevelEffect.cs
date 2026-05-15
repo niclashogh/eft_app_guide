@@ -4,7 +4,11 @@ using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.HideoutStations.Design
 {
-    /// <summary> AssociationEntity (StationLevelId + StationEffectId) </summary>
+    /// <summary><b>AssociationEntity</b>
+    /// Between:<code>
+    /// StationLevelId
+    /// StationEffectId
+    /// </code></summary>
     [EntityTypeConfiguration(typeof(StationLevelEffectConfig))]
     public class StationLevelEffect
     {

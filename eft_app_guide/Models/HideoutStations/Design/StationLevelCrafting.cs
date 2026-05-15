@@ -5,7 +5,11 @@ using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.HideoutStations.Design
 {
-    /// <summary> JunctionEntity (StationLevelId + CraftingId) </summary>
+    /// <summary><b>JunctionEntity</b>
+    /// Between:<code>
+    /// StationLevelId
+    /// CraftingId
+    /// </code></summary>
     [EntityTypeConfiguration(typeof(StationLevelCraftingConfig))]
     public class StationLevelCrafting
     {

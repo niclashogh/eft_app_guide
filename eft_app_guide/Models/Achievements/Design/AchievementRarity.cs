@@ -4,7 +4,13 @@ using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Achievements.Design
 {
-    /// <summary> DefinitionEntity (Common, Rare, Legendary) </summary>
+    /// <summary><b>DefinitionEntity</b>
+    /// Containing:<code>
+    /// Common
+    /// Rare
+    /// Legendary
+    /// ...
+    /// </code></summary>
     [EntityTypeConfiguration(typeof(AchievementRarityConfig))]
     public class AchievementRarity
     {

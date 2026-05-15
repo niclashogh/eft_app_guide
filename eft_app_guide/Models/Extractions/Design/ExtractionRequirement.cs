@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Extractions.Design
 {
-    /// <summary> ChildEntity (Extraction) </summary>
+    /// <summary><b>ChildEntity of Extraction</b></summary>
     [EntityTypeConfiguration(typeof(ExtractionRequirementConfig))]
     public class ExtractionRequirement
     {

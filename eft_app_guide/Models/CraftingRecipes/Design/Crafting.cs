@@ -6,7 +6,12 @@ using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.CraftingRecipes.Design
 {
-    /// <summary> AggregativeEntity (CraftingResult + CraftingIngredient) </summary>
+    /// <summary><b>AggregativeEntity</b>
+    /// Relations:<code>
+    /// CraftingResult
+    /// CraftingIngredient
+    /// StationLevelCrafting
+    /// </code></summary>
     [EntityTypeConfiguration(typeof(CraftingConfig))]
     public class Crafting
     {

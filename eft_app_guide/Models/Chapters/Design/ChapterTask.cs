@@ -6,7 +6,14 @@ using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Chapters.Design
 {
-    /// <summary> AggregativeEntity (ChapterTaskGroup + ChapterTaskMap + ChapterTaskReward + ChapterTaskDisplay) </summary>
+    /// <summary><b>AggregativeEntity</b>
+    /// Relations:<code>
+    /// Chapter
+    /// ChapterTaskMap
+    /// ChapterTaskReward
+    /// ChapterTaskDisplay
+    /// ChapterTaskGroup
+    /// </code></summary>
     [EntityTypeConfiguration(typeof(ChapterTaskConfig))]
     public class ChapterTask
     {

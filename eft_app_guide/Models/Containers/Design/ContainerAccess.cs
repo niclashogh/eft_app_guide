@@ -5,7 +5,11 @@ using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Containers.Design
 {
-    /// <summary> JunctionEntity (ContainerId + AccessKeyId) </summary>
+    /// <summary><b>JunctionEntity</b>
+    /// Between:<code>
+    /// ContainerId
+    /// AccessKeyId
+    /// </code></summary>
     [EntityTypeConfiguration(typeof(ContainerAccessConfig))]
     public class ContainerAccess
     {

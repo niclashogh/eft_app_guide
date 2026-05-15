@@ -5,7 +5,12 @@ using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Traders.Design
 {
-    /// <summary> AggregativeEntity (TradePayment + TradeResult) </summary>
+    /// <summary><b>AggregativeEntity</b>
+    /// Relations:<code>
+    /// Trader
+    /// TradePayment
+    /// TradeResult
+    /// </code></summary>
     [EntityTypeConfiguration(typeof(TradeConfig))]
     public class Trade
     {

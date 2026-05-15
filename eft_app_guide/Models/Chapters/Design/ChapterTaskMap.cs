@@ -5,7 +5,11 @@ using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Chapters.Design
 {
-    /// <summary> JunctionEntity (ChapterTaskId + MapId) </summary>
+    /// <summary><b>JunctionEntity</b>
+    /// Between:<code>
+    /// ChapterTaskId
+    /// MapId
+    /// </code></summary>
     [EntityTypeConfiguration(typeof(ChapterTaskMapConfig))]
     public class ChapterTaskMap
     {

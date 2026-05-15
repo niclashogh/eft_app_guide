@@ -6,7 +6,12 @@ using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Containers.Design
 {
-    /// <summary> AggregativeEntity (ContainerType + ContainerAccess) </summary>
+    /// <summary><b>AggregativeEntity</b>
+    /// Relations:<code>
+    /// Location
+    /// ContainerType
+    /// ContainerAccess
+    /// </code></summary>
     [EntityTypeConfiguration(typeof(ContainerConfig))]
     public class Container
     {

@@ -1,5 +1,5 @@
-﻿using eft_app_guide.Models.Characters.Config;
-using eft_app_guide.Models.HideoutStations.Design;
+﻿using eft_app_guide.Models.Achievements.Design;
+using eft_app_guide.Models.Characters.Config;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 
@@ -8,21 +8,21 @@ namespace eft_app_guide.Models.Characters.State
     /// <summary><b>AssociationEntity</b>
     /// Between:<code>
     /// CharacterId
-    /// StationLevelId
+    /// AchievementId
     /// </code></summary>
-    [EntityTypeConfiguration(typeof(CharacterStationLevelProgressConfig))]
-    public class CharacterStationLevelProgress
+    [EntityTypeConfiguration(typeof(CharacterAchievementProgressConfig))]
+    public class CharacterAchievementProgress
     {
         #region Keys (CompositeKeys)
         [Required] public int CharacterId { get; set; }
-        [Required] public int StationLevelId { get; set; }
+        [Required] public int AchievementId { get; set; }
         #endregion
 
-        [Required] public bool IsBuild {  get; set; }
+        [Required] public DateTime CompletionDate { get; set; }
 
         #region Relations (Parents)
         public Character? Character { get; set; }
-        public StationLevel? StationLevel { get; set; }
+        public Achievement? Achievement { get; set; }
         #endregion
     }
 }

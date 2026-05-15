@@ -7,7 +7,13 @@ using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Extractions.Design
 {
-    /// <summary> AggregativeEntity (ExtractionRequirement + ExtractionFaction + ExtractionDisplay) </summary>
+    /// <summary><b>AggregativeEntity</b>
+    /// Relations:<code>
+    /// Map
+    /// ExtractionRequirement
+    /// ExtractionFaction
+    /// ExtractionDisplay
+    /// </code></summary>
     [EntityTypeConfiguration(typeof(ExtractionConfig))]
     public class Extraction
     {

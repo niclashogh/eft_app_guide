@@ -6,7 +6,13 @@ using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Quests.Design
 {
-    /// <summary> AggregativeEntity (QuestTaskGroup + QuestTaskMap + QuestTaskDisplay) </summary>
+    /// <summary><b>AggregativeEntity</b>
+    /// Relations:<code>
+    /// Quest
+    /// QuestTaskMap
+    /// QuestTaskDisplay
+    /// QuestTaskGroup
+    /// </code></summary>
     [EntityTypeConfiguration(typeof(QuestTaskConfig))]
     public class QuestTask
     {

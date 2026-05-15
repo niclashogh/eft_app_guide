@@ -7,7 +7,12 @@ using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.AccessKeys.Design
 {
-    /// <summary> DefintionEntity (Keys, Keycards, etc.) </summary>
+    /// <summary><b>DefintionEntity</b>
+    /// Containing:<code>
+    /// Keys
+    /// Keycards
+    /// ...
+    /// </code></summary>
     [EntityTypeConfiguration(typeof(AccessKeyConfig))]
     public class AccessKey
     {

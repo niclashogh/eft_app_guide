@@ -5,7 +5,11 @@ using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Characters.State
 {
-    /// <summary> AssociationEntity (CharacterId + QuestId) </summary>
+    /// <summary><b>AssociationEntity</b>
+    /// Between:<code>
+    /// CharacterId
+    /// QuestId
+    /// </code></summary>
     [EntityTypeConfiguration(typeof(CharacterQuestProgressConfig))]
     public class CharacterQuestProgress
     {

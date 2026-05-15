@@ -5,7 +5,11 @@ using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.MarketPlaces.Design
 {
-    /// <summary> AssociationEntity (MarketPlaceId + ItemId) </summary>
+    /// <summary><b>AssociationEntity</b>
+    /// Between:<code>
+    /// MarketPlaceId
+    /// ItemId
+    /// </code></summary>
     [EntityTypeConfiguration(typeof(MarketPlaceItemConfig))]
     public class MarketPlaceItem
     {

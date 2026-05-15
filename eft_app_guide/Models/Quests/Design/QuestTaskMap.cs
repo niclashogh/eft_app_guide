@@ -5,7 +5,11 @@ using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Quests.Design
 {
-    /// <summary> JunctionEntity (QuestTaskId + MapId) </summary>
+    /// <summary><b>JunctionEntity</b>
+    /// Between:<code>
+    /// QuestTaskId
+    /// MapId
+    /// </code></summary>
     [EntityTypeConfiguration(typeof(QuestTaskMapConfig))]
     public class QuestTaskMap
     {

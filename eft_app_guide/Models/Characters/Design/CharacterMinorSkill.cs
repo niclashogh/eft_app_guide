@@ -5,7 +5,14 @@ using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Characters.Design
 {
-    /// <summary> ChildEntity (CharacterMajorSkill) - DifintionEntity (Stamia, Jump Stamia Drain, Breath Holding, Breath Recovery, etc.) </summary>
+    /// <summary><b>DifintionEntity</b>
+    /// Containing:<code>
+    /// Stamia
+    /// Jump Stamia Drain
+    /// Breath Holding
+    /// Breath Recovery
+    /// ...
+    /// </code></summary>
     [EntityTypeConfiguration(typeof(CharacterMinorSkillConfig))]
     public class CharacterMinorSkill
     {

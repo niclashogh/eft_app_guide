@@ -24,7 +24,7 @@ namespace eft_app_guide.Models.Achievements.Config
 
             // Link @ to AccountAchievementProgress
             builder
-                .HasMany(x => x.AccountAchievementProgressions)
+                .HasMany(x => x.CharacterAchievementProgressions)
                 .WithOne(x => x.Achievement)
                 .HasForeignKey(x => x.AchievementId);
         }

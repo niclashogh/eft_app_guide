@@ -28,6 +28,12 @@ namespace eft_app_guide.Models.Accounts.Config
                 .HasMany(x => x.AccountAchievementProgressions)
                 .WithOne(x => x.Account)
                 .HasForeignKey(x => x.AccountId);
+
+            // Link @ to AccountRaid
+            builder
+                .HasMany(x => x.AccountRaids)
+                .WithOne(x => x.Account)
+                .HasForeignKey(x => x.AccountId);
         }
     }
 }

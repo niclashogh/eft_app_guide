@@ -5,7 +5,11 @@ using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Characters.State
 {
-    /// <summary> AssociationEntity (CharacterId + MapId) </summary>
+    /// <summary><b>AssociationEntity</b>
+    /// Between:<code>
+    /// CharacterId
+    /// MapId
+    /// </code></summary>
     [EntityTypeConfiguration(typeof(CharacterMapAccessConfig))]
     public class CharacterMapAccess
     {

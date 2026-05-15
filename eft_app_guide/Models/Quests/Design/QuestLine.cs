@@ -4,7 +4,10 @@ using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Quests.Design
 {
-    /// <summary> AggregativeEntity (Quest) </summary>
+    /// <summary><b>AggregativeEntity</b>
+    /// Relations:<code>
+    /// Quest
+    /// </code></summary>
     [EntityTypeConfiguration(typeof(QuestLineConfig))]
     public class QuestLine
     {

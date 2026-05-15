@@ -5,7 +5,11 @@ using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.CraftingRecipes.Design
 {
-    /// <summary> AssociationEntity (CraftingId + ItemId) </summary>
+    /// <summary><b>AssociationEntity</b>
+    /// Between:<code>
+    /// CraftingId
+    /// ItemId
+    /// </code></summary>
     [EntityTypeConfiguration(typeof(CraftingIngredientConfig))]
     public class CraftingIngredient
     {

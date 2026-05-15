@@ -7,7 +7,15 @@ using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Characters.Design
 {
-    /// <summary> DefinitionEntity (Endurance, Health, Immunity, Metabolism, Strenght, etc.) </summary>
+    /// <summary><b>DefinitionEntity</b>
+    /// Containing:<code>
+    /// Endurance
+    /// Health
+    /// Immunity
+    /// Metabolism
+    /// Strenght
+    /// ...
+    /// </code></summary>
     [EntityTypeConfiguration(typeof(CharacterMajorSkillConfig))]
     public class CharacterMajorSkill
     {
