@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace eft_app_guide.Models.Rewards.Design.Config
+namespace eft_app_guide._Persistence.Entities.RewardDomain.Config
 {
     public class RewardDomainConfig : IEntityTypeConfiguration<RewardDomain>
     {

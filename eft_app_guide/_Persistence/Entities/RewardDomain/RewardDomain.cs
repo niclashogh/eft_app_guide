@@ -1,13 +1,13 @@
-﻿using eft_app_guide._Persistence.Objects;
+﻿using eft_app_guide._Persistence.Entities.RewardDomain.Config;
+using eft_app_guide._Persistence.Objects;
 using eft_app_guide.Models.Accounts.Relations;
 using eft_app_guide.Models.Achievements.Relations;
 using eft_app_guide.Models.Chapters.Relations;
 using eft_app_guide.Models.Quests.Relations;
-using eft_app_guide.Models.Rewards.Design.Config;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 
-namespace eft_app_guide.Models.Rewards.Design
+namespace eft_app_guide._Persistence.Entities.RewardDomain
 {
     /// <summary><b>DefintionEntity</b></summary>
     [EntityTypeConfiguration(typeof(RewardDomainConfig))]

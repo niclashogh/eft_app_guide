@@ -1,7 +1,7 @@
-﻿using eft_app_guide.Models._Interfaces;
+﻿using eft_app_guide._Persistence.Entities.RewardDomain;
+using eft_app_guide.Models._Interfaces;
 using eft_app_guide.Models.Accounts.Design;
 using eft_app_guide.Models.Accounts.Relations.Config;
-using eft_app_guide.Models.Rewards.Design;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 

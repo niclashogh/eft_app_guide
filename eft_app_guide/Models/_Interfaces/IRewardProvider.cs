@@ -1,4 +1,4 @@
-﻿using eft_app_guide.Models.Rewards.Design;
+﻿using eft_app_guide._Persistence.Entities.RewardDomain;
 
 namespace eft_app_guide.Models._Interfaces
 {
