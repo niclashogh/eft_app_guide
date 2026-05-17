@@ -47,7 +47,7 @@ namespace eft_app_guide.Models.Characters.State.Config
 
             // Link @ to CharacterTraderReputation
             builder
-                .HasMany(x => x.CharacterTraderReputations)
+                .HasMany(x => x.CharacterTraderProgressions)
                 .WithOne(x => x.Character)
                 .HasForeignKey(x => x.CharacterId);
 
@@ -59,7 +59,19 @@ namespace eft_app_guide.Models.Characters.State.Config
 
             // Link @ to CharacterRaid
             builder
-                .HasMany(x => x.CharacterRaids)
+                .HasMany(x => x.CharacterRaidStatistics)
+                .WithOne(x => x.Character)
+                .HasForeignKey(x => x.CharacterId);
+
+            // Link @ to CharacterChapterProgress
+            builder
+                .HasMany(x => x.CharacterChapterProgressions)
+                .WithOne(x => x.Character)
+                .HasForeignKey(x => x.CharacterId);
+
+            // Link @ to CharacterChapterTaskProgress
+            builder
+                .HasMany(x => x.CharacterChapterTaskProgressions)
                 .WithOne(x => x.Character)
                 .HasForeignKey(x => x.CharacterId);
         }

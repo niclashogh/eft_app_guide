@@ -10,8 +10,8 @@ namespace eft_app_guide.Models.Characters.State
     /// CharacterId
     /// RaidId
     /// </code></summary>
-    [EntityTypeConfiguration(typeof(CharacterRaidConfig))]
-    public class CharacterRaid
+    [EntityTypeConfiguration(typeof(CharacterRaidStatisticConfig))]
+    public class CharacterRaidStatistic
     {
         #region Keys (CompositeKeys)
         [Required] public int CharacterId { get; set; }

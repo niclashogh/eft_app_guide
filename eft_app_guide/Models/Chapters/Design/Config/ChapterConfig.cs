@@ -17,8 +17,10 @@ namespace eft_app_guide.Models.Chapters.Design.Config
                 .HasForeignKey(x => x.Id);
 
             // Link @ to CharacterChapterProgress
-
-            // Link @ to CharacterChapterTaskProgress
+            builder
+                .HasMany(x => x.CharacterChapterProgressions)
+                .WithOne(x => x.Chapter)
+                .HasForeignKey(x => x.ChapterId);
         }
     }
 }

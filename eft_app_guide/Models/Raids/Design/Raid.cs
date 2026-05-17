@@ -26,7 +26,7 @@ namespace eft_app_guide.Models.Raids.Design
         #endregion
 
         #region Relations (Children)
-        public AssociationList<CharacterRaid> CharacterRaids { get; set; } = [];
+        public AssociationList<CharacterRaidStatistic> CharacterRaidStatistics { get; set; } = [];
         #endregion
     }
 }

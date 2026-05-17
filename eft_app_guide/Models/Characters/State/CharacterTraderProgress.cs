@@ -10,16 +10,17 @@ namespace eft_app_guide.Models.Characters.State
     /// CharacterId
     /// TraderId
     /// </code></summary>
-    [EntityTypeConfiguration(typeof(CharacterTraderReputationConfig))]
-    public class CharacterTraderReputation
+    [EntityTypeConfiguration(typeof(CharacterTraderProgressConfig))]
+    public class CharacterTraderProgress // TODO
     {
         #region Keys (CompositeKeys)
         [Required] public int CharacterId { get; set; }
         [Required] public int TraderId { get; set; }
         #endregion
 
-        [Required] public bool HasAchieved { get; set; }
+        [Required] public bool IsUnlocked { get; set; }
         [Required] public double Reputation { get; set; }
+        [Required] public int Level { get; set; }
 
         #region Relations (Parents)
         public Character? Character { get; set; }

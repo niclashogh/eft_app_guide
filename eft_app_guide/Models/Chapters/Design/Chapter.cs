@@ -1,4 +1,6 @@
-﻿using eft_app_guide.Models.Chapters.Design.Config;
+﻿using eft_app_guide._Persistence.Objects;
+using eft_app_guide.Models.Chapters.Design.Config;
+using eft_app_guide.Models.Characters.State;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 
@@ -8,9 +10,12 @@ namespace eft_app_guide.Models.Chapters.Design
     /// Relations:<code>
     /// CHILDREN:
     /// ChapterTask
+    /// 
+    /// ASSOCIATIONS:
+    /// CharacterChapterProgress
     /// </code></summary>
     [EntityTypeConfiguration(typeof(ChapterConfig))]
-    public class Chapter // TODO
+    public class Chapter
     {
         #region Keys
         [Key] public int Id { get; init; }
@@ -20,8 +25,8 @@ namespace eft_app_guide.Models.Chapters.Design
 
         #region Relatations (Chrildren)
         public List<ChapterTask> ChapterTasks { get; set; } = [];
-        // public AssociationList<CharacterChapterProgress> CharacterChapterProgresses { get; set; } = [];
-        // public AssociationList<CharacterChapterTaskProgress> CharacterChapterTaskProgresses { get; set; } = [];
+
+        public AssociationList<CharacterChapterProgress> CharacterChapterProgressions { get; set; } = [];
         #endregion
     }
 }

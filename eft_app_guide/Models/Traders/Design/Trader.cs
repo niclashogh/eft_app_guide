@@ -14,11 +14,14 @@ namespace eft_app_guide.Models.Traders.Design
     /// TraderLevel
     /// Trade
     /// 
+    /// JUNCTIONS:
+    /// TraderCurrency
+    /// 
     /// ASSOCIATIONS:
-    /// CharacterTraderReputation
+    /// CharacterTraderProgress
     /// </code></summary>
     [EntityTypeConfiguration(typeof(TraderConfig))]
-    public class Trader
+    public class Trader // TODO
     {
         #region Keys
         [Key] public int Id { get; init; }
@@ -26,12 +29,17 @@ namespace eft_app_guide.Models.Traders.Design
 
         [Required] public string Name { get; set; }
 
+        public string? Description { get; set; }
+        public string? Found {  get; set; }
+
         #region Relations (Children)
         public List<Quest> Quests { get; set; } = [];
         public List<TraderLevel> TraderLevels { get; set; } = [];
         public List<Trade> Trades { get; set; } = [];
 
-        public AssociationList<CharacterTraderReputation> CharacterTraderReputations { get; set; } = [];
+        public JunctionList<TraderCurrency> TraderCurrencies { get; set; } = [];
+
+        public AssociationList<CharacterTraderProgress> CharacterTraderProgressions { get; set; } = [];
         #endregion
     }
 }

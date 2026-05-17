@@ -18,9 +18,11 @@ namespace eft_app_guide.Models.Characters.State
     /// CharacterQuestProgress
     /// CharacterMajorSkillProgress
     /// CharacterStationLevelProgress
-    /// CharacterTraderReputation
+    /// CharacterTraderProgress
     /// CharacterAchievementProgress
-    /// CharacterRaid
+    /// CharacterRaidStatistic
+    /// CharacterChapterProgress
+    /// CharacterChapterTaskProgress
     /// </code></summary>
     [EntityTypeConfiguration(typeof(CharacterConfig))]
     public class Character
@@ -42,9 +44,11 @@ namespace eft_app_guide.Models.Characters.State
         public AssociationList<CharacterQuestProgress> CharacterQuestProgressions { get; set; } = [];
         public AssociationList<CharacterMajorSkillProgress> CharacterMajorSkillProgressions { get; set; } = [];
         public AssociationList<CharacterStationLevelProgress> CharacterStationLevelProgressions { get; set; } = [];
-        public AssociationList<CharacterTraderReputation> CharacterTraderReputations { get; set; } = [];
+        public AssociationList<CharacterTraderProgress> CharacterTraderProgressions { get; set; } = [];
         public AssociationList<CharacterAchievementProgress> CharacterAchievementProgressions { get; set; } = [];
-        public AssociationList<CharacterRaid> CharacterRaids { get; set; } = [];
+        public AssociationList<CharacterRaidStatistic> CharacterRaidStatistics { get; set; } = [];
+        public AssociationList<CharacterChapterProgress> CharacterChapterProgressions { get; set; } = [];
+        public AssociationList<CharacterChapterTaskProgress> CharacterChapterTaskProgressions { get; set; } = [];
         #endregion
     }
 }

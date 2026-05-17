@@ -8,18 +8,13 @@ namespace eft_app_guide.Models.Traders.Design.Config
         public void Configure(EntityTypeBuilder<TraderLevel> builder)
         {
             builder.HasKey(x => x.Id);
+            builder.HasIndex(x => new { x.TraderId, x.Level });
 
             // Link @ to Trader
             builder
                 .HasOne(x => x.Trader)
                 .WithMany(x => x.TraderLevels)
                 .HasForeignKey(x => x.TraderId);
-
-            // Link @ to Currency
-            builder
-                .HasOne(x => x.Currency)
-                .WithMany(x => x.TraderLevels)
-                .HasForeignKey(x => x.CurrencyId);
         }
     }
 }

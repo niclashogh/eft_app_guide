@@ -38,6 +38,12 @@ namespace eft_app_guide.Models.Chapters.Design.Config
                 .HasMany(x => x.ChapterTaskRewards)
                 .WithOne(x => x.Task)
                 .HasForeignKey(x => x.ChapterTaskId);
+
+            // Link @ to CharacterChapterTaskProgress
+            builder
+                .HasMany(x => x.CharacterChapterTaskProgressions)
+                .WithOne(x => x.ChapterTask)
+                .HasForeignKey(x => x.ChapterTaskId);
         }
     }
 }

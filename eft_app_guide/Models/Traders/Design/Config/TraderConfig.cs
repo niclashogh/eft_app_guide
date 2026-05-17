@@ -29,7 +29,7 @@ namespace eft_app_guide.Models.Traders.Design.Config
 
             // Link @ to CharacterTraderReputation
             builder
-                .HasMany(x => x.CharacterTraderReputations)
+                .HasMany(x => x.CharacterTraderProgressions)
                 .WithOne(x => x.Trader)
                 .HasForeignKey(x => x.TraderId);
         }

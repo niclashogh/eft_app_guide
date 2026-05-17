@@ -2,6 +2,7 @@
 using eft_app_guide._Persistence.Objects;
 using eft_app_guide.Models.Chapters.Design.Config;
 using eft_app_guide.Models.Chapters.Relations;
+using eft_app_guide.Models.Characters.State;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 
@@ -19,6 +20,7 @@ namespace eft_app_guide.Models.Chapters.Design
     /// ASSOCIATIONS:
     /// ChapterTaskReward
     /// ChapterTaskDisplay
+    /// CharacterChapterTaskProgress
     /// </code></summary>
     [EntityTypeConfiguration(typeof(ChapterTaskConfig))]
     public class ChapterTask
@@ -40,6 +42,7 @@ namespace eft_app_guide.Models.Chapters.Design
 
         public AssociationList<ChapterTaskReward> ChapterTaskRewards { get; set; } = [];
         public AssociationList<ChapterTaskDisplay> ChapterTaskDisplays { get; set; } = [];
+        public AssociationList<CharacterChapterTaskProgress> CharacterChapterTaskProgressions { get; set; } = [];
         #endregion
     }
 }

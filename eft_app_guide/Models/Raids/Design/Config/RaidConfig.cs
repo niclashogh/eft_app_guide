@@ -17,7 +17,7 @@ namespace eft_app_guide.Models.Raids.Design.Config
 
             // Link @ to CharacterRaid
             builder
-                .HasMany(x => x.CharacterRaids)
+                .HasMany(x => x.CharacterRaidStatistics)
                 .WithOne(x => x.Raid)
                 .HasForeignKey(x => x.RaidId);
         }

@@ -3,22 +3,22 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace eft_app_guide.Models.Characters.State.Config
 {
-    public class CharacterRaidConfig : IEntityTypeConfiguration<CharacterRaid>
+    public class CharacterRaidStatisticConfig : IEntityTypeConfiguration<CharacterRaidStatistic>
     {
-        public void Configure(EntityTypeBuilder<CharacterRaid> builder)
+        public void Configure(EntityTypeBuilder<CharacterRaidStatistic> builder)
         {
             builder.HasKey(x => new { x.CharacterId, x.RaidId });
 
             // Link @ to Character
             builder
                 .HasOne(x => x.Character)
-                .WithMany(x => x.CharacterRaids)
+                .WithMany(x => x.CharacterRaidStatistics)
                 .HasForeignKey(x => x.CharacterId);
 
             // Link @ to Raid
             builder
                 .HasOne(x => x.Raid)
-                .WithMany(x => x.CharacterRaids)
+                .WithMany(x => x.CharacterRaidStatistics)
                 .HasForeignKey(x => x.RaidId);
         }
     }
