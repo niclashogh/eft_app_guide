@@ -1,9 +1,9 @@
 ﻿using eft_app_guide._Persistence.Objects;
-using eft_app_guide.Models.CraftingRecipes.Design;
-using eft_app_guide.Models.Items.Config;
-using eft_app_guide.Models.Locations.Design;
-using eft_app_guide.Models.MarketPlaces.Design;
-using eft_app_guide.Models.Traders.Design;
+using eft_app_guide.Models.CraftingRecipes.Relations;
+using eft_app_guide.Models.Items.Design.Config;
+using eft_app_guide.Models.Locations.Relations;
+using eft_app_guide.Models.MarketPlaces._temp;
+using eft_app_guide.Models.Traders.Relations;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 
@@ -11,7 +11,10 @@ namespace eft_app_guide.Models.Items.Design
 {
     /// <summary><b>AggregativeEntity</b>
     /// Relations:<code>
+    /// PARENTS:
     /// ItemCategory
+    /// 
+    /// ASSOCIATIONS:
     /// CraftingIngredient
     /// CraftingResult
     /// TradePayment

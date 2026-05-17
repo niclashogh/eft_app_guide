@@ -1,4 +1,4 @@
-﻿using eft_app_guide.Models.Achievements.Config;
+﻿using eft_app_guide.Models.Achievements.Design.Config;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 

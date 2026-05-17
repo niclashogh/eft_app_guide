@@ -1,4 +1,4 @@
-﻿using eft_app_guide.Models.Items.Config;
+﻿using eft_app_guide.Models.Items.Design.Config;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 

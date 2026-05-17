@@ -1,5 +1,6 @@
 ﻿using eft_app_guide._Persistence.Objects;
-using eft_app_guide.Models.MarketPlaces.Config;
+using eft_app_guide.Models.MarketPlaces._temp;
+using eft_app_guide.Models.MarketPlaces.Design.Config;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 
@@ -7,6 +8,7 @@ namespace eft_app_guide.Models.MarketPlaces.Design
 {
     /// <summary><b>AggregativeEntity</b>
     /// Relations:<code>
+    /// ASSOCIATIONS:
     /// MarketPlaceItem
     /// </code></summary>
     [EntityTypeConfiguration(typeof(MarketPlaceConfig))]

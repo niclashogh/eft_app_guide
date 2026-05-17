@@ -1,4 +1,4 @@
-﻿using eft_app_guide.Models.Quests.Config;
+﻿using eft_app_guide.Models.Quests.Design.Config;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 
@@ -6,6 +6,7 @@ namespace eft_app_guide.Models.Quests.Design
 {
     /// <summary><b>AggregativeEntity</b>
     /// Relations:<code>
+    /// CHILDREN:
     /// Quest
     /// </code></summary>
     [EntityTypeConfiguration(typeof(QuestLineConfig))]

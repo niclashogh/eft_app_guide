@@ -1,7 +1,8 @@
 ﻿using eft_app_guide._Persistence.Objects;
+using eft_app_guide.Models.AI.Design;
 using eft_app_guide.Models.Characters.State;
-using eft_app_guide.Models.Extractions.Design;
-using eft_app_guide.Models.Factions.Config;
+using eft_app_guide.Models.Extractions.Relations;
+using eft_app_guide.Models.Factions.Design.Config;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 
@@ -31,6 +32,8 @@ namespace eft_app_guide.Models.Factions.Design
 
         #region Relations (Children)
         public List<Character> Characters { get; set; } = [];
+        public List<Human> Humans { get; set; } = [];
+
         public JunctionList<ExtractionFaction> ExtractionFactions { get; set; } = [];
         #endregion
     }

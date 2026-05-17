@@ -3,7 +3,7 @@
 namespace eft_app_guide.Models.Characters.Design
 {
     /// <summary><b>DefinitionEntity</b></summary>
-    public class CharacterLevel
+    public class CharacterLevel // TODO
     {
         #region Keys
         [Key] public int Id { get; init; }

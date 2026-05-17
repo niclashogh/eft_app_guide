@@ -1,5 +1,5 @@
 ﻿using eft_app_guide._Persistence.Entities.AuditLogs;
-using eft_app_guide._Persistence.Entities.Display.State;
+using eft_app_guide._Persistence.Entities.Display;
 using eft_app_guide.Models.Extractions.Design;
 using eft_app_guide.Models.Locations.Design;
 using eft_app_guide.Models.Maps.Design;

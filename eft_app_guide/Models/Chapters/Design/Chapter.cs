@@ -1,4 +1,4 @@
-﻿using eft_app_guide.Models.Chapters.Config;
+﻿using eft_app_guide.Models.Chapters.Design.Config;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 
@@ -6,8 +6,8 @@ namespace eft_app_guide.Models.Chapters.Design
 {
     /// <summary><b>AggregativeEntity</b>
     /// Relations:<code>
+    /// CHILDREN:
     /// ChapterTask
-    /// x
     /// </code></summary>
     [EntityTypeConfiguration(typeof(ChapterConfig))]
     public class Chapter // TODO
@@ -21,6 +21,7 @@ namespace eft_app_guide.Models.Chapters.Design
         #region Relatations (Chrildren)
         public List<ChapterTask> ChapterTasks { get; set; } = [];
         // public AssociationList<CharacterChapterProgress> CharacterChapterProgresses { get; set; } = [];
+        // public AssociationList<CharacterChapterTaskProgress> CharacterChapterTaskProgresses { get; set; } = [];
         #endregion
     }
 }

@@ -1,5 +1,6 @@
 ﻿using eft_app_guide._Persistence.Objects;
-using eft_app_guide.Models.Accounts.Config;
+using eft_app_guide.Models.Accounts.Design.Config;
+using eft_app_guide.Models.Accounts.Relations;
 using eft_app_guide.Models.Accounts.State;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
@@ -23,6 +24,7 @@ namespace eft_app_guide.Models.Accounts.Design
 
         #region Relations (Children)
         public List<Account> Accounts { get; set; } = [];
+
         public AssociationList<AccountEditionReward> AccountEditionRewards { get; set; } = [];
         #endregion
     }

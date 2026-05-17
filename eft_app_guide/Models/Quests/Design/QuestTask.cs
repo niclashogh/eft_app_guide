@@ -1,6 +1,7 @@
-﻿using eft_app_guide._Persistence.Entities.Display.State;
+﻿using eft_app_guide._Persistence.Entities.Display;
 using eft_app_guide._Persistence.Objects;
-using eft_app_guide.Models.Quests.Config;
+using eft_app_guide.Models.Quests.Design.Config;
+using eft_app_guide.Models.Quests.Relations;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 
@@ -8,10 +9,15 @@ namespace eft_app_guide.Models.Quests.Design
 {
     /// <summary><b>AggregativeEntity</b>
     /// Relations:<code>
+    /// PARENTS:
     /// Quest
-    /// QuestTaskMap
-    /// QuestTaskDisplay
+    /// 
+    /// JUNCTIONS:
     /// QuestTaskGroup
+    /// QuestTaskMap
+    /// 
+    /// ASSOCIATIONS:
+    /// QuestTaskDisplay
     /// </code></summary>
     [EntityTypeConfiguration(typeof(QuestTaskConfig))]
     public class QuestTask
@@ -29,12 +35,10 @@ namespace eft_app_guide.Models.Quests.Design
         #endregion
 
         #region Relations (Children)
+        public JunctionList<QuestTaskGroup> QuestTaskGroups { get; set; } = [];
         public JunctionList<QuestTaskMap> QuestTaskMaps { get; set; } = [];
-        public AssociationList<QuestTaskDisplay> QuestTaskDisplays { get; set; } = [];
-        #endregion
 
-        #region Relations (Extensions)
-        public QuestTaskGroup? QuestTaskGroup { get; set; }
+        public AssociationList<QuestTaskDisplay> QuestTaskDisplays { get; set; } = [];
         #endregion
     }
 }

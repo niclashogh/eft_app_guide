@@ -1,6 +1,5 @@
-﻿using eft_app_guide._Persistence.Objects;
-using eft_app_guide.Models.Accounts.Config;
-using eft_app_guide.Models.Accounts.Design;
+﻿using eft_app_guide.Models.Accounts.Design;
+using eft_app_guide.Models.Accounts.State.Config;
 using eft_app_guide.Models.Characters.State;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
@@ -9,7 +8,10 @@ namespace eft_app_guide.Models.Accounts.State
 {
     /// <summary><b>AggregativeEntity</b>
     /// Relations:<code>
+    /// PARENTS:
     /// AccountEdition
+    /// 
+    /// CHILDREN:
     /// Character
     /// </code></summary>
     [EntityTypeConfiguration(typeof(AccountConfig))]
@@ -28,7 +30,7 @@ namespace eft_app_guide.Models.Accounts.State
         #endregion
 
         #region Relations (Children)
-        public Character? Character { get; set; }
+        public List<Character> Characters { get; set; } = [];
         #endregion
     }
 }

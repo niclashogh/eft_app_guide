@@ -1,17 +1,13 @@
 ﻿using eft_app_guide.Models.Currencies.Design;
-using eft_app_guide.Models.Traders.Config;
+using eft_app_guide.Models.Traders.Design.Config;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Traders.Design
 {
-    /// <summary><b>AssociationEntity</b>
-    /// Between:<code>
-    /// TraderId
-    /// CurrencyId
-    /// </code></summary>
+    /// <summary><b>ChildEntity of Trader + Currency</b></summary>
     [EntityTypeConfiguration(typeof(TraderLevelConfig))]
-    public class TraderLevel
+    public class TraderLevel // TODO
     {
         #region Keys
         [Key] public int Id { get; init; }

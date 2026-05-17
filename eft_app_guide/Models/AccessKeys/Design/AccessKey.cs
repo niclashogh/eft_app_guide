@@ -1,7 +1,7 @@
 ﻿using eft_app_guide._Persistence.Objects;
-using eft_app_guide.Models.AccessKeys.Config;
-using eft_app_guide.Models.Containers.Design;
-using eft_app_guide.Models.Locations.Design;
+using eft_app_guide.Models.AccessKeys.Design.Config;
+using eft_app_guide.Models.Containers.Relations;
+using eft_app_guide.Models.Locations.Relations;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 

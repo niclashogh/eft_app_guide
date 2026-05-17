@@ -1,5 +1,5 @@
 ﻿using eft_app_guide.DataTransferObjects.ValueObjects;
-using eft_app_guide.Models.Characters.Config;
+using eft_app_guide.Models.Characters.Design.Config;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 

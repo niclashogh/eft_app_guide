@@ -1,27 +1,33 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using Microsoft.EntityFrameworkCore;
-using eft_app_guide.Models.Maps.Config;
 using eft_app_guide._Persistence.Objects;
 using eft_app_guide.Models.Characters.State;
-using eft_app_guide.Models.Chapters.Design;
 using eft_app_guide.Models.Extractions.Design;
 using eft_app_guide.Models.Locations.Design;
-using eft_app_guide.Models.Quests.Design;
 using eft_app_guide.Models.Services.Design;
-using eft_app_guide._Persistence.Entities.Display.State;
 using eft_app_guide.Models.Raids.Design;
+using eft_app_guide.Models.Chapters.Relations;
+using eft_app_guide.Models.Quests.Relations;
+using eft_app_guide.Models.AI.Relations;
+using eft_app_guide._Persistence.Entities.Display;
+using eft_app_guide.Models.Maps.Design.Config;
 
 namespace eft_app_guide.Models.Maps.Design
 {
     /// <summary><b>AggregativeEntity</b>
     /// Relations:<code>
+    /// CHILDREN:
     /// Raid
     /// MapDisplay
     /// Location
     /// Extraction
     /// Btr
+    /// 
+    /// JUNCTION:
     /// ChapterTaskMap
     /// QuestTaskMap
+    /// 
+    /// ASSOCIATIONS:
     /// CharacterMapAccess
     /// </code></summary>
     [EntityTypeConfiguration(typeof(MapConfig))]
@@ -39,8 +45,11 @@ namespace eft_app_guide.Models.Maps.Design
         public List<Location> Locations { get; set; } = [];
         public List<Extraction> Extractions { get; set; } = [];
         public List<Btr> Btrs { get; set; } = [];
+
         public JunctionList<ChapterTaskMap> ChapterTaskMaps { get; set; } = [];
         public JunctionList<QuestTaskMap> QuestTasksMaps { get; set; } = [];
+        public JunctionList<HumanMap> HumanMaps {  get; set; } = [];
+
         public AssociationList<CharacterMapAccess> CharacterMapAccesses { get; set; } = [];
         #endregion
     }

@@ -1,8 +1,9 @@
 ﻿using eft_app_guide._Persistence.Objects;
-using eft_app_guide.Models.Accounts.Design;
-using eft_app_guide.Models.Achievements.Design;
-using eft_app_guide.Models.Chapters.Design;
-using eft_app_guide.Models.Rewards.Config;
+using eft_app_guide.Models.Accounts.Relations;
+using eft_app_guide.Models.Achievements.Relations;
+using eft_app_guide.Models.Chapters.Relations;
+using eft_app_guide.Models.Quests.Relations;
+using eft_app_guide.Models.Rewards.Design.Config;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 
@@ -16,14 +17,13 @@ namespace eft_app_guide.Models.Rewards.Design
         [Key] public int Id { get; init; }
         #endregion
 
-        /// <summary> Domain of which the reward originates from. Item, Currency, etc. </summary>
-        [Required] public string Domain {  get; set; }
+        [Required] public string Name {  get; set; }
 
         #region Relations (Children)
         public AssociationList<AccountEditionReward> AccountEditionRewards { get; set; } = [];
         public AssociationList<ChapterTaskReward> ChapterTaskRewards { get; set; } = [];
         public AssociationList<AchievementReward> AchievementRewards { get; set; } = [];
-        // TODO AssociationList<QuestReward> ...
+        public AssociationList<QuestReward> QuestRewards { get; set; } = [];
         #endregion
     }
 }

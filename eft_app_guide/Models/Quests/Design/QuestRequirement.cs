@@ -1,4 +1,4 @@
-﻿using eft_app_guide.Models.Quests.Config;
+﻿using eft_app_guide.Models.Quests.Design.Config;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 

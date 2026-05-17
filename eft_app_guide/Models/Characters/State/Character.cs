@@ -1,6 +1,6 @@
 ﻿using eft_app_guide._Persistence.Objects;
 using eft_app_guide.Models.Accounts.State;
-using eft_app_guide.Models.Characters.Config;
+using eft_app_guide.Models.Characters.State.Config;
 using eft_app_guide.Models.Factions.Design;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
@@ -9,8 +9,11 @@ namespace eft_app_guide.Models.Characters.State
 {
     /// <summary><b>AggregativeEntity</b>
     /// Relations:<code>
+    /// PARENTS:
     /// Account
     /// Faction
+    /// 
+    /// ASSOCIATIONS:
     /// CharacterMapAccess
     /// CharacterQuestProgress
     /// CharacterMajorSkillProgress

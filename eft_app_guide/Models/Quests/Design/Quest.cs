@@ -1,6 +1,7 @@
 ﻿using eft_app_guide._Persistence.Objects;
 using eft_app_guide.Models.Characters.State;
-using eft_app_guide.Models.Quests.Config;
+using eft_app_guide.Models.Quests.Design.Config;
+using eft_app_guide.Models.Quests.Relations;
 using eft_app_guide.Models.Traders.Design;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
@@ -9,13 +10,20 @@ namespace eft_app_guide.Models.Quests.Design
 {
     /// <summary><b>AggregativeEntity</b>
     /// Relations:<code>
+    /// PARENTS:
     /// QuestLine
     /// Trader
+    /// 
+    /// CHILDREN:
     /// QuestRequirement
-    /// QuestReward
     /// QuestTask
-    /// CharacterQuestProgress
+    /// 
+    /// JUNCTIONS:
     /// QuestGroup
+    /// 
+    /// ASSOCIATIONS:
+    /// QuestReward
+    /// CharacterQuestProgress
     /// </code></summary>
     [EntityTypeConfiguration(typeof(QuestConfig))]
     public class Quest
@@ -35,13 +43,12 @@ namespace eft_app_guide.Models.Quests.Design
 
         #region Relations (Children)
         public List<QuestRequirement> QuestRequirements { get; set; } = [];
-        public AssociationList<QuestReward> QuestRewards { get; set; } = [];
         public List<QuestTask> QuestTasks { get; set; } = [];
-        public AssociationList<CharacterQuestProgress> CharacterQuestProgressions { get; set; } = [];
-        #endregion
 
-        #region Relations (Extensions)
-        public QuestGroup? QuestGroup { get; set; }
+        public JunctionList<QuestGroup> QuestGroups { get; set; } = [];
+        
+        public AssociationList<QuestReward> QuestRewards { get; set; } = [];
+        public AssociationList<CharacterQuestProgress> CharacterQuestProgressions { get; set; } = [];
         #endregion
     }
 }

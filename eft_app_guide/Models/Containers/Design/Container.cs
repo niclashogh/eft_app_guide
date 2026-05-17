@@ -1,5 +1,6 @@
 ﻿using eft_app_guide._Persistence.Objects;
-using eft_app_guide.Models.Containers.Config;
+using eft_app_guide.Models.Containers.Design.Config;
+using eft_app_guide.Models.Containers.Relations;
 using eft_app_guide.Models.Locations.Design;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
@@ -8,8 +9,11 @@ namespace eft_app_guide.Models.Containers.Design
 {
     /// <summary><b>AggregativeEntity</b>
     /// Relations:<code>
+    /// PARENTS:
     /// Location
     /// ContainerType
+    /// 
+    /// JUNCTIONS:
     /// ContainerAccess
     /// </code></summary>
     [EntityTypeConfiguration(typeof(ContainerConfig))]

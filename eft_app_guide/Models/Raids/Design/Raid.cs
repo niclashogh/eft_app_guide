@@ -1,7 +1,7 @@
 ﻿using eft_app_guide._Persistence.Objects;
 using eft_app_guide.Models.Characters.State;
 using eft_app_guide.Models.Maps.Design;
-using eft_app_guide.Models.Raids.Config;
+using eft_app_guide.Models.Raids.Design.Config;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 
@@ -23,6 +23,9 @@ namespace eft_app_guide.Models.Raids.Design
 
         #region Relations (Parents)
         public Map? Map { get; set; }
+        #endregion
+
+        #region Relations (Children)
         public AssociationList<CharacterRaid> CharacterRaids { get; set; } = [];
         #endregion
     }

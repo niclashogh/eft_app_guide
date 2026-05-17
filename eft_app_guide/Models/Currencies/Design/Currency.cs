@@ -1,5 +1,6 @@
 ﻿using eft_app_guide._Persistence.Objects;
-using eft_app_guide.Models.Currencies.Config;
+using eft_app_guide.Models.Currencies.Design.Config;
+using eft_app_guide.Models.Currencies.Relations;
 using eft_app_guide.Models.Traders.Design;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
@@ -8,8 +9,11 @@ namespace eft_app_guide.Models.Currencies.Design
 {
     /// <summary><b>AggregativeEntity</b>
     /// Relations:<code>
-    /// CurrencyExchange
+    /// JUNCTIONS:
     /// TraderLevel
+    /// 
+    /// ASSOCIATIONS:
+    /// CurrencyExchange
     /// </code></summary>
     [EntityTypeConfiguration(typeof(CurrencyConfig))]
     public class Currency
@@ -21,8 +25,9 @@ namespace eft_app_guide.Models.Currencies.Design
         [Required] public string Name { get; set; }
 
         #region Relations (Children)
-        public AssociationList<CurrencyExchange> CurrencyExchanges { get; set; } = [];
         public List<TraderLevel> TraderLevels { get; set; } = [];
+
+        public AssociationList<CurrencyExchange> CurrencyExchanges { get; set; } = [];
         #endregion
     }
 }

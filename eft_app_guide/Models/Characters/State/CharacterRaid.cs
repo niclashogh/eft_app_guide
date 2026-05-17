@@ -1,4 +1,4 @@
-﻿using eft_app_guide.Models.Characters.Config;
+﻿using eft_app_guide.Models.Characters.State.Config;
 using eft_app_guide.Models.Raids.Design;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;

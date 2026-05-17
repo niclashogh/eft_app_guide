@@ -1,4 +1,4 @@
-﻿using eft_app_guide.Models.HideoutStations.Config;
+﻿using eft_app_guide.Models.HideoutStations.Design.Config;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 

@@ -1,7 +1,7 @@
 ﻿using eft_app_guide._Persistence.Objects;
-using eft_app_guide.Models.Characters.Config;
+using eft_app_guide.Models.Characters.Design.Config;
 using eft_app_guide.Models.Characters.State;
-using eft_app_guide.Models.HideoutStations.Design;
+using eft_app_guide.Models.HideoutStations._temp;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 
