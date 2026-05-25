@@ -7,13 +7,11 @@ using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Currencies.Design
 {
-    /// <summary><b>AggregativeEntity</b>
+    /// <summary><b>DefinitionEntity</b> and <b>AggregativeEntity</b>
     /// Relations:<code>
-    /// JUNCTIONS:
-    /// TraderLevel
-    /// 
     /// ASSOCIATIONS:
     /// CurrencyExchange
+    /// TraderCurrency
     /// </code></summary>
     [EntityTypeConfiguration(typeof(CurrencyConfig))]
     public class Currency
@@ -25,9 +23,8 @@ namespace eft_app_guide.Models.Currencies.Design
         [Required] public string Name { get; set; }
 
         #region Relations (Children)
-        public List<TraderLevel> TraderLevels { get; set; } = [];
-
         public AssociationList<CurrencyExchange> CurrencyExchanges { get; set; } = [];
+        public AssociationList<TraderCurrency> TraderCurrencies { get; set; } = [];
         #endregion
     }
 }

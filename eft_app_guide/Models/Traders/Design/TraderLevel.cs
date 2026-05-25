@@ -4,9 +4,17 @@ using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Traders.Design
 {
-    /// <summary><b>ChildEntity of Trader</b></summary>
+    /// <summary><b>ChildEntity</b> and <b>AggregativeEntity</b>
+    /// Relations:<code>
+    /// PARENTS:
+    /// Trader
+    /// 
+    /// CHILDREN:
+    /// Trade
+    /// 
+    /// </code></summary>
     [EntityTypeConfiguration(typeof(TraderLevelConfig))]
-    public class TraderLevel // TODO
+    public class TraderLevel
     {
         #region Keys
         [Key] public int Id { get; init; }
@@ -20,6 +28,10 @@ namespace eft_app_guide.Models.Traders.Design
 
         #region Relations (Parents)
         public Trader? Trader { get; set; }
+        #endregion
+
+        #region Relations (Children)
+        public List<Trade> Trades { get; set; } = [];
         #endregion
     }
 }

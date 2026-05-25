@@ -16,7 +16,6 @@ namespace eft_app_guide.Models.Characters.State
     /// ASSOCIATIONS:
     /// CharacterMapAccess
     /// CharacterQuestProgress
-    /// CharacterMajorSkillProgress
     /// CharacterStationLevelProgress
     /// CharacterTraderProgress
     /// CharacterAchievementProgress
@@ -42,7 +41,6 @@ namespace eft_app_guide.Models.Characters.State
         #region Relations (Children)
         public AssociationList<CharacterMapAccess> CharacterMapAccesses { get; set; } = [];
         public AssociationList<CharacterQuestProgress> CharacterQuestProgressions { get; set; } = [];
-        public AssociationList<CharacterMajorSkillProgress> CharacterMajorSkillProgressions { get; set; } = [];
         public AssociationList<CharacterStationLevelProgress> CharacterStationLevelProgressions { get; set; } = [];
         public AssociationList<CharacterTraderProgress> CharacterTraderProgressions { get; set; } = [];
         public AssociationList<CharacterAchievementProgress> CharacterAchievementProgressions { get; set; } = [];

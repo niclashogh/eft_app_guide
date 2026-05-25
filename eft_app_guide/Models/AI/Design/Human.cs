@@ -7,7 +7,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.AI.Design
 {
-    /// <summary><b>AggregativeEntity</b>
+    /// <summary><b>ChildEntity</b> and <b>AggregativeEntity</b>
     /// Relations:<code>
     /// PARENTS:
     /// Faction
@@ -22,7 +22,7 @@ namespace eft_app_guide.Models.AI.Design
     /// HumanMap
     /// </code></summary>
     [EntityTypeConfiguration(typeof(HumanConfig))]
-    public class Human
+    public class Human // TODO
     {
         #region Keys
         [Key] public int Id { get; init; }

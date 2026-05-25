@@ -1,4 +1,4 @@
-﻿using eft_app_guide._Persistence.Entities.RewardDomain;
+﻿using eft_app_guide._Persistence.Entities.TargetTypes;
 using eft_app_guide.Models._Interfaces;
 using eft_app_guide.Models.Achievements.Design;
 using eft_app_guide.Models.Achievements.Relations.Config;
@@ -17,15 +17,15 @@ namespace eft_app_guide.Models.Achievements.Relations
     {
         #region Keys (CompositeKeys)
         [Required] public int AchievementId { get; set; }
-        [Required] public int RewardDomainId { get; set; }
+        [Required] public int RewardTargetTypeId { get; set; }
         #endregion
 
-        [Required] public int DomainKey { get; set; }
+        [Required] public int TargetKey { get; set; }
         [Required] public int Quantity { get; set; }
 
         #region Relations (Parents)
         public Achievement? Achievement { get; set; }
-        public RewardDomain? RewardDomain { get; set; }
+        public RewardTargetType? RewardTargetType { get; set; }
         #endregion
     }
 }

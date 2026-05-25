@@ -6,7 +6,7 @@ namespace eft_app_guide._Persistence.Entities.Grouping
 {
     /// <summary><b>DefintionEntity</b>
     /// Containing:<code>
-    /// QuestS
+    /// Quests
     /// Chapters
     /// ChapterTasks
     /// OperatorTeams

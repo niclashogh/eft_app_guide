@@ -15,9 +15,9 @@ namespace eft_app_guide.Models.Currencies.Design.Config
                 .WithOne(x => x.FromCurrency)
                 .HasForeignKey(x => x.FromCurrencyId);
 
-            // Link @ to TraderLevel
+            // Link @ to TraderCurrency
             builder
-                .HasMany(x => x.TraderLevels)
+                .HasMany(x => x.TraderCurrencies)
                 .WithOne(x => x.Currency)
                 .HasForeignKey(x => x.CurrencyId);
         }

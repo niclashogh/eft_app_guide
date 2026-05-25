@@ -7,7 +7,7 @@ namespace eft_app_guide.Models.Achievements.Relations.Config
     {
         public void Configure(EntityTypeBuilder<AchievementReward> builder)
         {
-            builder.HasKey(x => new { x.AchievementId, x.RewardDomainId });
+            builder.HasKey(x => new { x.AchievementId, x.RewardTargetTypeId });
 
             // Link @ to Achievement
             builder
@@ -17,9 +17,9 @@ namespace eft_app_guide.Models.Achievements.Relations.Config
 
             // Link @ to RewardDomain
             builder
-                .HasOne(x => x.RewardDomain)
+                .HasOne(x => x.RewardTargetType)
                 .WithMany(x => x.AchievementRewards)
-                .HasForeignKey(x => x.RewardDomainId);
+                .HasForeignKey(x => x.RewardTargetTypeId);
         }
     }
 }

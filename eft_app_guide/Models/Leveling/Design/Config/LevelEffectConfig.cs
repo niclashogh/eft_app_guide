@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace eft_app_guide.Models.Leveling
+namespace eft_app_guide.Models.Leveling.Design.Config
 {
-    public class SkillLevelEffect // TODO - DEL?
+    internal class LevelEffectConfig // TODO
     {
-
     }
 }

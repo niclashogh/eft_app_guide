@@ -9,7 +9,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Locations.Design
 {
-    /// <summary><b>AggregativeEntity</b>
+    /// <summary><b>ChildEntity</b> and <b>AggregativeEntity</b>
     /// Relations:<code>
     /// PARENTS:
     /// Map

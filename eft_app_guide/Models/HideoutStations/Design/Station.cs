@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.HideoutStations.Design
 {
-    /// <summary><b>AggregativeEntity</b>
+    /// <summary><b>DefinitionEntity</b> and <b>AggregativeEntity</b>
     /// Relations:<code>
     /// StationLevel
     /// </code></summary>

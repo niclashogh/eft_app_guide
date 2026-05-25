@@ -1,5 +1,4 @@
 ﻿using eft_app_guide._Persistence.Objects;
-using eft_app_guide.Models.Accounts.State;
 using eft_app_guide.Models.Achievements.Design.Config;
 using eft_app_guide.Models.Achievements.Relations;
 using eft_app_guide.Models.Characters.State;
@@ -8,7 +7,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Achievements.Design
 {
-    /// <summary><b>AggregativeEntity</b>
+    /// <summary><b>ChildEntity</b> and <b>AggregativeEntity</b>
     /// Relations:<code>
     /// PARENTS:
     /// AchievementRarity

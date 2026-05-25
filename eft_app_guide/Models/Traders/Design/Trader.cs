@@ -7,12 +7,11 @@ using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Traders.Design
 {
-    /// <summary><b>AggregativeEntity</b>
+    /// <summary><b>DefinitionEntity</b> and <b>AggregativeEntity</b>
     /// Relations:<code>
     /// CHILDREN:
     /// Quest
     /// TraderLevel
-    /// Trade
     /// 
     /// JUNCTIONS:
     /// TraderCurrency
@@ -21,7 +20,7 @@ namespace eft_app_guide.Models.Traders.Design
     /// CharacterTraderProgress
     /// </code></summary>
     [EntityTypeConfiguration(typeof(TraderConfig))]
-    public class Trader // TODO
+    public class Trader
     {
         #region Keys
         [Key] public int Id { get; init; }
@@ -30,12 +29,10 @@ namespace eft_app_guide.Models.Traders.Design
         [Required] public string Name { get; set; }
 
         public string? Description { get; set; }
-        public string? Found {  get; set; }
 
         #region Relations (Children)
         public List<Quest> Quests { get; set; } = [];
         public List<TraderLevel> TraderLevels { get; set; } = [];
-        public List<Trade> Trades { get; set; } = [];
 
         public JunctionList<TraderCurrency> TraderCurrencies { get; set; } = [];
 

@@ -21,15 +21,15 @@ namespace eft_app_guide.Models.Traders.Design.Config
                 .WithOne(x => x.Trader)
                 .HasForeignKey(x => x.TraderId);
 
-            // Link @ to Trade
-            builder
-                .HasMany(x => x.Trades)
-                .WithOne(x => x.Trader)
-                .HasForeignKey(x => x.TraderId);
-
             // Link @ to CharacterTraderReputation
             builder
                 .HasMany(x => x.CharacterTraderProgressions)
+                .WithOne(x => x.Trader)
+                .HasForeignKey(x => x.TraderId);
+
+            // Link @ to TraderCurrency
+            builder
+                .HasMany(x => x.TraderCurrencies)
                 .WithOne(x => x.Trader)
                 .HasForeignKey(x => x.TraderId);
         }

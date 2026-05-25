@@ -16,7 +16,7 @@ namespace eft_app_guide.Models.HideoutStations.Design
     /// ...
     /// </code></summary>
     [EntityTypeConfiguration(typeof(StationEffectConfig))]
-    public class StationEffect
+    public class StationEffect // TODO
     {
         #region Keys
         [Key] public int Id { get; init; }

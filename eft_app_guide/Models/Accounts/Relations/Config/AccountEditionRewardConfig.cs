@@ -7,7 +7,7 @@ namespace eft_app_guide.Models.Accounts.Relations.Config
     {
         public void Configure(EntityTypeBuilder<AccountEditionReward> builder)
         {
-            builder.HasKey(x => new { x.AccountEditionId, x.RewardDomainId });
+            builder.HasKey(x => new { x.AccountEditionId, x.RewardTargetTypeId });
 
             // Link @ to AccountEdition
             builder
@@ -17,9 +17,9 @@ namespace eft_app_guide.Models.Accounts.Relations.Config
 
             // Link @ to RewardDomain
             builder
-                .HasOne(x => x.RewardDomain)
+                .HasOne(x => x.RewardTargetType)
                 .WithMany(x => x.AccountEditionRewards)
-                .HasForeignKey(x => x.RewardDomainId);
+                .HasForeignKey(x => x.RewardTargetTypeId);
         }
     }
 }

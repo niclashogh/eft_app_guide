@@ -1,8 +1,7 @@
-﻿using eft_app_guide.Models.Ammunitions.Design;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace eft_app_guide.Models.Ammunitions.Config
+namespace eft_app_guide.Models.Ammunitions.Design.Config
 {
     public class AmmunitionCaliberConfig : IEntityTypeConfiguration<AmmunitionCaliber>
     {

@@ -9,11 +9,11 @@ namespace eft_app_guide.Models.Traders.Design.Config
         {
             builder.HasKey(x => x.Id);
 
-            // Link @ to Trader
+            // Link @ to TraderLevel
             builder
-                .HasOne(x => x.Trader)
+                .HasOne(x => x.TraderLevel)
                 .WithMany(x => x.Trades)
-                .HasForeignKey(x => x.TraderId);
+                .HasForeignKey(x => x.TraderLevelId);
 
             // Link @ to TradePayment
             builder

@@ -14,7 +14,7 @@ using eft_app_guide.Models.Maps.Design.Config;
 
 namespace eft_app_guide.Models.Maps.Design
 {
-    /// <summary><b>AggregativeEntity</b>
+    /// <summary><b>DefinitionEntity</b> and <b>AggregativeEntity</b>
     /// Relations:<code>
     /// CHILDREN:
     /// Raid

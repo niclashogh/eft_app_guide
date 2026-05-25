@@ -4,10 +4,13 @@ namespace eft_app_guide.DataTransferObjects.ValueObjects
     public readonly struct Percent
     {
         public double Value { get; }
+        public bool IsNegative { get; }
 
         public Percent(double value)
         {
-            if (value < 0 || value > 100) throw new ArgumentOutOfRangeException(nameof(value), "Percent must be between 0 and 100.");
+            if (value < -100 || value > 100) throw new ArgumentOutOfRangeException(nameof(value), "Percent must be between -100 and 100.");
+            if (value < 0) IsNegative = true;
+
             Value = value;
         }
 

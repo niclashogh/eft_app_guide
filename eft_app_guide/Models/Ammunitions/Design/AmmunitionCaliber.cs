@@ -1,10 +1,15 @@
-﻿using eft_app_guide.Models.Ammunitions.Config;
+﻿using eft_app_guide.Models.Ammunitions.Design.Config;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Ammunitions.Design
 {
-    /// <summary> DefinitionEntity </summary>
+    /// <summary><b>DefintionEntity</b>
+    /// Containing:<code>
+    /// 556
+    /// 19 mm
+    /// ...
+    /// </code></summary>
     [EntityTypeConfiguration(typeof(AmmunitionCaliberConfig))]
     public class AmmunitionCaliber
     {

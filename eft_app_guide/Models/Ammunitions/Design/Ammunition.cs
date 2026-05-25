@@ -1,10 +1,17 @@
-﻿using eft_app_guide.Models.Ammunitions.Config;
+﻿using eft_app_guide.Models.Ammunitions.Design.Config;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Ammunitions.Design
 {
-    /// <summary> AggregativeEntity (AmmunitionPerformance + AmmunitionCaliber) </summary>
+    /// <summary><b>ChildEntity</b> and <b>AggregativeEntity</b>
+    /// Relations:<code>
+    /// PARENTS:
+    /// AmmunitionCaliber
+    /// 
+    /// EXTENTIONS:
+    /// AmmunitionPerformance
+    /// </code></summary>
     [EntityTypeConfiguration(typeof(AmmunitionConfig))]
     public class Ammunition
     {

@@ -6,10 +6,10 @@ using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Traders.Design
 {
-    /// <summary><b>AggregativeEntity</b>
+    /// <summary><b>ChildEntity</b> and <b>AggregativeEntity</b>
     /// Relations:<code>
     /// PARENTS:
-    /// Trader
+    /// TraderLevel
     /// 
     /// ASSOCIATIONS:
     /// TradePayment
@@ -20,11 +20,11 @@ namespace eft_app_guide.Models.Traders.Design
     {
         #region Keys
         [Key] public int Id { get; init; }
-        [Required] public int TraderId { get; set; }
+        [Required] public int TraderLevelId { get; set; }
         #endregion
 
         #region Relations (Parents)
-        public Trader? Trader { get; set; }
+        public TraderLevel? TraderLevel { get; set; }
         #endregion
 
         #region Relations (Children)

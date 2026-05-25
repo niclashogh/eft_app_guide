@@ -21,6 +21,7 @@ namespace eft_app_guide.Models.Characters.State
         [Required] public bool IsUnlocked { get; set; }
         [Required] public double Reputation { get; set; }
         [Required] public int Level { get; set; }
+        [Required] public int TradeValue { get; set; }
 
         #region Relations (Parents)
         public Character? Character { get; set; }

@@ -17,9 +17,9 @@ namespace eft_app_guide.Models.Quests.Relations.Config
 
             // Link @ to RewardDomain
             builder
-                .HasOne(x => x.RewardDomain)
+                .HasOne(x => x.RewardTargetType)
                 .WithMany(x => x.QuestRewards)
-                .HasForeignKey(x => x.RewardDomainId);
+                .HasForeignKey(x => x.RewardTargetTypeId);
         }
     }
 }
