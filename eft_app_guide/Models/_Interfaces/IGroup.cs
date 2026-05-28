@@ -1,4 +1,4 @@
-﻿using eft_app_guide._Persistence.Entities.Grouping;
+﻿using eft_app_guide.Models._Graph;
 
 namespace eft_app_guide.Models._Interfaces
 {

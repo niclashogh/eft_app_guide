@@ -1,11 +1,11 @@
-﻿using eft_app_guide.DataTransferObjects.ValueObjects;
+﻿using eft_app_guide._Objects.ValueObjects;
 using eft_app_guide.Models.Ammunitions.Design.Config;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Ammunitions.Design
 {
-    /// <summary><b>Extends Ammunition</b></summary>
+    /// <summary><b>ExtentionEntity of Ammunition</b></summary>
     [EntityTypeConfiguration(typeof(AmmunitionPerformanceConfig))]
     public class AmmunitionPerformance
     {

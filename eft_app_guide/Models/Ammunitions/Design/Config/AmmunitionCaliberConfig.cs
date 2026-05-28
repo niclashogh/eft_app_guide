@@ -8,7 +8,7 @@ namespace eft_app_guide.Models.Ammunitions.Design.Config
         public void Configure(EntityTypeBuilder<AmmunitionCaliber> builder)
         {
             builder.HasKey(x => x.Id);
-            builder.HasIndex(x => x.ShortendName);
+            //builder.HasIndex(x => x.ShortendName);
 
             // Link @ to Ammunition
             builder

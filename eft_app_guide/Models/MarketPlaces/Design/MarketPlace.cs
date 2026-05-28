@@ -1,4 +1,4 @@
-﻿using eft_app_guide._Persistence.Objects;
+﻿using eft_app_guide._Objects.Types;
 using eft_app_guide.Models.MarketPlaces._temp;
 using eft_app_guide.Models.MarketPlaces.Design.Config;
 using Microsoft.EntityFrameworkCore;

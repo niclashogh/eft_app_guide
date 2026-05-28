@@ -1,4 +1,4 @@
-﻿using eft_app_guide._Persistence.Objects;
+﻿using eft_app_guide._Objects.Types;
 using eft_app_guide.Models.AccessKeys.Design.Config;
 using eft_app_guide.Models.Containers.Relations;
 using eft_app_guide.Models.Locations.Relations;

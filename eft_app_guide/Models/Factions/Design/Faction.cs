@@ -1,4 +1,4 @@
-﻿using eft_app_guide._Persistence.Objects;
+﻿using eft_app_guide._Objects.Types;
 using eft_app_guide.Models.AI.Design;
 using eft_app_guide.Models.Characters.State;
 using eft_app_guide.Models.Extractions.Relations;

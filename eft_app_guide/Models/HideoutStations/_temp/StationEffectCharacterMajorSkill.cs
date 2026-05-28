@@ -1,11 +1,10 @@
-﻿using eft_app_guide.Models.Characters.Design;
-using eft_app_guide.Models.HideoutStations.Design;
+﻿using eft_app_guide.Models.HideoutStations.Design;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.HideoutStations._temp
 {
-    /// <summary><b>Extends StationEffect</b></summary>
+    /// <summary><b>ExtentionEntity of StationEffect</b></summary>
     [EntityTypeConfiguration(typeof(StationEffectCharacterMajorSkillConfig))]
     public class StationEffectCharacterMajorSkill // TODO: Incorp. into StationEffect?
     {

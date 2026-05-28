@@ -1,5 +1,5 @@
-﻿using eft_app_guide._Persistence.Entities.AuditLogs.Config;
-using eft_app_guide._Persistence.Enums;
+﻿using eft_app_guide._Objects.Enums;
+using eft_app_guide._Persistence.Entities.AuditLogs.Config;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 

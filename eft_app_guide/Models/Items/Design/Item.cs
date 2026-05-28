@@ -1,4 +1,4 @@
-﻿using eft_app_guide._Persistence.Objects;
+﻿using eft_app_guide._Objects.Types;
 using eft_app_guide.Models.CraftingRecipes.Relations;
 using eft_app_guide.Models.Items.Design.Config;
 using eft_app_guide.Models.Locations.Relations;

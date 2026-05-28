@@ -1,4 +1,4 @@
-﻿using eft_app_guide._Persistence.Entities.Grouping;
+﻿using eft_app_guide.Models._Graph;
 using eft_app_guide.Models._Interfaces;
 using eft_app_guide.Models.Quests.Design;
 using eft_app_guide.Models.Quests.Relations.Config;

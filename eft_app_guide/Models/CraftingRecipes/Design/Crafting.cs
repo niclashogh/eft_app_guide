@@ -1,4 +1,4 @@
-﻿using eft_app_guide._Persistence.Objects;
+﻿using eft_app_guide._Objects.Types;
 using eft_app_guide.Models.CraftingRecipes.Design.Config;
 using eft_app_guide.Models.CraftingRecipes.Relations;
 using eft_app_guide.Models.HideoutStations.Relations;
@@ -17,7 +17,7 @@ namespace eft_app_guide.Models.CraftingRecipes.Design
     /// CraftingIngredient
     /// </code></summary>
     [EntityTypeConfiguration(typeof(CraftingConfig))]
-    public class Crafting
+    public class Crafting // TODO - Move to _Graph?
     {
         #region Keys
         [Key] public int Id { get; init; }

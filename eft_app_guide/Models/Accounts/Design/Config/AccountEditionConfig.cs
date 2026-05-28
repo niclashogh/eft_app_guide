@@ -15,12 +15,6 @@ namespace eft_app_guide.Models.Accounts.Design.Config
                 .HasMany(x => x.Accounts)
                 .WithOne(x => x.AccountEdition)
                 .HasForeignKey(x => x.AccountEditionId);
-
-            // Link @ to AccountEditionReward
-            builder
-                .HasMany(x => x.AccountEditionRewards)
-                .WithOne(x => x.AccountEdition)
-                .HasForeignKey(x => x.AccountEditionId);
         }
     }
 }

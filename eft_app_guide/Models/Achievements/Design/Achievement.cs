@@ -1,6 +1,5 @@
-﻿using eft_app_guide._Persistence.Objects;
+﻿using eft_app_guide._Objects.Types;
 using eft_app_guide.Models.Achievements.Design.Config;
-using eft_app_guide.Models.Achievements.Relations;
 using eft_app_guide.Models.Characters.State;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
@@ -13,7 +12,6 @@ namespace eft_app_guide.Models.Achievements.Design
     /// AchievementRarity
     /// 
     /// ASSOCIATIONS:
-    /// AchievementReward
     /// CharacterAchievementProgress
     /// </code></summary>
     [EntityTypeConfiguration(typeof(AchievementConfig))]
@@ -32,7 +30,6 @@ namespace eft_app_guide.Models.Achievements.Design
         #endregion
 
         #region Relations (Children)
-        public AssociationList<AchievementReward> AchievementRewards { get; set; } = [];
         public AssociationList<CharacterAchievementProgress> CharacterAchievementProgressions { get; set; } = [];
         #endregion
     }

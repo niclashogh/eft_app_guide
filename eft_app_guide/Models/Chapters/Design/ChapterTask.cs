@@ -1,5 +1,5 @@
-﻿using eft_app_guide._Persistence.Entities.Display;
-using eft_app_guide._Persistence.Objects;
+﻿using eft_app_guide._Objects.Types;
+using eft_app_guide._Persistence.Entities.Display;
 using eft_app_guide.Models.Chapters.Design.Config;
 using eft_app_guide.Models.Chapters.Relations;
 using eft_app_guide.Models.Characters.State;
@@ -18,7 +18,6 @@ namespace eft_app_guide.Models.Chapters.Design
     /// ChapterTaskMap
     /// 
     /// ASSOCIATIONS:
-    /// ChapterTaskReward
     /// ChapterTaskDisplay
     /// CharacterChapterTaskProgress
     /// </code></summary>
@@ -40,7 +39,6 @@ namespace eft_app_guide.Models.Chapters.Design
         public JunctionList<ChapterTaskGroup> ChapterTaskGroups { get; set; } = [];
         public JunctionList<ChapterTaskMap> ChapterTaskMaps { get; set; } = [];
 
-        public AssociationList<ChapterTaskReward> ChapterTaskRewards { get; set; } = [];
         public AssociationList<ChapterTaskDisplay> ChapterTaskDisplays { get; set; } = [];
         public AssociationList<CharacterChapterTaskProgress> CharacterChapterTaskProgressions { get; set; } = [];
         #endregion

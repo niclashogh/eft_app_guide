@@ -1,6 +1,6 @@
-﻿using eft_app_guide._Persistence.Entities.Display.Config;
+﻿using eft_app_guide._Persistence._Interface;
+using eft_app_guide._Persistence.Entities.Display.Config;
 using eft_app_guide.Models.Extractions.Design;
-using eft_app_guide.Models.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 

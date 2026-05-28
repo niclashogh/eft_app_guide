@@ -11,6 +11,14 @@
 - AssociationEntity
 	A JunctionEntity containing additional domain-specific data.
 
+- ChildEntity
+	An entity that is dependent on another class and cannot exists without.
+
+- ExtentionEntity
+	An entity that extends another class and cannot exists without.
+
+- GraphEntity
+	An entity that defines progression relationships between gameplay entities (Polymorphic references).
 
 ---------- Terms Used ----------
 - Composite keys

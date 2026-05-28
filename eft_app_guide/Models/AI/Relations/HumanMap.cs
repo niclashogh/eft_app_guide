@@ -12,7 +12,7 @@ namespace eft_app_guide.Models.AI.Relations
     /// MapId
     /// </code></summary>
     [EntityTypeConfiguration(typeof(HumanMapConfig))]
-    public class HumanMap
+    public class HumanMap // TODO - Add Percent?
     {
         #region Keys (CompositeKeys)
         [Required] public int HumanId { get; set; }

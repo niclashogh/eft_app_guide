@@ -1,4 +1,4 @@
-﻿using eft_app_guide._Persistence.Objects;
+﻿using eft_app_guide._Objects.Types;
 using eft_app_guide.Models.Characters.State;
 using eft_app_guide.Models.Quests.Design.Config;
 using eft_app_guide.Models.Quests.Relations;
@@ -15,14 +15,12 @@ namespace eft_app_guide.Models.Quests.Design
     /// Trader
     /// 
     /// CHILDREN:
-    /// QuestRequirement
     /// QuestTask
     /// 
     /// JUNCTIONS:
     /// QuestGroup
     /// 
     /// ASSOCIATIONS:
-    /// QuestReward
     /// CharacterQuestProgress
     /// </code></summary>
     [EntityTypeConfiguration(typeof(QuestConfig))]
@@ -42,12 +40,10 @@ namespace eft_app_guide.Models.Quests.Design
         #endregion
 
         #region Relations (Children)
-        public List<QuestRequirement> QuestRequirements { get; set; } = [];
         public List<QuestTask> QuestTasks { get; set; } = [];
 
         public JunctionList<QuestGroup> QuestGroups { get; set; } = [];
         
-        public AssociationList<QuestReward> QuestRewards { get; set; } = [];
         public AssociationList<CharacterQuestProgress> CharacterQuestProgressions { get; set; } = [];
         #endregion
     }

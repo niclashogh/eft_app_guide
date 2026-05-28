@@ -1,6 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using Microsoft.EntityFrameworkCore;
-using eft_app_guide._Persistence.Objects;
 using eft_app_guide.Models.Characters.State;
 using eft_app_guide.Models.Extractions.Design;
 using eft_app_guide.Models.Locations.Design;
@@ -11,6 +10,7 @@ using eft_app_guide.Models.Quests.Relations;
 using eft_app_guide.Models.AI.Relations;
 using eft_app_guide._Persistence.Entities.Display;
 using eft_app_guide.Models.Maps.Design.Config;
+using eft_app_guide._Objects.Types;
 
 namespace eft_app_guide.Models.Maps.Design
 {

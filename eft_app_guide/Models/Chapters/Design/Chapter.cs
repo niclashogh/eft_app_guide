@@ -1,4 +1,4 @@
-﻿using eft_app_guide._Persistence.Objects;
+﻿using eft_app_guide._Objects.Types;
 using eft_app_guide.Models.Chapters.Design.Config;
 using eft_app_guide.Models.Characters.State;
 using Microsoft.EntityFrameworkCore;

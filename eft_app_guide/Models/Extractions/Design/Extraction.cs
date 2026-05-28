@@ -1,5 +1,5 @@
-﻿using eft_app_guide._Persistence.Entities.Display;
-using eft_app_guide._Persistence.Objects;
+﻿using eft_app_guide._Objects.Types;
+using eft_app_guide._Persistence.Entities.Display;
 using eft_app_guide.Models.Extractions.Design.Config;
 using eft_app_guide.Models.Extractions.Relations;
 using eft_app_guide.Models.Maps.Design;
@@ -12,9 +12,6 @@ namespace eft_app_guide.Models.Extractions.Design
     /// Relations:<code>
     /// PARENTS:
     /// Map
-    /// 
-    /// CHILDREN:
-    /// ExtractionRequirement
     /// 
     /// JUNCTIONS:
     /// ExtractionFaction
@@ -39,8 +36,6 @@ namespace eft_app_guide.Models.Extractions.Design
         #endregion
 
         #region Relations (Children)
-        public List<ExtractionRequirement> ExtractionRequirements { get; set; } = [];
-
         public JunctionList<ExtractionFaction> ExtractionFactions { get; set; } = [];
 
         public AssociationList<ExtractionDisplay> ExtractionDisplays { get; set; } = [];

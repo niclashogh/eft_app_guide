@@ -27,18 +27,6 @@ namespace eft_app_guide.Models.Quests.Design.Config
                 .WithOne(x => x.Quest)
                 .HasForeignKey(x => x.QuestId);
 
-            // Link @ to QuestRequirement
-            builder
-                .HasMany(x => x.QuestRequirements)
-                .WithOne(x => x.Quest)
-                .HasForeignKey(x => x.QuestId);
-
-            // Link @ to QuestReward
-            builder
-                .HasMany(x => x.QuestRewards)
-                .WithOne(x => x.Quest)
-                .HasForeignKey(x => x.QuestId);
-
             // Link @ to QuestTask
             builder
                 .HasMany(x => x.QuestTasks)

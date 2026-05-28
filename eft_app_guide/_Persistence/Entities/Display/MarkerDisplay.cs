@@ -1,6 +1,6 @@
-﻿using eft_app_guide._Persistence.Entities.Display.Config;
-using eft_app_guide.DataTransferObjects.Enums;
-using eft_app_guide.Models.Interfaces;
+﻿using eft_app_guide._Objects.Enums;
+using eft_app_guide._Persistence._Interface;
+using eft_app_guide._Persistence.Entities.Display.Config;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 
