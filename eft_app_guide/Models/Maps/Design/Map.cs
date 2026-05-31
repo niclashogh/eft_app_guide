@@ -11,6 +11,7 @@ using eft_app_guide.Models.AI.Relations;
 using eft_app_guide._Persistence.Entities.Display;
 using eft_app_guide.Models.Maps.Design.Config;
 using eft_app_guide._Objects.Types;
+using eft_app_guide.Models._Enums;
 
 namespace eft_app_guide.Models.Maps.Design
 {
@@ -38,6 +39,8 @@ namespace eft_app_guide.Models.Maps.Design
         #endregion
 
         [Required] public string Name { get; set; }
+        [Required] public MapAccessType MapAccessType { get; set; }
+        [Required] public bool IsVirtual { get; set; }
 
         #region Relatations (Children)
         public List<Raid> Raids { get; set; } = [];

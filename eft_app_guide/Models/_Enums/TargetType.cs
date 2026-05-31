@@ -12,6 +12,6 @@
         Ammunition, Currency, Item,
 
         // Exclusive
-        StackQuantity
+        StackQuantity, TargetDescription
     }
 }
