@@ -18,7 +18,10 @@
 	An entity that extends another class and cannot exists without.
 
 - GraphEntity
-	An entity that defines progression relationships between gameplay entities (Polymorphic references).
+	An entity that defines relationships between gameplay entities (Polymorphic references).
+
+- PayloadEntity
+	An entity that encaptulates resuable data used by GraphEntities (Data as payload, not entire entities).
 
 ---------- Terms Used ----------
 - Composite keys
@@ -39,3 +42,6 @@
 
 - Percent
 	A ValueObject representing a percentage value.
+
+- GameTime
+	A ValueObject representing ingame time (24 hour clock)

@@ -1,6 +1,6 @@
 ﻿namespace eft_app_guide._Objects.ValueObjects
 {
-    public readonly struct InventoryGrid
+    public readonly struct InventoryGrid // DEL?
     {
         public int Width { get; }
         public int Height { get; }

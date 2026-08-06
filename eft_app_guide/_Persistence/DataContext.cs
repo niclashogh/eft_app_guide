@@ -1,10 +1,12 @@
-﻿using eft_app_guide._Persistence.Entities.AuditLogs;
+﻿using eft_app_guide._Objects.ValueObjects;
+using eft_app_guide._Objects.ValueObjects.Converters;
+using eft_app_guide._Persistence.Entities.AuditLogs;
 using eft_app_guide._Persistence.Entities.Display;
-using eft_app_guide.Models.Extractions.Design;
-using eft_app_guide.Models.Locations.Design;
-using eft_app_guide.Models.Maps.Design;
-using eft_app_guide.Models.Quests.Design;
-using eft_app_guide.Models.Traders.Design;
+using eft_app_guide.Models.Entities.Extractions.Design;
+using eft_app_guide.Models.Entities.Locations.Design;
+using eft_app_guide.Models.Entities.Maps.Design;
+using eft_app_guide.Models.Entities.Quests.Design;
+using eft_app_guide.Models.Entities.Traders.Design;
 using Microsoft.EntityFrameworkCore;
 
 namespace eft_app_guide._Persistence
@@ -12,6 +14,17 @@ namespace eft_app_guide._Persistence
     public class DataContext : DbContext
     {
         public DataContext(DbContextOptions<DataContext> opt) : base(opt) { }
+
+        protected override void ConfigureConventions(ModelConfigurationBuilder configurationBuilder)
+        {
+            configurationBuilder
+                .Properties<Percent>()
+                .HaveConversion<PercentConverter>();
+
+            configurationBuilder
+                .Properties<GameTime>()
+                .HaveConversion<GameTimeConverter>();
+        }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

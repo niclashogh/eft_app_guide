@@ -1,23 +1,13 @@
 ﻿using eft_app_guide._Objects.Types;
 using eft_app_guide._Persistence.Entities.Display.Config;
-using eft_app_guide.Models.Maps.Design;
+using eft_app_guide.Models.Entities.Maps.Design;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide._Persistence.Entities.Display
 {
-    /// <summary><b>AggregativeEntity</b>
-    /// Relations:<code>
-    /// Map
-    /// BtrDisplay
-    /// ChapterTaskDisplay
-    /// ExtractionDisplay
-    /// LocationDisplay
-    /// MarkerDisplay
-    /// QuestTaskDisplay
-    /// </code></summary>
     [EntityTypeConfiguration(typeof(MapDisplayConfig))]
-    public class MapDisplay
+    public class MapDisplay // TODO
     {
         #region Keys
         [Key] public int Id { get; init; }

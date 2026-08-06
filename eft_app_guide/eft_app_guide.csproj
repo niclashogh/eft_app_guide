@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Models\Workstations\Relations\" />
+    <Folder Include="Models\Entities\Workstations\Relations\" />
   </ItemGroup>
 
 </Project>
