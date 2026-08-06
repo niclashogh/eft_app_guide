@@ -1,0 +1,32 @@
+﻿---------- Keywords ----------
+
+- abstract
+	Prevents a class from being instantiated directly.
+	Intended to be inherited by other classes.
+	May also define abstract members that derived classes must implement.
+
+- sealed
+	Prevents a class from being inherited.
+	Prevents a virtual member from being overridden further (`sealed override`).
+
+- record
+	A reference type primarily intended for immutable data models.
+	Provides value-based equality by default.
+
+- struct
+	A value type copied by value instead of by reference.
+
+- readonly
+	Prevents a field or struct from being modified after construction.
+
+- nullable (?)
+	Indicates that a reference or value type may contain null.
+
+- implicit operator
+	Allows automatic conversion between two types.
+
+- override
+	Replaces the implementation of an inherited virtual or abstract member.
+
+- virtual
+	Allows a member to be overridden by derived classes.

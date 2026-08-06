@@ -1,0 +1,20 @@
+﻿---------- Type Categories ----------
+
+- class
+	A reference type where variables store a reference to an object stored in memory.
+	Operations that compare two classes compare their object references by default,
+	meaning they check if both variables point to the same object.
+
+	In other words: this is an identity-comparison as the object in storage has an identity,
+	that classes reference to.
+
+- record
+	A reference type where variables store a reference to an object stored in memory.
+	Operations that compare two records compare their stored data by default,
+	meaning two separate objects can be considered identical if they contain the same values.
+
+	In other words: this is a value-comparison based on the stored value within each reference.
+
+- struct
+	A value type where variables store the actual value instead of a reference.
+	Assigning or passing a struct creates a copy of the value.

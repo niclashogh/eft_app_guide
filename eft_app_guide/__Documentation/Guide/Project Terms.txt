@@ -1,0 +1,25 @@
+﻿---------- Project Terms ----------
+
+- DefinitionEntity
+	An entity that purely defines the state and fundamental data.
+
+- AggregativeEntity
+	An entity that centralise associated/related entities within itself.
+
+- JunctionEntity
+	An entity to associate 2 or more tables through thier primary keys.
+
+- AssociationEntity
+	A JunctionEntity containing additional domain-specific data.
+
+- ChildEntity
+	An entity that is dependent on another class and cannot exists without.
+
+- ExtentionEntity
+	An entity that extends another class and cannot exists without.
+
+- GraphEntity
+	An entity that defines relationships between gameplay entities (Polymorphic references).
+
+- PayloadEntity
+	An entity that encaptulates resuable data used by GraphEntities (Data as payload, not entire entities).

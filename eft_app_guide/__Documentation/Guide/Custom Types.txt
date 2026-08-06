@@ -1,0 +1,13 @@
+﻿---------- Custom Objects & ValueObjects ----------
+
+- AssociationList<>
+	A Collection used to signal that the list consists of AssociationEntities.
+
+- JunctionList<>
+	A Collection used to signalize that the list consists of JunctionEntities.
+
+- Percent
+	A ValueObject representing a percentage value.
+
+- GameTime
+	A ValueObject representing ingame time (24 hour clock)

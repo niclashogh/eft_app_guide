@@ -1,6 +1,6 @@
-﻿namespace eft_app_guide.Packages.Display
+﻿namespace eft_app_guide.Packs
 {
-    public class AssetCredit
+    public record PackCredit
     {
         public string Name { get; set; }
         public string? Url { get; set; }

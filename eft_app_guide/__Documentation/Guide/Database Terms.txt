@@ -1,0 +1,10 @@
+﻿---------- Database Terms ----------
+
+- Composite keys
+	A primary key composed of multiple properties, often derived from foreign keys.
+
+- PK / Primary key
+	A unique identifier used to identify an entity in a relational database.
+
+- FK / Foriegn key
+	A key referencing another entity's primary key.
