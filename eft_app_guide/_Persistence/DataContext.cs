@@ -1,11 +1,7 @@
 ﻿using eft_app_guide._Objects.ValueObjects;
 using eft_app_guide._Objects.ValueObjects.Converters;
-using eft_app_guide._Persistence.Entities.AuditLogs;
-using eft_app_guide._Persistence.Entities.Display;
-using eft_app_guide.Models.Entities.Extractions.Design;
-using eft_app_guide.Models.Entities.Locations.Design;
+using eft_app_guide.Models.AuditLogs;
 using eft_app_guide.Models.Entities.Maps.Design;
-using eft_app_guide.Models.Entities.Quests.Design;
 using eft_app_guide.Models.Entities.Traders.Design;
 using Microsoft.EntityFrameworkCore;
 
@@ -33,11 +29,7 @@ namespace eft_app_guide._Persistence
 
         DbSet<Map> Maps { get; set; }
         DbSet<Trader> Traders { get; set; }
-
-        DbSet<Location> AccessKeys { get; set; }
-        DbSet<Extraction> Extractions { get; set; }
-        DbSet<MarkerDisplay> MarkerDisplay { get; set; }
-        DbSet<Quest> Quests { get; set; }
+        // ...
 
         DbSet<AuditLog> AuditLogs { get; set; }
     }

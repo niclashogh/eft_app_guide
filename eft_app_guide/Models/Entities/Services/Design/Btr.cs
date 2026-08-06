@@ -1,5 +1,5 @@
 ﻿using eft_app_guide._Objects.Types;
-using eft_app_guide._Persistence.Entities.Display;
+using eft_app_guide._Persistence.Entities._temp;
 using eft_app_guide.Models.Entities.Maps.Design;
 using eft_app_guide.Models.Entities.Services.Design.Config;
 using Microsoft.EntityFrameworkCore;

@@ -1,5 +1,5 @@
 ﻿using eft_app_guide._Attributes;
-using eft_app_guide._Objects.Enums;
+using eft_app_guide.Configurations.Enums;
 using eft_app_guide.ViewModels;
 using Microsoft.Extensions.DependencyInjection;
 using System.Windows;

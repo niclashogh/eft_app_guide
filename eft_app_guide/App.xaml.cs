@@ -17,7 +17,7 @@ namespace eft_app_guide
             #region Adding Services
             ServiceCollection service = new();
 
-            StorageFolder.CreateDirectory();
+            StorageDirectory.CreateDirectory();
             DatabaseSetup.AddContextFactory(service);
             service.AddDependencyInjections();
 

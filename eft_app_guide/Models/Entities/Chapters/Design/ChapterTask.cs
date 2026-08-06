@@ -1,5 +1,5 @@
 ﻿using eft_app_guide._Objects.Types;
-using eft_app_guide._Persistence.Entities.Display;
+using eft_app_guide._Persistence.Entities._temp;
 using eft_app_guide.Models.Entities.Chapters.Design.Config;
 using eft_app_guide.Models.Entities.Chapters.Relations;
 using eft_app_guide.Models.Entities.Characters.State;

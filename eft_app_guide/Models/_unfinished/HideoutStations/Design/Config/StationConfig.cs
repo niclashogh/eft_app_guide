@@ -1,0 +1,19 @@
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
+
+namespace eft_app_guide.Models._unfinished.HideoutStations.Design.Config
+{
+    public class StationConfig : IEntityTypeConfiguration<Station>
+    {
+        public void Configure(EntityTypeBuilder<Station> builder)
+        {
+            builder.HasKey(x => x.Id);
+
+            // Link @ to StationLevel
+            builder
+                .HasMany(x => x.StationLevels)
+                .WithOne(x => x.Station)
+                .HasForeignKey(x => x.StationId);
+        }
+    }
+}

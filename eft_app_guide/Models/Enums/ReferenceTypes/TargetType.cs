@@ -3,10 +3,10 @@
     public enum TargetType // TODO
     {
         // InteractionTargetTypes
-        Container, Extraction, Location, MarketPlace, Raid, Btr, Trader,
+        Container, Extraction, Location, MarketPlace, Raid, Btr, Patron,
 
         // ProgressionTargetType
-        Achievement, Chapter, ChapterTask, CharacterLevel, Quest, Skill, SkillGroup, SkillEffect, TraderLevel, Workstation,
+        Achievement, Chapter, ChapterTask, CharacterLevel, Quest, Skill, SkillGroup, SkillEffect, PatronLevel, Workstation,
 
         // StackTargetType
         Ammunition, Currency, Item,

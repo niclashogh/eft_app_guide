@@ -12,7 +12,7 @@ namespace eft_app_guide._Persistence
         {
             service.AddDbContextFactory<DataContext>((serviceProvider, opt) =>
             {
-                string path = Path.Combine(StorageFolder.DATA_FOLDER, DATABASE_NAME + ".db");
+                string path = Path.Combine(StorageDirectory.DATA_FOLDER, DATABASE_NAME + ".db");
 
                 opt.UseSqlite($"Data Source={path}");
                 opt.AddInterceptors(new ForeignKeyInterceptor());

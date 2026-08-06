@@ -2,6 +2,6 @@
 {
     public enum InteractionTargetType // TODO - Inventory (depends on how it evolves)?
     {
-        Container, Extraction, Location, MarketPlace, Raid, Btr, Trader
+        Container, Extraction, Location, MarketPlace, Raid, Btr, Patron
     }
 }

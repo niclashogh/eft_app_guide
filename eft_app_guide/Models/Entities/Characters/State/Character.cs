@@ -8,7 +8,7 @@ using System.ComponentModel.DataAnnotations;
 namespace eft_app_guide.Models.Entities.Characters.State
 {
     [EntityTypeConfiguration(typeof(CharacterConfig))]
-    public class Character // TODO - Prestige + PrestigeDisplay
+    public class Character // TODO - PrestigeLevel + PrestigeDisplay
     {
         #region Keys (CompositeKeys)
         [Required] public int AccountId { get; set; }

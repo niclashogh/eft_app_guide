@@ -1,6 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using Microsoft.EntityFrameworkCore;
-using eft_app_guide._Persistence.Entities.Display;
 using eft_app_guide._Objects.Types;
 using eft_app_guide.Models.Entities.Extractions.Design;
 using eft_app_guide.Models.Entities.Characters.State;
@@ -12,6 +11,7 @@ using eft_app_guide.Models.Entities.Raids.Design;
 using eft_app_guide.Models.Entities.Maps.Design.Config;
 using eft_app_guide.Models.Enums;
 using eft_app_guide.Models.Entities.Actors.Relations;
+using eft_app_guide._Persistence.Entities.Display;
 
 namespace eft_app_guide.Models.Entities.Maps.Design
 {
@@ -29,7 +29,7 @@ namespace eft_app_guide.Models.Entities.Maps.Design
 
         #region Relatations (Children)
         public List<Raid> Raids { get; set; } = [];
-        public List<MapDisplay> MapDisplays { get; set; } = [];
+        public List<MapPackage> MapDisplays { get; set; } = [];
         public List<Location> Locations { get; set; } = [];
         public List<Extraction> Extractions { get; set; } = [];
         public List<Btr> Btrs { get; set; } = [];

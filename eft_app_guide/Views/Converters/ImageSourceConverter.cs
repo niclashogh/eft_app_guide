@@ -13,7 +13,7 @@ namespace eft_app_guide.Views.Converters
     {
         private BitmapImage? Bitmap<T>(T type, string fileName)
         {
-            string path = $"{StorageFolder.ASSET_FOLDER}/{nameof(T)}/{fileName}.png";
+            string path = $"{StorageDirectory.ASSET_FOLDER}/{nameof(T)}/{fileName}.png";
             if (!File.Exists(path))
             {
                 // log
