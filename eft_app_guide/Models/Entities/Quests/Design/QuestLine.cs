@@ -4,11 +4,6 @@ using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Entities.Quests.Design
 {
-    /// <summary><b>DefinitionEntity</b> and <b>AggregativeEntity</b>
-    /// Relations:<code>
-    /// CHILDREN:
-    /// Quest
-    /// </code></summary>
     [EntityTypeConfiguration(typeof(QuestLineConfig))]
     public class QuestLine
     {
@@ -18,7 +13,7 @@ namespace eft_app_guide.Models.Entities.Quests.Design
 
         [Required] public string Name { get; set; }
 
-        #region Relations (Children)
+        #region Relations
         public List<Quest> Quests { get; set; } = [];
         #endregion
     }

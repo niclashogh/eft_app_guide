@@ -1,21 +1,7 @@
-﻿using eft_app_guide._Persistence.Objects;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Entities.Workstations.Design
 {
-    /// <summary><b>ChildEntity</b> and <b>AggregativeEntity</b>
-    /// Relations:<code>
-    /// PARENTS:
-    /// Workstation
-    /// 
-    /// JUNCTIONS:
-    /// WorkstationLevelCrafting
-    /// WorkstationLevelEffect
-    /// 
-    /// ASSOCIATIONS:
-    /// CharacterWorkstationProgress
-    /// </code></summary>
-
     public class WorkstationLevel // TODO
     {
         #region Keys
@@ -25,11 +11,8 @@ namespace eft_app_guide.Models.Entities.Workstations.Design
 
         [Required] public int Level { get; set; }
 
-        #region Relations (Parents)
+        #region Relations
         public Workstation? Workstation { get; set; }
-        #endregion
-
-        #region Relations (Children)
         //public JunctionList<StationLevelCrafting> StationLevelCraftings { get; set; } = [];
         //public JunctionList<StationLevelEffect> StationLevelEffects { get; set; } = [];
 

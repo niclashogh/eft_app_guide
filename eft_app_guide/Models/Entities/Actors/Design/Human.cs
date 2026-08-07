@@ -17,15 +17,10 @@ namespace eft_app_guide.Models.Entities.Actors.Design
 
         [Required] public string Name { get; set; }
 
-        #region Relations (Parents)
+        #region Relations
         public Faction? Faction { get; set; }
-        #endregion
-
-        #region Relations (Children)
         public List<HumanLimb> HumanLimbs { get; set; } = [];
-
         public JunctionList<HumanGroup> HumanGroups { get; set; } = [];
-
         public AssociationList<HumanMap> HumanMaps { get; set; } = [];
         #endregion
     }

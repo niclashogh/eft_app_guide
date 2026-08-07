@@ -1,5 +1,4 @@
-﻿using eft_app_guide.Models.Entities.Quests.Design;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace eft_app_guide.Models.Entities.Quests.Design.Config

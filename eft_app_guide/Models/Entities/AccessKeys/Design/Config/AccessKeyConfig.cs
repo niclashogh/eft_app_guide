@@ -9,18 +9,6 @@ namespace eft_app_guide.Models.Entities.AccessKeys.Design.Config
         {
             builder.HasKey(x => x.Id);
             //builder.HasIndex(x => x.ShortendName);
-
-            // Link @ to LocationAccess
-            builder
-                .HasMany(x => x.LocationAccesses)
-                .WithOne(x => x.AccessKey)
-                .HasForeignKey(x => x.AccessKeyId);
-
-            // Link @ to ContainerAccess
-            builder
-                .HasMany(x => x.ContainerAccesses)
-                .WithOne(x => x.AccessKey)
-                .HasForeignKey(x => x.AccessKeyId);
         }
     }
 }

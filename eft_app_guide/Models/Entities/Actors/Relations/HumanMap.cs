@@ -20,7 +20,7 @@ namespace eft_app_guide.Models.Entities.Actors.Relations
         public GameTime? SpawningStartTime { get; set; }
         public GameTime? SpawningEndTime { get; set; }
 
-        #region Relations (Parents)
+        #region Relations
         public Human? Human { get; set; }
         public Map? Map { get; set; }
         #endregion

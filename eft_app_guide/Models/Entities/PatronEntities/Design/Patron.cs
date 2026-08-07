@@ -5,24 +5,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Entities.PatronEntities.Design
 {
-    /// <summary><para><b>DefinitionEntity</b> and <b>AggregativeEntity</b></para>
-    /// <b>RELATIONS</b><code>
-    /// CHILDREN:
-    /// Quest
-    /// PatronLevel
-    /// 
-    /// JUNCTIONS:
-    /// PatronCurrency
-    /// 
-    /// ASSOCIATIONS:
-    /// CharacterPatronProgress
-    /// </code>
-    /// 
-    /// <b>ABOUT THIS CLASS</b><code>
-    /// A Patron is a an entity that can establish a relationship with the player,
-    /// providing progression, rewards, reputation, services, and/or trading.
-    /// </code></summary>
-    public class Patron
+    public class Patron // TODO
     {
         #region Keys
         [Key] public int Id { get; init; }
@@ -32,12 +15,10 @@ namespace eft_app_guide.Models.Entities.PatronEntities.Design
 
         public string? Description { get; set; }
 
-        #region Relations (Children)
+        #region Relations
         public List<Quest> Quests { get; set; } = [];
         public List<PatronLevel> PatronLevels { get; set; } = [];
-
         public JunctionList<PatronCurrency> PatronCurrencies { get; set; } = [];
-
         public AssociationList<CharacterPatronProgress> CharacterPatronProgressions { get; set; } = [];
         #endregion
     }

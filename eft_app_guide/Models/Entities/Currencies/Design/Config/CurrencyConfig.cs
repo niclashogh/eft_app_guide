@@ -1,5 +1,4 @@
-﻿using eft_app_guide.Models.Entities.Currencies.Design;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace eft_app_guide.Models.Entities.Currencies.Design.Config
@@ -16,9 +15,9 @@ namespace eft_app_guide.Models.Entities.Currencies.Design.Config
                 .WithOne(x => x.FromCurrency)
                 .HasForeignKey(x => x.FromCurrencyId);
 
-            // Link @ to TraderCurrency
+            // Link @ to PatronCurrency
             builder
-                .HasMany(x => x.TraderCurrencies)
+                .HasMany(x => x.PatronCurrencies)
                 .WithOne(x => x.Currency)
                 .HasForeignKey(x => x.CurrencyId);
         }

@@ -1,5 +1,4 @@
-﻿using eft_app_guide.Models.Entities.Quests.Design;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace eft_app_guide.Models.Entities.Quests.Design.Config
@@ -16,11 +15,11 @@ namespace eft_app_guide.Models.Entities.Quests.Design.Config
                 .WithMany(x => x.Quests)
                 .HasForeignKey(x => x.QuestLineId);
 
-            // Link @ to Trader
+            // Link @ to Patron
             builder
-                .HasOne(x => x.Trader)
+                .HasOne(x => x.Patron)
                 .WithMany(x => x.Quests)
-                .HasForeignKey(x => x.TraderId);
+                .HasForeignKey(x => x.PatronId);
 
             // Link @ to QuestGroup
             builder

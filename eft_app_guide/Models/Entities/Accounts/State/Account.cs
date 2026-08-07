@@ -17,11 +17,8 @@ namespace eft_app_guide.Models.Entities.Accounts.State
         [Required] public string Name { get; set; }
         [Required] public DateTime WipeDate { get; set; }
 
-        #region Relations (Parents)
+        #region Relations
         public AccountEdition? AccountEdition { get; set; }
-        #endregion
-
-        #region Relations (Children)
         public List<Character> Characters { get; set; } = [];
         #endregion
     }

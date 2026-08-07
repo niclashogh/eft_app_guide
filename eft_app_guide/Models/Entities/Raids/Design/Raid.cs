@@ -7,7 +7,6 @@ using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Entities.Raids.Design
 {
-    /// <summary><b>ChildEntity of Map</b></summary>
     [EntityTypeConfiguration(typeof(RaidConfig))]
     public class Raid
     {
@@ -21,11 +20,8 @@ namespace eft_app_guide.Models.Entities.Raids.Design
         [Required] public byte MaximumPlayerCount { get; set; }
 
 
-        #region Relations (Parents)
+        #region Relations
         public Map? Map { get; set; }
-        #endregion
-
-        #region Relations (Children)
         public AssociationList<CharacterRaidStatistic> CharacterRaidStatistics { get; set; } = [];
         #endregion
     }

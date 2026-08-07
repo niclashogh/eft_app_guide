@@ -1,5 +1,4 @@
-﻿using eft_app_guide.Models.Entities.Quests.Design;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace eft_app_guide.Models.Entities.Quests.Design.Config
@@ -25,12 +24,6 @@ namespace eft_app_guide.Models.Entities.Quests.Design.Config
             // Link @ to QuestTaskMap
             builder
                 .HasMany(x => x.QuestTaskMaps)
-                .WithOne(x => x.QuestTask)
-                .HasForeignKey(x => x.QuestTaskId);
-
-            // Link @ to QuestTaskDisplay
-            builder
-                .HasMany(x => x.QuestTaskDisplays)
                 .WithOne(x => x.QuestTask)
                 .HasForeignKey(x => x.QuestTaskId);
         }

@@ -1,24 +1,10 @@
-﻿using eft_app_guide._Objects.Types;
-using eft_app_guide._Persistence.Entities._temp;
-using eft_app_guide.Models.Entities.Extractions.Design.Config;
-using eft_app_guide.Models.Entities.Extractions.Relations;
+﻿using eft_app_guide.Models.Entities.Extractions.Design.Config;
 using eft_app_guide.Models.Entities.Maps.Design;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Entities.Extractions.Design
 {
-    /// <summary><b>ChildEntity</b> and <b>AggregativeEntity</b>
-    /// Relations:<code>
-    /// PARENTS:
-    /// Map
-    /// 
-    /// JUNCTIONS:
-    /// ExtractionFaction
-    /// 
-    /// ASSOCIATIONS:
-    /// ExtractionDisplay
-    /// </code></summary>
     [EntityTypeConfiguration(typeof(ExtractionConfig))]
     public class Extraction
     {
@@ -31,14 +17,8 @@ namespace eft_app_guide.Models.Entities.Extractions.Design
         [Required] public bool IsSingleUse { get; set; }
         [Required] public bool IsRandom { get; set; }
 
-        #region Relations (Parents)
+        #region Relations
         public Map? Map { get; set; }
-        #endregion
-
-        #region Relations (Children)
-        public JunctionList<ExtractionFaction> ExtractionFactions { get; set; } = [];
-
-        public AssociationList<ExtractionDisplay> ExtractionDisplays { get; set; } = [];
         #endregion
     }
 }

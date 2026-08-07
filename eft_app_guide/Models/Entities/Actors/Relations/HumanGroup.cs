@@ -16,7 +16,7 @@ namespace eft_app_guide.Models.Entities.Actors.Relations
         [Required] public int GroupId { get; set; }
         #endregion
 
-        #region Relations (Parents)
+        #region Relations
         public Human? Human { get; set; }
         public Group? Group { get; set; }
         #endregion

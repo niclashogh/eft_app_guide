@@ -9,7 +9,7 @@ namespace eft_app_guide.Models.Entities.Chapters.Relations
 {
     /// <summary><b>JunctionTable</b></summary>
     [EntityTypeConfiguration(typeof(ChapterTaskGroupConfig))]
-    public class ChapterTaskGroup : IGroup
+    public class ChapterTaskGroup : IGroup // TODO ?
     {
         #region Keys (CompositeKeys)
         [Required] public int ChapterTaskId { get; set; }

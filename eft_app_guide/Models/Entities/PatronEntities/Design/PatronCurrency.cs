@@ -3,12 +3,8 @@ using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Entities.PatronEntities.Design
 {
-    /// <summary><b>AssociationEntity</b>
-    /// Between:<code>
-    /// PatronId
-    /// CurrencyId
-    /// </code></summary>
-    public class PatronCurrency
+    /// <summary><b>AssociationEntity</b></summary>
+    public class PatronCurrency // TODO
     {
         #region Keys (CompositeKeys)
         [Required] public int PatronId { get; set; }

@@ -5,11 +5,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Entities.Currencies.Relations
 {
-    /// <summary><b>AssociationEntity</b>
-    /// Between:<code>
-    /// FromCurrencyId
-    /// ToCurrencyId
-    /// </code></summary>
+    /// <summary><b>AssociationEntity</b></summary>
     [EntityTypeConfiguration(typeof(CurrencyExchangeConfig))]
     public class CurrencyExchange
     {
@@ -21,7 +17,7 @@ namespace eft_app_guide.Models.Entities.Currencies.Relations
         /// <summary> How many "ToCurrency", "FromCurrency" can buy </summary>
         [Required] public int Rate { get; set; }
 
-        #region Relations (Parents)
+        #region Relations
         public Currency? FromCurrency { get; set; }
         public Currency? ToCurrency { get; set; }
         #endregion

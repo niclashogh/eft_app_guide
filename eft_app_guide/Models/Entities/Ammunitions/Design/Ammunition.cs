@@ -1,11 +1,12 @@
 ﻿using eft_app_guide.Models.Entities.Ammunitions.Design.Config;
+using eft_app_guide.Models.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Entities.Ammunitions.Design
 {
     [EntityTypeConfiguration(typeof(AmmunitionConfig))]
-    public class Ammunition
+    public class Ammunition : IGraphSource
     {
         #region Keys
         [Key] public int Id { get; init; }
@@ -15,11 +16,8 @@ namespace eft_app_guide.Models.Entities.Ammunitions.Design
         [Required] public string Name { get; set; }
         [Required] public string ShortendName { get; set; }
 
-        #region Relations (Parents)
+        #region Relations
         public AmmunitionCaliber? AmmunitionCaliber { get; set; }
-        #endregion
-
-        #region Relations (Extensions)
         public AmmunitionPerformance? AmmunitionPerformance { get; set; }
         #endregion
     }

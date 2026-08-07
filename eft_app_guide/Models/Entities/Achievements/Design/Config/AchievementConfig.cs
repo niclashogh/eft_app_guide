@@ -15,12 +15,6 @@ namespace eft_app_guide.Models.Entities.Achievements.Design.Config
                 .WithMany(x => x.Achievements)
                 .HasForeignKey(x => x.AchivementRarityId);
 
-            // Link @ to AchievementReward
-            builder
-                .HasMany(x => x.AchievementRewards)
-                .WithOne(x => x.Achievement)
-                .HasForeignKey(x => x.AchievementId);
-
             // Link @ to CharacterAchievementProgress
             builder
                 .HasMany(x => x.CharacterAchievementProgressions)

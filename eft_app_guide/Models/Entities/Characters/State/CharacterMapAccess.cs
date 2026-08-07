@@ -5,11 +5,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Entities.Characters.State
 {
-    /// <summary><b>AssociationEntity</b>
-    /// Between:<code>
-    /// CharacterId
-    /// MapId
-    /// </code></summary>
+    /// <summary><b>AssociationEntity</b></summary>
     [EntityTypeConfiguration(typeof(CharacterMapAccessConfig))]
     public class CharacterMapAccess
     {
@@ -18,9 +14,9 @@ namespace eft_app_guide.Models.Entities.Characters.State
         [Required] public int MapId { get; set; }
         #endregion
 
-        [Required] public bool IsLocked { get; set; }
+        [Required] public bool IsUnlocked { get; set; }
 
-        #region Relations (Parents)
+        #region Relations
         public Character? Character { get; set; }
         public Map? Map { get; set; }
         #endregion

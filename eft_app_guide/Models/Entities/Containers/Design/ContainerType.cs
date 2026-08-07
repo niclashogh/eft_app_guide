@@ -4,13 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Entities.Containers.Design
 {
-    /// <summary><b>DefintionEntity</b>
-    /// Containing:<code>
-    /// Jackets
-    /// Bags
-    /// Drawers
-    /// ...
-    /// </code></summary>
+    /// <summary><b>DefintionEntity</b></summary>
     [EntityTypeConfiguration(typeof(ContainerTypeConfig))]
     public class ContainerType
     {
@@ -21,7 +15,7 @@ namespace eft_app_guide.Models.Entities.Containers.Design
         [Required] public string Name { get; set; }
         [Required] public string ShortendName { get; set; }
 
-        #region Relations (Children)
+        #region Relations
         public List<Container> Containers { get; set; } = [];
         #endregion
     }

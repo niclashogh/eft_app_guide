@@ -6,11 +6,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace eft_app_guide.Models.Entities.Quests.Relations
 {
-    /// <summary><b>JunctionEntity</b>
-    /// Between:<code>
-    /// QuestTaskId
-    /// MapId
-    /// </code></summary>
+    /// <summary><b>JunctionEntity</b></summary>
     [EntityTypeConfiguration(typeof(QuestTaskMapConfig))]
     public class QuestTaskMap
     {
@@ -19,7 +15,7 @@ namespace eft_app_guide.Models.Entities.Quests.Relations
         [Required] public int MapId { get; set; }
         #endregion
 
-        #region Relations (Parents)
+        #region Relations
         public QuestTask? QuestTask { get; set; }
         public Map? Map { get; set; }
         #endregion

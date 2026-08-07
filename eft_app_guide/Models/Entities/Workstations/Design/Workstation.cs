@@ -7,11 +7,6 @@ using System.Threading.Tasks;
 
 namespace eft_app_guide.Models.Entities.Workstations.Design
 {
-    /// <summary><b>DefinitionEntity</b> and <b>AggregativeEntity</b>
-    /// Relations:<code>
-    /// StationLevel
-    /// </code></summary>
-
     public class Workstation // TODO
     {
         #region Keys
@@ -20,7 +15,7 @@ namespace eft_app_guide.Models.Entities.Workstations.Design
 
         [Required] public string Name { get; set; }
 
-        #region Relations (Children)
+        #region Relations
         public List<WorkstationLevel> WorkstationLevels { get; set; } = [];
         #endregion
     }

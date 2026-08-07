@@ -1,5 +1,4 @@
-﻿using eft_app_guide.Models.Entities.Maps.Design;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace eft_app_guide.Models.Entities.Maps.Design.Config
@@ -16,9 +15,9 @@ namespace eft_app_guide.Models.Entities.Maps.Design.Config
                 .WithOne(x => x.Map)
                 .HasForeignKey(x => x.MapId);
 
-            // Link @ to Location
+            // Link @ to GeoProximity
             builder
-                .HasMany(x => x.Locations)
+                .HasMany(x => x.GeoProximities)
                 .WithOne(x => x.Map)
                 .HasForeignKey(x => x.MapId);
 
@@ -55,12 +54,6 @@ namespace eft_app_guide.Models.Entities.Maps.Design.Config
             // Link @ to CharacterMapAccess
             builder
                 .HasMany(x => x.CharacterMapAccesses)
-                .WithOne(x => x.Map)
-                .HasForeignKey(x => x.MapId);
-
-            // Link @ to MapDisplay
-            builder
-                .HasMany(x => x.MapDisplays)
                 .WithOne(x => x.Map)
                 .HasForeignKey(x => x.MapId);
         }

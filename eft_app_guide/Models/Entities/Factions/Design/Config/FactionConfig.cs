@@ -1,5 +1,4 @@
-﻿using eft_app_guide.Models.Entities.Factions.Design;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace eft_app_guide.Models.Entities.Factions.Design.Config
@@ -16,9 +15,9 @@ namespace eft_app_guide.Models.Entities.Factions.Design.Config
                 .WithOne(x => x.Faction)
                 .HasForeignKey(x => x.FactionId);
 
-            // Link @ to ExtractionFaction
+            // Link @ to Human
             builder
-                .HasMany(x => x.ExtractionFactions)
+                .HasMany(x => x.Humans)
                 .WithOne(x => x.Faction)
                 .HasForeignKey(x => x.FactionId);
         }

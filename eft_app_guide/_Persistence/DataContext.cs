@@ -1,8 +1,8 @@
 ﻿using eft_app_guide._Objects.ValueObjects;
 using eft_app_guide._Objects.ValueObjects.Converters;
+using eft_app_guide.Models._unfinished.Traders.Design;
 using eft_app_guide.Models.AuditLogs;
 using eft_app_guide.Models.Entities.Maps.Design;
-using eft_app_guide.Models.Entities.Traders.Design;
 using Microsoft.EntityFrameworkCore;
 
 namespace eft_app_guide._Persistence

@@ -1,5 +1,5 @@
 ﻿using eft_app_guide.Models._unfinished.HideoutStations.Relations.Config;
-using eft_app_guide.Models.Entities.Recipes.Design;
+using eft_app_guide.Models._unfinished.Recipes.Design;
 using eft_app_guide.Models.HideoutStations.Design;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;

@@ -25,7 +25,7 @@ namespace eft_app_guide.Models.Entities.Actors.Design
         [Required] public bool CanLightBleed { get; set; }
         [Required] public bool CanHeavyBleed { get; set; }
 
-        #region Relations (Parents)
+        #region Relations
         public Human? Human { get; set; }
         #endregion
     }
