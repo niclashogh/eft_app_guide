@@ -18,6 +18,7 @@ namespace eft_app_guide.Models.Entities.Raids.Design
         [Required] public int DurationInMinutes { get; set; }
         [Required] public byte MinimumPlayerCount { get; set; }
         [Required] public byte MaximumPlayerCount { get; set; }
+        [Required] public int EXPRequiredForSurvivedStatus { get; set; }
 
 
         #region Relations
