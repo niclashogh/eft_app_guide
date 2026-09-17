@@ -1,5 +1,4 @@
-﻿using eft_app_guide.Packages.Interface;
-using eft_app_guide.Packs.Enums;
+﻿using eft_app_guide.Packs.Enums;
 using System.Text.Json.Serialization;
 
 namespace eft_app_guide.Packages.Display
