@@ -7,7 +7,7 @@ namespace eft_app_guide.Models.Entities.AccessKeys.Design
 {
     /// <summary><b>DefintionEntity</b></summary>
     [EntityTypeConfiguration(typeof(AccessKeyConfig))]
-    public class AccessKey : IGraphTarget
+    public class AccessKey : IGraphTarget // TODO - Make AccessKey, AccessCard + KeyLockGraph to link anything to a unlockable item, object, etc.?
     {
         #region Keys
         [Key] public int Id { get; init; }
